@@ -56,7 +56,7 @@ def split_cypher_statements(cypher_content):
 try:
     # Read and execute Cypher query
     print("Reading Cypher query from file...")
-    with open('cipher_outputs/neo4j_import.cypher', 'r') as file:
+    with open('../process/cipher_outputs/neo4j_import.cypher', 'r') as file:
         cypher_content = file.read()
     
     if not cypher_content.strip():

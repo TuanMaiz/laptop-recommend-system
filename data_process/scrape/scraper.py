@@ -403,7 +403,7 @@ def main():
     # Save results
     if all_data:
         scraper.save_to_json(all_data, "sazo_laptops.json")
-        scraper.save_to_csv(all_data, "sazo_laptops.csv")
+        # scraper.save_to_csv(all_data, "sazo_laptops.csv")
         
         # Print summary
         successful_scrapes = [item for item in all_data if "error" not in item]
@@ -433,7 +433,7 @@ def main():
         
         print(f"\nOutput files:")
         print(f"  - sazo_laptops.json")
-        print(f"  - sazo_laptops.csv")
+        # print(f"  - sazo_laptops.csv")
     else:
         print("No data was scraped.")
 
