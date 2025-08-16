@@ -3,11 +3,12 @@ from pydantic import BaseModel
 from typing import List, Optional
 import uvicorn
 
-from api.routers import laptop_router
+from api.routers import laptop_router, chat_router
 
 app = FastAPI(title="Laptop Recommendation API")
 
 app.include_router(laptop_router.router)
+app.include_router(chat_router.router)
 
 
 @app.get("/")
