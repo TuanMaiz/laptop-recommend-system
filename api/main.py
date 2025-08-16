@@ -5,6 +5,8 @@ import uvicorn
 import os
 from fastapi.middleware.cors import CORSMiddleware
 
+from api.routers import laptop_router, chat_router
+
 from dotenv import load_dotenv
 load_dotenv()  # loads .env file into environment
 # Models for request/response
@@ -64,6 +66,18 @@ async def chatbot(req: ChatRequest):
         return {"response": response_content}
     else:
         return {"response": chat_completion.choices[0].message.content}
+
+from api.routers import laptop_router, chat_router
+
+app = FastAPI(title="Laptop Recommendation API")
+
+app.include_router(laptop_router.router)
+app.include_router(chat_router.router)
+
+
+@app.get("/")
+def root():
+    return {"message": "Hello Bigger Applications!"}
 
 
 if __name__ == "__main__":
