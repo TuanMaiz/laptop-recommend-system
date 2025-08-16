@@ -2,6 +2,30 @@
 
 This project implements a web scraping and data processing pipeline for laptop data from Sazo website, with both graph database (Neo4j) and relational database (SQL) storage options.
 
+# FastAPI folder structure
+
+api/
+
+├ ── db/
+
+│ ├── session.py # DB connection & Base
+
+│ └── models/
+
+│ └── laptop.py # SQLAlchemy models
+
+├── schemas/
+
+│ └── laptop_schema.py # Pydantic
+
+schemas
+
+├── routers/
+
+│ └── laptops.py # Routes
+
+└── main.py
+
 ## Steps
 
 1. **Run scraper to get scraped data** - done
