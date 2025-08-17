@@ -30,6 +30,8 @@ def list_laptops(limit: int = 20, db: Session = Depends(get_db)):
 
 @router.get("/{id}", response_model=LaptopBase)
 def get_laptop_detail(id: int, db: Session = Depends(get_db)):
+    if not isinstance(id, str):
+        id = str(id)
     laptop = db.query(Laptop).filter(Laptop.id == id).first()
     if not laptop:
         raise HTTPException(status_code=404, detail="Laptop not found")
