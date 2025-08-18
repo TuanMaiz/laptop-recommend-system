@@ -84,25 +84,39 @@ def get_hybrid_recommendations(
         }
     }
 
-@router.post("/track-interaction")
-def track_interaction(
-    laptop_id: str,
-    interaction_type: str,
-    user_id: Optional[str] = None,
-    fingerprint: str = Query(...),
-    session_id: str = Query(...),
-    db: Session = Depends(get_db)
-):
+class BaseEventModel(BaseModel):
+    id: str
+    timestamp: int
+    url: str
+    userId: Optional[str] = None
+    sessionId: str
+    fingerprint: str
+    type: str  # You can define an Enum for TrackingType if you want stricter typing
+    data: Dict[str, Any]
+    priority: Optional[str] = 'normal'  # 'low' | 'normal' | 'high'
+    
+
+@router.post("/track-interaction", status_code=status.HTTP_201_CREATED)
+def track_interaction(event: BaseEventModel, db: Session = Depends(get_db)):
     """
-    Track user interaction for recommendation system
+    Track user interaction for recommendation system.
+    laptop_id may or may not be present in event.data.
     """
+
     recommendation_service = RecommendationService(db)
     recommendation_service.record_interaction(
-        user_id=user_id,
-        fingerprint=fingerprint,
-        session_id=session_id,
-        laptop_id=laptop_id,
-        interaction_type=interaction_type
+        timestamp=event.timestamp,
+        url=event.url,
+        user_id=event.userId,
+        session_id=event.sessionId,
+        fingerprint=event.fingerprint,
+        event_type=event.type,
+        data=event.data
     )
-    
+
+    # Optionally, you can log or handle the missing laptop_id case here
+    # For example:
+    # if laptop_id is None:
+    #     logger.warning("track_interaction called without laptop_id in event data")
+
     return {"status": "interaction recorded"}

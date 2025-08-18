@@ -290,23 +290,26 @@ class RecommendationService:
 
     def record_interaction(
         self, 
+        timestamp: datetime,
+        url: str,
         user_id: Optional[str], 
-        fingerprint: str, 
         session_id: str,
-        laptop_id: str, 
-        interaction_type: str
+        fingerprint: str, 
+        event_type: str,
+        data: Dict[str, Any]
     ):
         """
         Record user interaction for future recommendations
         """
-        self.db.execute(text("""
-            INSERT INTO user_interactions (user_id, fingerprint, session_id, laptop_id, interaction_type)
-            VALUES (:user_id, :fingerprint, :session_id, :laptop_id, :interaction_type)
-        """), {
-            "user_id": user_id,
-            "fingerprint": fingerprint,
-            "session_id": session_id,
-            "laptop_id": laptop_id,
-            "interaction_type": interaction_type
-        })
+        
+        #TODO insert to track_events table
+        # self.db.execute(text("""
+        #     INSERT INTO user_interactions (user_id, fingerprint, session_id, laptop_id, interaction_type)
+        #     VALUES (:user_id, :fingerprint, :session_id, :laptop_id, :interaction_type)
+        # """), {
+        #     "user_id": user_id,
+        #     "fingerprint": fingerprint,
+        #     "session_id": session_id,
+        #     "laptop_id": laptop_id,
+        # })
         self.db.commit()
