@@ -13,8 +13,8 @@ load_dotenv()  # loads .env file into environment
 app = FastAPI(title="Laptop Recommendation API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # or ["http://localhost:3000"] for React only
-    allow_credentials=True,
+    allow_origins=["http://localhost:8080"],  # must be explicit
+    allow_credentials=True,                   # required for cookies/auth
     allow_methods=["*"],
     allow_headers=["*"],
 )

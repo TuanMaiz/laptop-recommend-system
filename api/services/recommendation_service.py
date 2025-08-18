@@ -5,6 +5,7 @@ from sqlalchemy import text, func, and_
 from api.db.models.laptop_model import Laptop
 import json
 from collections import defaultdict, Counter
+import uuid
 
 class RecommendationService:
     def __init__(self, db: Session):
@@ -289,27 +290,31 @@ class RecommendationService:
         return "; ".join(reasons) if reasons else "Popular choice"
 
     def record_interaction(
-        self, 
-        timestamp: datetime,
+        self,
+        timestamp: str,
         url: str,
-        user_id: Optional[str], 
+        user_id: Optional[str],
         session_id: str,
-        fingerprint: str, 
+        fingerprint: str,
         event_type: str,
         data: Dict[str, Any]
     ):
         """
         Record user interaction for future recommendations
         """
-        
-        #TODO insert to track_events table
-        # self.db.execute(text("""
-        #     INSERT INTO user_interactions (user_id, fingerprint, session_id, laptop_id, interaction_type)
-        #     VALUES (:user_id, :fingerprint, :session_id, :laptop_id, :interaction_type)
-        # """), {
-        #     "user_id": user_id,
-        #     "fingerprint": fingerprint,
-        #     "session_id": session_id,
-        #     "laptop_id": laptop_id,
-        # })
+
+        # Insert to track_events table
+        self.db.execute(text("""
+            INSERT INTO public.track_events (id, timestamp, url, user_id, session_id, fingerprint, event_type, data)
+            VALUES (:id, :timestamp, :url, :user_id, :session_id, :fingerprint, :event_type, :data)
+        """), {
+            "id": str(uuid.uuid4()),
+            "timestamp": timestamp,
+            "url": url,
+            "user_id": user_id,
+            "session_id": session_id,
+            "fingerprint": fingerprint,
+            "event_type": event_type,
+            "data": str(data)
+        })
         self.db.commit()
