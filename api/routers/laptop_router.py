@@ -102,12 +102,16 @@ class BaseEventModel(BaseModel):
     fingerprint: Optional[str] = None
     eventType: str
     eventData: Optional[Any] = None
-    deviceInfo: Optional[DeviceInfo] = None
+    deviceInfo: Optional[Any] = None
     ipAddress: Optional[str] = None
     priority: Optional[str] = None
     userAgent: Optional[str] = None
     
-
+@router.options("/track-interaction")
+async def options_track_interaction():
+    return {
+        "status": "ok"
+    }
 @router.post("/track-interaction", status_code=status.HTTP_201_CREATED)
 def track_interaction(events: List[BaseEventModel], db: Session = Depends(get_db)):
     """
@@ -124,6 +128,9 @@ def track_interaction(events: List[BaseEventModel], db: Session = Depends(get_db
             session_id=event.sessionId,
             fingerprint=event.fingerprint,
             event_type = event.eventType,
+            ip_address=event.ipAddress,
+            user_agent=event.userAgent,
+            device_info=event.deviceInfo,
             data = event.eventData
         )
 

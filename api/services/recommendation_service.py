@@ -297,6 +297,9 @@ class RecommendationService:
         session_id: str,
         fingerprint: str,
         event_type: str,
+        ip_address: str,
+        user_agent: str,
+        device_info: Dict[str, Any],
         data: Dict[str, Any]
     ):
         """
@@ -305,16 +308,19 @@ class RecommendationService:
 
         # Insert to track_events table
         self.db.execute(text("""
-            INSERT INTO public.track_events (id, timestamp, url, user_id, session_id, fingerprint, event_type, data)
-            VALUES (:id, :timestamp, :url, :user_id, :session_id, :fingerprint, :event_type, :data)
+            INSERT INTO public.tracking_events (id, timestamp, page_url, user_id, session_id, fingerprint, event_type, event_data, ip_address, user_agent, device_info)
+            VALUES (:id, :timestamp, :page_url, :user_id, :session_id, :fingerprint, :event_type, :event_data, :ip_address, :user_agent, :device_info)
         """), {
             "id": str(uuid.uuid4()),
             "timestamp": timestamp,
-            "url": url,
+            "page_url": url,
             "user_id": user_id,
             "session_id": session_id,
             "fingerprint": fingerprint,
             "event_type": event_type,
-            "data": str(data)
+            "event_data": json.dumps(data) if data else None,
+            "ip_address": ip_address,
+            "user_agent": user_agent,
+            "device_info": json.dumps(device_info) if device_info else None
         })
         self.db.commit()

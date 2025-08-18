@@ -13,10 +13,10 @@ load_dotenv()  # loads .env file into environment
 app = FastAPI(title="Laptop Recommendation API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080"],  # must be explicit
-    allow_credentials=True,                   # required for cookies/auth
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=["*"],      # allow all origins
+    allow_credentials=False,  # must be False when using "*" 
+    allow_methods=["*"],      # allow all HTTP methods
+    allow_headers=["*"],      # allow all headers
 )
 app.include_router(laptop_router.router)
 app.include_router(chat_router.router)
