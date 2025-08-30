@@ -107,11 +107,6 @@ class BaseEventModel(BaseModel):
     priority: Optional[str] = None
     userAgent: Optional[str] = None
     
-@router.options("/track-interaction")
-async def options_track_interaction():
-    return {
-        "status": "ok"
-    }
 @router.post("/track-interaction", status_code=status.HTTP_201_CREATED)
 def track_interaction(events: List[BaseEventModel], db: Session = Depends(get_db)):
     """

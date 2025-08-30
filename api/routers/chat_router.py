@@ -9,7 +9,7 @@ from api.db.session import SessionLocal
 from api.schemas.laptop_schema import LaptopBase
 from api.schemas.chat_request_schema import ChatRequest
 from api.db.models.laptop_model import Laptop
-
+from api.services.chat_query_service import makeChat
 router = APIRouter(prefix="/chatbot")
 
 
@@ -24,27 +24,5 @@ def get_db():
 
 @router.post("/")
 def chatbot(req: ChatRequest):
-    apikey = os.getenv("OPENAI_API_KEY")
-
-    client = OpenAI(
-        base_url="https://routellm.abacus.ai/v1",
-        api_key=apikey,
-    )
-
-    stream = False  # or False
-    chat_completion = client.chat.completions.create(
-        model="route-llm",
-        messages=[{"role": "user", "content": req.message}],
-        stream=stream,
-    )
-    if stream:
-        response_content = ""
-        for event in chat_completion:
-            if event.choices[0].finish_reason:
-                break
-            else:
-                if event.choices[0].delta and event.choices[0].delta.content:
-                    response_content += event.choices[0].delta.content
-        return {"response": response_content}
-    else:
-        return {"response": chat_completion.choices[0].message.content}
+    pass
+    

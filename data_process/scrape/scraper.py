@@ -88,9 +88,10 @@ class SAZOLaptopScraper:
             ".product-image img",
             ".main-image img",
             ".product-gallery img",
-            "img[itemprop='image']"
+            "img[itemprop='image']",
+            "div.picture a img"
         ]
-        
+
         for selector in image_selectors:
             img_elem = soup.select_one(selector)
             if img_elem:
