@@ -1,0 +1,1069 @@
+:Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_H_255_8_nhn_16_lung_c_th_t_ti_49GHz_vi_turbo_boost_24MB_Cache ,
+                      :32GB_DDR55600MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_2_slots ,
+                      :Brightness_400nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_80wh ,
+                      :Weight_1_43kg ;
+    :hasPrice "15790000"^^xsd:decimal .
+
+:Lecoo_Fighter_7000_2025_R98940HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8940HX_16_nhn_32_lung_xung_nhp_c_bn_24GHz_c_th_t_ti_53GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache ,
+                      :16GB_DDR55200MHzh_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_2_slots ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_180Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_4kg ;
+    :hasPrice "27000000"^^xsd:decimal .
+
+:Lecoo_Fighter_7000_2025_I714650HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_i7_14650HX_16_nhn_24_lung_xung_nhp_c_th_t_ti_a_52GHz_vi_Turbo_boost_30MB_Intel_Smart_Cache ,
+                      :16GB_DDR55600MHzh_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_2_slots ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_180Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_4kg ;
+    :hasPrice "27190000"^^xsd:decimal .
+
+:ThinkPad_T14P_AI_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255H_16_nhn_16_lung_xung_nhp_ti_a_c_th_t_Pcore_51GHz__Ecore_44GHz_24_MB_Intel_Intel_AI_Boost ,
+                      :32GB1616_DDR55600MHz_c_th_nng_cp_c ,
+                      :1TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_75wh ,
+                      :Weight_1_56kg ;
+    :hasPrice "33200000"^^xsd:decimal .
+
+:Legion_Pro_7i_2025_Y9000P_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB_DDR56400MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD1_x_PCIe_Gen4__1_x_PCIe_Gen5 ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_57kg ;
+    :hasPrice "67290000"^^xsd:decimal .
+
+:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB_DDR56400MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD1_x_PCIe_Gen4__1_x_PCIe_Gen5 ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_84wh ,
+                      :Weight_1_98kg ;
+    :hasPrice "56800000"^^xsd:decimal .
+
+:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB_DDR56400MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD1_x_PCIe_Gen4__1_x_PCIe_Gen5 ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_84wh ,
+                      :Weight_1_98kg ;
+    :hasPrice "53200000"^^xsd:decimal .
+
+:Thinkbook_16_G7_2025_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255H_16_nhn_16_lung_xung_nhp_ti_a_c_th_t_Pcore_51GHz__Ecore_44GHz_24_MB_Intel_Intel_AI_Boost ,
+                      :32GB_DDR5_5600MHz_c_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_85wh ,
+                      :Weight_1_9kg ;
+    :hasPrice "36400000"^^xsd:decimal .
+
+:Xiaoxin_Pro_14c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_H_255_38_GHz_up_to_49_GHz_8_Cores_16_Threads_16MB_Cache ,
+                      :24GB_DDR54800Mhz_c_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_60wh ,
+                      :Weight_1_39kg ;
+    :hasPrice "18090000"^^xsd:decimal .
+
+:Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_H_255_38_GHz_up_to_49_GHz_8_Cores_16_Threads_16MB_Cache ,
+                      :24GB_DDR54800Mhz_c_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_80wh ,
+                      :Weight_1_76kg ;
+    :hasPrice "18790000"^^xsd:decimal .
+
+:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_7_H_350_8_nhn_16_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_5GHz_8MB_L2_Cache_16MB_L3_Cache_default_TDP_28W_4nm_Zen_5 ,
+                      :32GB_DDR55600Mhz_c_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_80wh ,
+                      :Weight_1_76kg ;
+    :hasPrice "21990000"^^xsd:decimal .
+
+:Thinkbook_16_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_H_260_8_nhn_16_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_51GHz_16_Tops_NPU ,
+                      :32GB_LPDDR5x_7500MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_85wh ,
+                      :Weight_1_9kg ;
+    :hasPrice "21390000"^^xsd:decimal .
+
+:Thinkbook_14_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_H_260_8_nhn_16_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_51GHz_16_Tops_NPU ,
+                      :32GB_LPDDR5x_7500MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_85wh ,
+                      :Weight_1_5kg ;
+    :hasPrice "20790000"^^xsd:decimal .
+
+:Thinkpad_X1_Carbon_Gen_13_Ultra_5225H_32GB_RAM_1TB_SSDAura_Edition rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_5225H_14_nhn_14_lung_xung_nhp_ti_a_vi_Turbo_Boost_ti_49GHz_18_MB_Cache ,
+                      :32_GB_RAM_LPDDR5X_8400_MTs_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_SSD_Gen_4 ,
+                      :Brightness_400nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_57_Wh ,
+                      :Weight_1_09kg ;
+    :hasPrice "44500000"^^xsd:decimal .
+
+:ThinkBook_16P_2025_25k_Ultra_7255HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255HX_20_nhn_gm_8_nhn_P_v_12_nhn_E_20_lung_xung_nhp_c_bn_t_18GHz_c_th_t_max_vi_turbo_boost_ln_ti_52GHz_36MB_Cache ,
+                      :32GB_DDR55600MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_85whr ,
+                      :Weight_2_2kg ;
+    :hasPrice "40000000"^^xsd:decimal .
+
+:Thinkbook_16_G7_2025_Ultra_9285H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_DDR5_5600MHz_c_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_85wh ,
+                      :Weight_1_9kg ;
+    :hasPrice "38000000"^^xsd:decimal .
+
+:ThinkBook_16P_2025_25k_240Hz_R98945HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8945HX_16_nhn_32_lung_xung_nhp_c_bn_25GHz_c_th_t_ti_54GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache_default_TDP_55W ,
+                      :32GB_DDR55200MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_85whr ,
+                      :Weight_2_2kg ;
+    :hasPrice "36900000"^^xsd:decimal .
+
+:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8945HX_16_nhn_32_lung_xung_nhp_c_bn_25GHz_c_th_t_ti_54GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache_default_TDP_55W ,
+                      :16GB_DDR55200MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_85whr ,
+                      :Weight_2_2kg ;
+    :hasPrice "35690000"^^xsd:decimal .
+
+:ThinkBook_16P_2025_25k_165Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8945HX_16_nhn_32_lung_xung_nhp_c_bn_25GHz_c_th_t_ti_54GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache_default_TDP_55W ,
+                      :16GB_DDR55200MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_350nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_85whr ,
+                      :Weight_2_2kg ;
+    :hasPrice "32500000"^^xsd:decimal .
+
+:ThinkBook_16P_2025_25k_Ultra_7255HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255HX_20_nhn_gm_8_nhn_P_v_12_nhn_E_20_lung_xung_nhp_c_bn_t_18GHz_c_th_t_max_vi_turbo_boost_ln_ti_52GHz_36MB_Cache ,
+                      :16GB_DDR55600MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_85whr ,
+                      :Weight_2_2kg ;
+    :hasPrice "38500000"^^xsd:decimal .
+
+:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB1616_DDR55600MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_85whr ,
+                      :Weight_2_2kg ;
+    :hasPrice "53500000"^^xsd:decimal .
+
+:ThinkBook_16P_2025_25k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB1616_DDR55600MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_85whr ,
+                      :Weight_2_2kg ;
+    :hasPrice "52500000"^^xsd:decimal .
+
+:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB1616_DDR55600MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_85whr ,
+                      :Weight_2_2kg ;
+    :hasPrice "48000000"^^xsd:decimal .
+
+:ThinkBook_16P_2025_25k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB1616_DDR55600MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_85whr ,
+                      :Weight_2_2kg ;
+    :hasPrice "46000000"^^xsd:decimal .
+
+:ThinkPad_T14P_AI_2025_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB1616_DDR55600MHz_c_th_nng_cp_c ,
+                      :1TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_75wh ,
+                      :Weight_1_56kg ;
+    :hasPrice "34000000"^^xsd:decimal .
+
+:Legion_Pro_7i_2025_Y9000P_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB_DDR56400MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD1_x_PCIe_Gen4__1_x_PCIe_Gen5 ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_57kg ;
+    :hasPrice "66490000"^^xsd:decimal .
+
+:Xiaoxin_Pro_14c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_7_H_350_8_nhn_16_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_5GHz_8MB_L2_Cache_16MB_L3_Cache_default_TDP_28W_4nm_Zen_5 ,
+                      :32GB_DDR55600Mhz_c_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_60wh ,
+                      :Weight_1_39kg ;
+    :hasPrice "21490000"^^xsd:decimal .
+
+:Legion_5_2025_R7000_25K_Ryzen_7_H_255_16GB_RAM_512GB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_H_255_8_nhn_16_lung_xung_nhp_c_bn_38GHz_c_th_t_ti_49GHz_n_nhn_vi_turbo_boost_8MB_L2_Cache_16MB_L3_Cache_default_TDP_45W ,
+                      :16GB_DDR55600MHzh_tr_nng_cp ,
+                      :512GB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_400nits ,
+                      :RefreshRate_180Hz ,
+                      :Battery_60wh ,
+                      :Weight_2kg ;
+    :hasPrice "28890000"^^xsd:decimal .
+
+:Legion_5_2025_Y7000_FHD_I713650HX_24GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_i713650HX_14_nhn_20_lung_xung_nhp_c_th_t_ti_49GHz_n_nhn_vi_turbo_boost_24MB_Cache_default_TDP_55W ,
+                      :24GB_DDR5_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Brightness_300nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_60wh ,
+                      :Weight_2kg ;
+    :hasPrice "31590000"^^xsd:decimal .
+
+:Legion_5_2025_Y7000_25K_I714650HX_1624GB_RAM_512GB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_i7_14650HX_16_nhn_24_lung_xung_nhp_c_th_t_ti_a_52GHz_vi_Turbo_boost_30MB_Intel_Smart_Cache ,
+                      :1624GB_DDR55600MHzh_tr_nng_cp ,
+                      :512GB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_400nits ,
+                      :RefreshRate_180Hz ,
+                      :Battery_60wh ,
+                      :Weight_2kg ;
+    :hasPrice "30990000"^^xsd:decimal .
+
+:Legion_5_2025_R7000P_R98940HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8940HX_16_nhn_32_lung_xung_nhp_c_bn_25GHz_c_th_t_ti_53GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache_default_TDP_55W ,
+                      :16GB_DDR55600MHznhn_5200MHzh_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_5kg ;
+    :hasPrice "32090000"^^xsd:decimal .
+
+:Legion_5_2025_R7000P_R98945HX_16GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8945HX_16_nhn_32_lung_xung_nhp_c_bn_25GHz_c_th_t_ti_54GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache_default_TDP_55W ,
+                      :16GB_DDR55600MHznhn_5200MHzh_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_5kg ;
+    :hasPrice "32190000"^^xsd:decimal .
+
+:Legion_5_2025_Y7000P_I714650HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_i7_14650HX_16_nhn_24_lung_xung_nhp_c_th_t_ti_a_52GHz_vi_Turbo_boost_30MB_Intel_Smart_Cache ,
+                      :16GB_DDR5 ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ;
+    :hasPrice "33790000"^^xsd:decimal .
+
+:Legion_5_2025_Y7000P_I914900HX_16GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+    :hasSpecification :Intel_Core_i9_14900HX_24_nhn_32_lung_xung_nhp_c_th_t_ti_58GHz_vi_turbo_boost_36MB_Intel_Smart_Cache ,
+                      :16GB_DDR5 ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ;
+    :hasPrice "34190000"^^xsd:decimal .
+
+:Legion_Pro_5_2025_R9000P_WhiteR98945HX_32GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8945HX_16_nhn_32_lung_xung_nhp_c_bn_25GHz_c_th_t_ti_54GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache_default_TDP_55W120w ,
+                      :32GB1616_DDR55600MHznhn_5200MHzh_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_57kg ;
+    :hasPrice "36400000"^^xsd:decimal .
+
+:Legion_Pro_5_2025_R9000P_BlackR98945HX_32GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8945HX_16_nhn_32_lung_xung_nhp_c_bn_25GHz_c_th_t_ti_54GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache_default_TDP_55W120w ,
+                      :32GB1616_DDR55600MHznhn_5200MHzh_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_57kg ;
+    :hasPrice "34900000"^^xsd:decimal .
+
+:Legion_Pro_5_2025_Y9000P_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB1616_DDR56400MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_57kg ;
+    :hasPrice "46700000"^^xsd:decimal .
+
+:Legion_Pro_5_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB1616_DDR56400MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_57kg ;
+    :hasPrice "42600000"^^xsd:decimal .
+
+:ThinkPad_T14P_AI_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_5225H_14_nhn_14_lung_xung_nhp_ti_a_vi_Turbo_Boost_ti_49GHz_18_MB_Cache ,
+                      :32GB1616_DDR55600MHz_c_th_nng_cp_c ,
+                      :1TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_75wh ,
+                      :Weight_1_56kg ;
+    :hasPrice "28500000"^^xsd:decimal .
+
+:Xiaoxin_Pro_14_GT_2025_Ultra_9285H_32GB_RAM_1TB_SSDLenovo_IdeaPad_5_Pro rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_LPDDR5x_8533_MTs_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_84wh ,
+                      :Weight_1_39kg ;
+    :hasPrice "27690000"^^xsd:decimal .
+
+:ThinkPad_X914_2025_Touch_Ultra_9288V_32GB_RAM_2TB_SSD_Aura_Edition rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_288V_8nhn_gm_4_nhn_P_v_4_nhn_E_8_lung_xung_nhp_c_bn_t_33GHz_c_th_t_max_Pcore_vi_turbo_boost_ti_51GHz_12_MB_Intel_Smart_Cache ,
+                      :32GB_LPDDR5x_8533MHz_khng_h_tr_nng_cp ,
+                      :2TB_PCIe_NVMe_M2_SSD_gen_4 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_55wh ,
+                      :Weight_1_21kg ;
+    :hasPrice "53400000"^^xsd:decimal .
+
+:ThinkPad_X914_2025_Touch_Ultra_7258V_32GB_RAM_1TB_SSD_Aura_Edition rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_258V_32GB_8nhn_gm_4_nhn_P_v_4_nhn_E_8_lung_xung_nhp_c_bn_t_22GHz_c_th_t_max_Pcore_vi_turbo_boost_ti_48GHz_12_MB_Intel_Smart_Cache ,
+                      :32GB_LPDDR5x_8533MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_gen_4 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_80wh ,
+                      :Weight_1_21kg ;
+    :hasPrice "41500000"^^xsd:decimal .
+
+:Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB_DDR56400MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD1_x_PCIe_Gen4__1_x_PCIe_Gen5 ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_57kg ;
+    :hasPrice "74200000"^^xsd:decimal .
+
+:Legion_Pro_7i_2025_Y9000P_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_275HX_24_nhn_gm_8_nhn_P_v_16_nhn_E_24_lung_xung_nhp_c_bn_t_21GHz_c_th_t_max_vi_turbo_boost_ln_ti_54GHz_36MB_Cache ,
+                      :32GB_DDR56400MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_SSD1_x_PCIe_Gen4__1_x_PCIe_Gen5 ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_57kg ;
+    :hasPrice "73000000"^^xsd:decimal .
+
+:Xiaoxin_15c_2025_Lenovo_IdeaPad_Slim_3_R78745HS_16GB_RAM_512GB_SSD rdf:type :Product ;
+    :hasSpecification :Ryzen_7_8745HS_8_cores_x_16_threads_up_to_49_GHz_turbo_boost ,
+                      :16GB_8GB_onboard__8GB_in_slot_ram_h_tr_DDR5_5600MHz ,
+                      :512GB_PCIe_NVMe_M2_SSD_2_slot ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_60wh ,
+                      :Weight_1_49kg ;
+    :hasPrice "15800000"^^xsd:decimal .
+
+:Xiaoxin_Pro_14_GT_2025_AI_9_H_365_32GB_RAM_1TB_SSDIdeaPad_5_Pro rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_9_H_365_10_nhn_20_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_5GHz_10MB_L2_Cache_24MB_L3_Cache_default_TDP_28W_4nm_Zen_5 ,
+                      :32GB_LPDDR5x_8000MTs_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_1100nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_84wh ,
+                      :Weight_1_39kg ;
+    :hasPrice "26390000"^^xsd:decimal .
+
+:ThinkPad_X915_2025_Touch_Ultra_7258V_32GB_RAM_1TB_SSD_Aura_Edition rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_258V_32GB_8nhn_gm_4_nhn_P_v_4_nhn_E_8_lung_xung_nhp_c_bn_t_22GHz_c_th_t_max_Pcore_vi_turbo_boost_ti_48GHz_12_MB_Intel_Smart_Cache ,
+                      :32GB_LPDDR5x_8533MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_gen_4 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_80wh ,
+                      :Weight_1_4kg ;
+    :hasPrice "43000000"^^xsd:decimal .
+
+:ThinkPad_T14_Gen_4_R57540U_32GB_RAM_512GB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_5_PRO_7540U_Processor_320_GHz_up_to_490_GHz_Max_Boost_6_Cores_12_Threads_16_MB_Cache ,
+                      :32GB_LPDDR5x_6400MHz_khng_h_tr_nng_cp_c ,
+                      :512GB_PCIe_Gen4_NVMe_M2_SSD ,
+                      :Battery_52wh ,
+                      :Weight_1_35kg ;
+    :hasPrice "18700000"^^xsd:decimal .
+
+:Thinkbook_16_G7_2025_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_DDR5_5600MHz_c_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_85wh ,
+                      :Weight_1_9kg ;
+    :hasPrice "28690000"^^xsd:decimal .
+
+:Thinkbook_14_G7_2025_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_LPDDR5x_8533MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_85wh ,
+                      :Weight_1_5kg ;
+    :hasPrice "27890000"^^xsd:decimal .
+
+:ThinkPad_X915_2025_Touch_Ultra_9288V_32GB_RAM_2TB_SSD_Aura_Edition rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_288V_8nhn_gm_4_nhn_P_v_4_nhn_E_8_lung_xung_nhp_c_bn_t_33GHz_c_th_t_max_Pcore_vi_turbo_boost_ti_51GHz_12_MB_Intel_Smart_Cache ,
+                      :32GB_LPDDR5x_8533MHz_khng_h_tr_nng_cp ,
+                      :2TB_PCIe_NVMe_M2_SSD_gen_4 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_80wh ,
+                      :Weight_1_4kg ;
+    :hasPrice "54500000"^^xsd:decimal .
+
+:Xiaoxin_16_2024_R78745H_16GB_RAM_512GB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+    :hasSpecification :Ryzen_7_8745H_8_cores_x_16_threads_up_to_49_GHz_turbo_boost ,
+                      :16GB_LPDDR5X_6400MHz_onboard_khng_nng_cp_c ,
+                      :512GB_PCIe_NVMe_M2_SSD ,
+                      :Brightness_300nits ,
+                      :RefreshRate_60Hz ,
+                      :Battery_57wh ,
+                      :Weight_1_89kg ;
+    :hasPrice "14490000"^^xsd:decimal .
+
+:Legion_5_Pro_2024_R9000P_ARX8_Ryzen_9_7945HX_16GB_RAM_1TB_SSD_RTX4070 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_7945HX_16_nhn_32_lung_xung_nhp_c_bn_25GHz_c_th_t_ti_54GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache_default_TDP_55W110w ,
+                      :16GB_DDR5_5200MHz_c_th_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_gen_4 ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_4cell_80wh ,
+                      :Weight_2_55kg ;
+    :hasPrice "35200000"^^xsd:decimal .
+
+:Thinkbook_16_G7_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255H_16_nhn_16_lung_xung_nhp_ti_a_c_th_t_Pcore_51GHz__Ecore_44GHz_24_MB_Intel_Intel_AI_Boost ,
+                      :32GB_DDR5_5600Hz ,
+                      :1TB_PCIe_NVMe_M2_SSD_gen_4 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_165Hz ,
+                      :Battery_85wh ,
+                      :Weight_1_9kg ;
+    :hasPrice "27490000"^^xsd:decimal .
+
+:Legion_5_Pro_2024_R9000P_ARX8_Ryzen_9_7945HX_16GB_RAM_1TB_SSD_RTX4060_Trng rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_7945HX_16_nhn_32_lung_xung_nhp_c_bn_25GHz_c_th_t_ti_54GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache_default_TDP_55W110w ,
+                      :16GB_DDR5_5200MHz_c_th_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_gen_4 ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_240Hz ,
+                      :Battery_4cell_80wh ,
+                      :Weight_2_55kg ;
+    :hasPrice "32500000"^^xsd:decimal .
+
+:Thinkbook_X_AI_2025_Limited_Ultra_9285H_32GB_RAM_1TB_SSD_Stainless_Magnesium_Edition rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_LPDDR5x_8400MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_74wh ,
+                      :Weight_1kg ;
+    :hasPrice "36690000"^^xsd:decimal .
+
+:Thinkbook_X_AI_2025__Khng_Touch_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_5225H_14_nhn_14_lung_xung_nhp_ti_a_vi_Turbo_Boost_ti_49GHz_18_MB_Cache_chun_Intel_Evo ,
+                      :32GB_LPDDR5x_8400MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_74wh ,
+                      :Weight_1_2kg ;
+    :hasPrice "26990000"^^xsd:decimal .
+
+:Thinkbook_X_AI_2025__Touch_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_5225H_14_nhn_14_lung_xung_nhp_ti_a_vi_Turbo_Boost_ti_49GHz_18_MB_Cache_chun_Intel_Evo ,
+                      :32GB_LPDDR5x_8400MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_74wh ,
+                      :Weight_1_2kg ;
+    :hasPrice "28090000"^^xsd:decimal .
+
+:Thinkbook_X_AI_2025__Khng_Touch_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_LPDDR5x_8400MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_74wh ,
+                      :Weight_1_2kg ;
+    :hasPrice "29390000"^^xsd:decimal .
+
+:Thinkbook_X_AI_2025__Touch_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_LPDDR5x_8400MHz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_2242_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_74wh ,
+                      :Weight_1_2kg ;
+    :hasPrice "32390000"^^xsd:decimal .
+
+:HP_Elitebook_6_G1a_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_H_255_38_GHz_up_to_49_GHz_8_Cores_16_Threads_16MB_Cache ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_TLC_M2_SSD ,
+                      :Resolution_2560x1600 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_56wh ,
+                      :Weight_1_4kg ;
+    :hasPrice "21600000"^^xsd:decimal .
+
+:HP_ZBook_X_G1i_16_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_5_225H_14_nhn_14_lung_xung_nhp_ti_a_c_th_t_Pcore_49GHz__Ecore_43GHz_18_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_6_cell_83wh ,
+                      :Weight_2_04kg ;
+    :hasPrice "25800000"^^xsd:decimal .
+
+:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_64GB_RAM_1TB_SSD_DreamColor rdf:type :Product ;
+    :hasSpecification :Ryzen_AI_9_HX_Pro_375_2_GHz_base_clock_up_to_51_GHz_max_boost_clock12MB_L2_cache_24MB_L3_cache_12_cores_24_threads ,
+                      :64GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_3_cell_62wh ,
+                      :Weight_1_44kg ;
+    :hasPrice "55000000"^^xsd:decimal .
+
+:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Ryzen_AI_9_HX_Pro_375_2_GHz_base_clock_up_to_51_GHz_max_boost_clock12MB_L2_cache_24MB_L3_cache_12_cores_24_threads ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_3_cell_62wh ,
+                      :Weight_1_44kg ;
+    :hasPrice "35000000"^^xsd:decimal .
+
+:HP_ZBook_8_G1a_14_2025_AI_7_350_32GB_RAM_1TB_SSD_DreamColor rdf:type :Product ;
+    :hasSpecification :Ryzen_AI_7_350_2_GHz_base_clock_up_to_5_GHz_max_boost_clock_8MB_L2_cache_16MB_L3_cache_8_cores_16_threads ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_3_cell_62wh ,
+                      :Weight_1_44kg ;
+    :hasPrice "38000000"^^xsd:decimal .
+
+:HP_ZBook_8_G1a_14_2025_AI_7_350_64GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Ryzen_AI_7_350_2_GHz_base_clock_up_to_5_GHz_max_boost_clock_8MB_L2_cache_16MB_L3_cache_8_cores_16_threads ,
+                      :64GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_3_cell_62wh ,
+                      :Weight_1_44kg ;
+    :hasPrice "33200000"^^xsd:decimal .
+
+:HP_ZBook_8_G1a_14_2025_AI_7_350_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Ryzen_AI_7_350_2_GHz_base_clock_up_to_5_GHz_max_boost_clock_8MB_L2_cache_16MB_L3_cache_8_cores_16_threads ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_3_cell_62wh ,
+                      :Weight_1_44kg ;
+    :hasPrice "27700000"^^xsd:decimal .
+
+:HP_ZBook_X_G1i_16_2025_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_6_cell_83wh ,
+                      :Weight_2_04kg ;
+    :hasPrice "35000000"^^xsd:decimal .
+
+:HP_ZBook_X_G1i_16_2025_Ultra_7255H_64GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255H_16_nhn_16_lung_xung_nhp_ti_a_c_th_t_Pcore_51GHz__Ecore_44GHz_24_MB_Intel_Intel_AI_Boost ,
+                      :64GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_6_cell_83wh ,
+                      :Weight_2_04kg ;
+    :hasPrice "33000000"^^xsd:decimal .
+
+:HP_ZBook_X_G1i_16_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255H_16_nhn_16_lung_xung_nhp_ti_a_c_th_t_Pcore_51GHz__Ecore_44GHz_24_MB_Intel_Intel_AI_Boost ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_6_cell_83wh ,
+                      :Weight_2_04kg ;
+    :hasPrice "27700000"^^xsd:decimal .
+
+:HP_Elitebook_6_G1i_14_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_5_225H_14_nhn_14_lung_xung_nhp_ti_a_c_th_t_Pcore_49GHz__Ecore_43GHz_18_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_TLC_M2_SSD ,
+                      :Resolution_2560x1600 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_56wh ,
+                      :Weight_1_4kg ;
+    :hasPrice "23900000"^^xsd:decimal .
+
+:HP_Elitebook_6_G1i_14_2025_Ultra_7255H_3264GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255H_16_nhn_16_lung_xung_nhp_ti_a_c_th_t_Pcore_51GHz__Ecore_44GHz_24_MB_Intel_Intel_AI_Boost ,
+                      :3264GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_TLC_M2_SSD ,
+                      :Resolution_2560x1600 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_56wh ,
+                      :Weight_1_4kg ;
+    :hasPrice "26200000"^^xsd:decimal .
+
+:HP_Elitebook_6_G1i_16_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_5_225H_14_nhn_14_lung_xung_nhp_ti_a_c_th_t_Pcore_49GHz__Ecore_43GHz_18_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_TLC_M2_SSD ,
+                      :Resolution_2560x1600 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_56wh ,
+                      :Weight_1_6kg ;
+    :hasPrice "24900000"^^xsd:decimal .
+
+:HP_Elitebook_6_G1i_16_2025_Ultra_7255H_3264GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255H_16_nhn_16_lung_xung_nhp_ti_a_c_th_t_Pcore_51GHz__Ecore_44GHz_24_MB_Intel_Intel_AI_Boost ,
+                      :3264GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_TLC_M2_SSD ,
+                      :Resolution_2560x1600 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_56wh ,
+                      :Weight_1_6kg ;
+    :hasPrice "26900000"^^xsd:decimal .
+
+:HP_Elitebook_6_G1i_16_2025_Ultra_5225H_32GB_RAM_1TB_SSD_RTX_3050 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_5_225H_14_nhn_14_lung_xung_nhp_ti_a_c_th_t_Pcore_49GHz__Ecore_43GHz_18_MB_Intel_Smart_Cache_Intel_AI_Boost ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_TLC_M2_SSD ,
+                      :Resolution_2560x1600 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_56wh ,
+                      :Weight_1_6kg ;
+    :hasPrice "31300000"^^xsd:decimal .
+
+:HP_Elitebook_6_G1i_16_2025_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_3050 rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_255H_16_nhn_16_lung_xung_nhp_ti_a_c_th_t_Pcore_51GHz__Ecore_44GHz_24_MB_Intel_Intel_AI_Boost ,
+                      :3264GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_TLC_M2_SSD ,
+                      :Resolution_2560x1600 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_56wh ,
+                      :Weight_1_6kg ;
+    :hasPrice "33300000"^^xsd:decimal .
+
+:HP_Elitebook_8_G1i_16_2025_Ultra_7258V_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_258V_32GB_8_nhn_gm_4_nhn_P_v_4_nhn_E_8_lung_xung_nhp_c_bn_t_22GHz_c_th_t_max_Pcore_vi_turbo_boost_ti_48GHz_12_MB_Intel_Smart_Cache ,
+                      :32GB_LPDDR5X8533MHz_khng_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_Value_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_62wh ,
+                      :Weight_1_69kg ;
+    :hasPrice "32300000"^^xsd:decimal .
+
+:HP_Elitebook_8_G1i_16_2025_Ultra_5228V_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Ultra_5_228V_21_GHz_base_clock_up_to_45_GHz_max_boost_clock_8_MB_cache_8_cores_8_threads ,
+                      :32GB_LPDDR5X8533MHz_khng_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_Value_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_62wh ,
+                      :Weight_1_69kg ;
+    :hasPrice "29290000"^^xsd:decimal .
+
+:HP_Elitebook_8_G1i_14_2025_Ultra_7258V_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_258V_32GB_8_nhn_gm_4_nhn_P_v_4_nhn_E_8_lung_xung_nhp_c_bn_t_22GHz_c_th_t_max_Pcore_vi_turbo_boost_ti_48GHz_12_MB_Intel_Smart_Cache ,
+                      :32GB_LPDDR5X8533MHz_khng_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_Value_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_62wh ,
+                      :Weight_1_46kg ;
+    :hasPrice "31690000"^^xsd:decimal .
+
+:HP_Elitebook_8_G1i_14_2025_Ultra_5228V_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Ultra_5_228V_21_GHz_base_clock_up_to_45_GHz_max_boost_clock_8_MB_cache_8_cores_8_threads ,
+                      :32GB_LPDDR5X8533MHz_khng_nng_cp_c ,
+                      :1_TB_PCIe_NVMe_Value_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_62wh ,
+                      :Weight_1_46kg ;
+    :hasPrice "27500000"^^xsd:decimal .
+
+:HP_ProBook_460_G11_Ultra5_125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_5125H_14_nhn_18_lung_xung_nhp_ti_a_vi_Turbo_Boost_ti_45GHz_18_MB_Intel_Smart_Cache ,
+                      :16_GB_DDR5_5600MHz_c_h_tr_nng_cp ,
+                      :512GB_PCIe_NVMe_M2_SSD ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_400nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_56_Wh ,
+                      :Weight_1_74kg ;
+    :hasPrice "19200000"^^xsd:decimal .
+
+:HP_Pavilion_Plus_14_2024_R78845HS_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_8845HS_up_to_51_GHz_max_boost_clock_16_MB_L3_cache_8_cores_16_threads ,
+                      :32_GB_LPDDR5x6400_MTs_khng_th_nng_cp ,
+                      :1TB_PCIe_NVMe_M2 ,
+                      :Battery_68_Wh ,
+                      :Weight_1_5kg ;
+    :hasPrice "18890000"^^xsd:decimal .
+
+:HP_OMEN_16_I513500HX_16GB_RAM_512GB_SSD_RTX_4060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_i513500HX14_Cores_20_Threads_up_to_470_GHz_24MB ,
+                      :16GB_DDR54800_MHz_RAM_2_x_8_GB_c_th_nng_cp ,
+                      :512B_1x_512_GB_PCIe_Gen_3_NVMe_TLC_M2_SSD ,
+                      :RefreshRate_240Hz ,
+                      :Battery_4cell_70wh ,
+                      :Weight_2_35kg ;
+    :hasPrice "23900000"^^xsd:decimal .
+
+:HP_Zbook_Power_G11_R78845HS_16GB_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_8845HS_up_to_51_GHz_max_boost_clock_16_MB_L3_cache_8_cores_16_threads ,
+                      :1632GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_6_cell_83wh ,
+                      :Weight_2_12kg ;
+    :hasPrice "20590000"^^xsd:decimal .
+
+:HP_Elitebook_845_G11_R78840HS_1632GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_Pro_8840HS_with_Radeon_Graphics_33_GHz_base_clock_up_to_51_GHz_max_boost_clock16_MB_L3_cache_8_cores16_threads ,
+                      :1632GB_DDR55600MHz_c_th_nng_cp_c_bn_16GB_l_82_32GB_l_16_2 ,
+                      :1_TB_PCIe_NVMe_Value_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_3_cell_56wh ,
+                      :Weight_1_42kg ;
+    :hasPrice "22890000"^^xsd:decimal .
+
+:HP_ProBook_445_G11_R57535U_16GB_RAM_512GB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_5_7535U_20_GHz__45_GHz16MB6_nhn_12_lung ,
+                      :16_GBDDR5_5600_MHz ,
+                      :512GB_SSD_NVMe_PCIe ,
+                      :Brightness_300nits ,
+                      :Battery_3cell_56_Wh ,
+                      :Weight_1_4kg ;
+    :hasPrice "13490000"^^xsd:decimal .
+
+:HP_Elitebook_865_G10_R77840H_16GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_Processors_with_Radeon_Graphics_7840HS_8_core_16_threads_38GHz_Up_to_51GHz_16MB_Cache ,
+                      :16GB_DDR5_5600MHz ,
+                      :1TB_PCIe_NVMe_M2_SSD ,
+                      :RefreshRate_60Hz ,
+                      :Battery_6cell_76_Wh ,
+                      :Weight_1_75kg ;
+    :hasPrice "22300000"^^xsd:decimal .
+
+:HP_ZBook_Power_156_G10_R77840HS_1632GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_7840HS_Mobile_Processor_8core16thread_16MB_L3_cache_up_to_52_GHz_max_boost ,
+                      :1632_GB_DDR55600_MHz_RAM_2_x_816_GB ,
+                      :1TB_PCIe_SSD_Gen_4 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_6cell_83_Wh ,
+                      :Weight_2kg ;
+    :hasPrice "21000000"^^xsd:decimal .
+
+:HP_Elitebook_845_G10_2023_R7R9_1632GB_RAM_1TB_SSD_25k_120Hz rdf:type :Product ;
+    :hasPrice "21590000"^^xsd:decimal .
+
+:Mechrevo_15X_80Wh_R78745HS_24GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Ryzen_7_8745HS_8_cores_x_16_threads_up_to_49_GHz_turbo_boost ,
+                      :24GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_80wh ,
+                      :Weight_1_68kg ;
+    :hasPrice "16200000"^^xsd:decimal .
+
+:ROG_Zephyrus_G16_2025_Black_AI_7_H_350_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_7_H_350_8_nhn_16_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_5GHz_8MB_L2_Cache_16MB_L3_Cache_default_TDP_28W_4nm_Zen_5 ,
+                      :32GB_RAM_LPDDR5X_7467_khng_h_tr_nng_cp ,
+                      :1TB_M2_NVMe_PCIe_40_SSD_2_slot ,
+                      :RefreshRate_240Hz ,
+                      :Battery_4_cell_90_Whrs ,
+                      :Weight_1_9kg ;
+    :hasPrice "54000000"^^xsd:decimal .
+
+:ROG_Zephyrus_G16_2025_White_AI_7_H_350_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_7_H_350_8_nhn_16_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_5GHz_8MB_L2_Cache_16MB_L3_Cache_default_TDP_28W_4nm_Zen_5 ,
+                      :32GB_RAM_LPDDR5X_7467_khng_h_tr_nng_cp ,
+                      :1TB_M2_NVMe_PCIe_40_SSD_2_slot ,
+                      :RefreshRate_240Hz ,
+                      :Battery_4_cell_90_Whrs ,
+                      :Weight_1_9kg ;
+    :hasPrice "55000000"^^xsd:decimal .
+
+:Mechrevo_Star_14_2025_AI_9_H_365_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_9_H_365_10_nhn_20_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_5GHz_10MB_L2_Cache_24MB_L3_Cache_default_TDP_28W_4nm_Zen_5 ,
+                      :32GB_LPDDR5X8000MTs_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_80wh ,
+                      :Weight_1_00kg ;
+    :hasPrice "22500000"^^xsd:decimal .
+
+:Mechrevo_Star_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_H_255_38_GHz_up_to_49_GHz_8_Cores_16_Threads_16MB_Cache ,
+                      :32GB_LPDDR5X7500MTs_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_40_x4_NVME_M2_SSD ,
+                      :RefreshRate_120Hz ,
+                      :Battery_80wh ,
+                      :Weight_1_00kg ;
+    :hasPrice "20000000"^^xsd:decimal .
+
+:ASUS_TUF_Gaming_A14_2025_Ryzen_AI_7_H_350_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_7_H_350_8_nhn_16_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_5GHz_8MB_L2_Cache_16MB_L3_Cache_default_TDP_28W_4nm_Zen_5 ,
+                      :32GB_RAM_LPDDR5X7500Mhz_khng_th_nng_cp ,
+                      :1TB_M2_NVMe_PCIe_40_SSD__2_slot ,
+                      :RefreshRate_165Hz ,
+                      :Battery_4_cell_73_Wh ,
+                      :Weight_1_46kg ;
+    :hasPrice "35800000"^^xsd:decimal .
+
+:ROG_Zephyrus_G14_2025_White_AI_9_HX_370_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_9_HX_370_Processor_20GHz_36MB_Cache_ln_n_51GHz_12_nhn_24_lung_NPU_AMD_XDNA_ln_ti_50TOPS ,
+                      :32_GB_RAM_LPDDR5X_khng_h_tr_nng_cp ,
+                      :1TB_M2_NVMe_PCIe_40_SSD__2_slot ,
+                      :RefreshRate_120Hz ,
+                      :Battery_4_cell_73_Wh ,
+                      :Weight_1_5kg ;
+    :hasPrice "72400000"^^xsd:decimal .
+
+:ROG_Zephyrus_G14_2025_White_AI_9_HX_370_32GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_9_HX_370_Processor_20GHz_36MB_Cache_ln_n_51GHz_12_nhn_24_lung_NPU_AMD_XDNA_ln_ti_50TOPS ,
+                      :32_GB_RAM_LPDDR5X_khng_h_tr_nng_cp ,
+                      :1TB_M2_NVMe_PCIe_40_SSD__2_slot ,
+                      :RefreshRate_120Hz ,
+                      :Battery_4_cell_73_Wh ,
+                      :Weight_1_5kg ;
+    :hasPrice "53200000"^^xsd:decimal .
+
+:ROG_Zephyrus_G14_2025_Black_AI_9_HX_370_32GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_9_HX_370_Processor_20GHz_36MB_Cache_ln_n_51GHz_12_nhn_24_lung_NPU_AMD_XDNA_ln_ti_50TOPS ,
+                      :32_GB_RAM_LPDDR5X_khng_h_tr_nng_cp ,
+                      :1TB_M2_NVMe_PCIe_40_SSD__2_slot ,
+                      :RefreshRate_120Hz ,
+                      :Battery_4_cell_73_Wh ,
+                      :Weight_1_5kg ;
+    :hasPrice "53200000"^^xsd:decimal .
+
+:Mechrevo_15X_Pro_2025_AI_9_H_365_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_9_H_365_10_nhn_20_lung_xung_nhp_c_bn_2GHz_ti_a_c_th_t_5GHz_10MB_L2_Cache_24MB_L3_Cache_default_TDP_28W_4nm_Zen_5 ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD2_slot ,
+                      :Resolution_2560x1600 ,
+                      :Battery_99wh ,
+                      :Weight_1_7kg ;
+    :hasPrice "21700000"^^xsd:decimal .
+
+:ASUS_TUF_Gaming_A14_2024_AI_9_HX_370_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_9_HX_370_Processor_20GHz_36MB_Cache_ln_n_51GHz_12_nhn_24_lung_NPU_AMD_XDNA_ln_ti_50TOPS ,
+                      :32_GB_RAM_LPDDR5X_khng_th_nng_cp ,
+                      :1TB_M2_NVMe_PCIe_40_SSD__2_slot ,
+                      :RefreshRate_165Hz ,
+                      :Battery_4_cell_73_Wh ,
+                      :Weight_1_46kg ;
+    :hasPrice "37000000"^^xsd:decimal .
+
+:ASUS_Zenbook_14_2025_Bc_Ultra_9_285H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_285H_16_nhn_16_lung_xung_nhp_c_th_t_ti_54GHz_vi_turbo_boost_24_MB_Intel_Smart_Cache_Default_TDP_45W_chun_Intel_Evo ,
+                      :32GB_LPDDR5x_7467Mhz_khng_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_gen_4 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_4cell_75_Wh ,
+                      :Weight_1_2kg ;
+    :hasPrice "25990000"^^xsd:decimal .
+
+:ASUS_Zenbook_14_2024_Bc_Ultra_9_185H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_9_Processor_185H_23_GHz_24MB_Cache_up_to_51_GHz_16_cores_22_Threads_Intel_AI_Boost_NPU ,
+                      :32_GB_LPDDR5X_RAM ,
+                      :1TB_PCIe_NVMe_M2_SSD_gen_4 ,
+                      :Brightness_400nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_4cell_75_Wh ,
+                      :Weight_1_2kg ;
+    :hasPrice "22890000"^^xsd:decimal .
+
+:Mechrevo_14X_80Wh_R78845HS_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_8845HS_up_to_51_GHz_max_boost_clock_16_MB_L3_cache_8_cores_16_threads ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_80wh ,
+                      :Weight_1_45kg ;
+    :hasPrice "17800000"^^xsd:decimal .
+
+:ASUS_Zenbook_S_16_UM5606_AI_9_HX_370_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_AI_9_HX_370_Processor_20GHz_36MB_Cache_up_to_51GHz_12_cores_24_Threads_AMD_XDNA_NPU_up_to_50TOPS ,
+                      :32_GB_RAM_LPDDR5X_khng_th_nng_cp ,
+                      :1TB_M2_NVMe_PCIe_40_SSD ,
+                      :Brightness_400nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_4_cell_78_Wh ,
+                      :Weight_1_5kg ;
+    :hasPrice "34390000"^^xsd:decimal .
+
+:Mechrevo_15X_80Wh_R78845HS_24GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_8845HS_up_to_51_GHz_max_boost_clock_16_MB_L3_cache_8_cores_16_threads ,
+                      :24GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_80wh ,
+                      :Weight_1_68kg ;
+    :hasPrice "17200000"^^xsd:decimal .
+
+:Mechrevo_15X_99Whr_R78845HS_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_8845HS_up_to_51_GHz_max_boost_clock_16_MB_L3_cache_8_cores_16_threads ,
+                      :32GB_DDR55600MHz_c_th_nng_cp_c ,
+                      :1_TB_PCIe_Gen4_NVMe_TLC_M2_SSD ,
+                      :Battery_99wh ,
+                      :Weight_1_68kg ;
+    :hasPrice "20000000"^^xsd:decimal .
+
+:AI_ASUS_Zenbook_S_14_UX5406S_Ultra_7_258V_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_Processor_258V_3nm_8core8thread_up_to_48_GHz_NPU_AI ,
+                      :32_GB_RAM_LPDDR5X_8533_MTs ,
+                      :1TB_PCIe_SSD_Gen_4 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_72_Wh ,
+                      :Weight_1_15kg ;
+    :hasPrice "30790000"^^xsd:decimal .
+
+:Mn_Hnh_ViewSonic_VX27582KPRO5_27_inch_FAST_IPS_185hz rdf:type :Product ;
+    :hasPrice "4500000"^^xsd:decimal .
+
+:ASUS_ROG_Zephyrus_G14_2024_R98945HS_32GB_RAM_1TB_SSD_RTX_4060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8945HS_4GHz_24MB_Cache_up_to_52_GHz_8_Cores_16_Threads_AMD_Ryzen_AI_technology ,
+                      :32GB_LPDDR5X_6400_RAM ,
+                      :1TB_PCIe_40_NVMe_M2_SSD ,
+                      :Brightness_500nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_73Wh ,
+                      :Weight_1_5kg ;
+    :hasPrice "46490000"^^xsd:decimal .
+
+:ASUS_Zenbook_14_2024_Ultra_7_155H_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_Ultra_7_155H_16core22thread_24MB_Intel_Smart_Cache_48_GHz ,
+                      :32_GB_LPDDR5X_RAM ,
+                      :1TB_PCIe_SSD_Gen_4 ,
+                      :RefreshRate_120Hz ,
+                      :Battery_4cell_75_Wh ,
+                      :Weight_1_2kg ;
+    :hasPrice "26000000"^^xsd:decimal .
+
+:Asus_ROG_Zephyrus_M16_2022_i712700H_16GB_RAM_512GB_SSD_RTX_3060_165Hz rdf:type :Product ;
+    :hasSpecification :Intel_Core_i712700H_14_nhn_20_lung_tn_s_xung_nhp_c_bn_35GHz__ti_a_Turbo_boost_c_th_t_47GHz_24_MB_Intel_Smart_Cache_45W ,
+                      :16GB_DDR5_4800MHz_8GB_onboard ,
+                      :512GB_PCIe_40_NVMe_M2_SSD ,
+                      :Resolution_2560x1600 ,
+                      :RefreshRate_165Hz ,
+                      :Battery_4cell_90_Wh ,
+                      :Weight_2kg ;
+    :hasPrice "27300000"^^xsd:decimal .
+
+:Dell_inspiron_5420__I5_1240P_16GB_RAM_512GB_SSD rdf:type :Product ;
+    :hasSpecification :Intel_Core_i5_1240P_12_nhn_16_lung_tn_s_xung_nhp_c_bn_17GHz__ti_a_Turbo_boost_c_th_t_44GHz_vi_core_P_v_33GHz_vi_Core_E_12MB_Smart_Cache ,
+                      :16GB_DDR_3200MHz_dual_channel_2_x_8GB_c_2_khe_lp_c_th_nng_cp_ti_a_64GB ,
+                      :512GB_PCIe_NVME_M2_SSD_c_th_nng_cp_theo_dng_thay_th ,
+                      :Brightness_300nits ,
+                      :RefreshRate_60Hz ,
+                      :Battery_4_cell_54Wh ,
+                      :Weight_1_54kg ;
+    :hasPrice "14000000"^^xsd:decimal .
