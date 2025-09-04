@@ -1,0 +1,32 @@
+@prefix ex: <http://example.org/laptop#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Lecoo_Fighter_7000_2025_I7_14650HX_16GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 27190000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_i7_14650HX,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5600MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.4kg .
+
+ex:Lecoo_Fighter_7000_2025_R9_8940HX_16GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 27000000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_8940HX,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5200MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.4kg .
+
+ex:Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 15790000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_7_H_255,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_5600MHz,
+        ex:Resolution_2880x1800,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.43kg .

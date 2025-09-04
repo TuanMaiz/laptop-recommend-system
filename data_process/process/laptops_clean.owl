@@ -1,0 +1,793 @@
+@prefix ex: <http://example.org/laptop#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Lecoo_Fighter_7000_2025_I7_14650HX_16GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 27190000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_i7_14650HX,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5600MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.4kg .
+
+ex:Lecoo_Fighter_7000_2025_R9_8940HX_16GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 27000000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_8940HX,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5200MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.4kg .
+
+ex:Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 15790000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_7_H_255,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_5600MHz,
+        ex:Resolution_2880x1800,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.43kg .
+
+ex:Legion_5_2025_R7000P_R9_8940HX_16GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 32090000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_8940HX,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5600MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.5kg .
+
+ex:Legion_5_2025_R7000P_R9_8945HX_16GB_RAM_1TB_SSD_RTX_5060_5070_ a ex:Product ;
+    ex:hasPrice 31690000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_8945HX,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5600MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.5kg .
+
+ex:Legion_5_2025_R7000_2_5K_Ryzen_7_H_255_16GB_RAM_512GB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 28890000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_7_H_255,
+        ex:Battery_60wh,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5600MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_512GB_SSD,
+        ex:Weight_2kg .
+
+ex:Legion_5_2025_Y7000P_I7_14650HX_16GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 33790000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_i7_14650HX,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD .
+
+ex:Legion_5_2025_Y7000P_I9_14900HX_16GB_RAM_1TB_SSD_RTX_5060_5070_ a ex:Product ;
+    ex:hasPrice 34190000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_i9_14900HX,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD .
+
+ex:Legion_5_2025_Y7000_2_5K_I7_14650HX_16_24GB_RAM_512GB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 30990000.0 ;
+    ex:hasSpecification ex:Battery_60wh,
+        ex:Intel_Core_i7_14650HX,
+        ex:Lenovo,
+        ex:RAM_24GB_DDR5_5600MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_512GB_SSD,
+        ex:Weight_2kg .
+
+ex:Legion_5_2025_Y7000_FHD_I7_13650HX_24GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 31590000.0 ;
+    ex:hasSpecification ex:Battery_60wh,
+        ex:Intel_Core_i7_13650HX,
+        ex:Lenovo,
+        ex:RAM_24GB_DDR5,
+        ex:Resolution_15_3_FHD_1920_1200_IPS_300nits_m_n_nh_m_165Hz_100_sRGB_DC_dimmer,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2kg .
+
+ex:Legion_5_Pro_2024_R9000P_ARX8_Ryzen_9_7945HX_16GB_RAM_1TB_SSD_RTX4060_Tr_ng a ex:Product ;
+    ex:hasPrice 32500000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_7945HX,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5200MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.55kg .
+
+ex:Legion_5_Pro_2024_R9000P_ARX8_Ryzen_9_7945HX_16GB_RAM_1TB_SSD_RTX4070 a ex:Product ;
+    ex:hasPrice 35200000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_7945HX,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5200MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.55kg .
+
+ex:Legion_7_2025_Y9000X_White_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 53200000.0 ;
+    ex:hasSpecification ex:Battery_84wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_6400MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.98kg .
+
+ex:Legion_7_2025_Y9000X_White_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5070_ a ex:Product ;
+    ex:hasPrice 56800000.0 ;
+    ex:hasSpecification ex:Battery_84wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_6400MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.98kg .
+
+ex:Legion_Pro_5_2025_R9000P_Black_R9_8945HX_32GB_RAM_1TB_SSD_RTX_5060_5070_ a ex:Product ;
+    ex:hasPrice 34900000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_8945HX,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_5600MHz_nh_n_5200MHz_h_tr_n_ng_c_p_,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.57kg .
+
+ex:Legion_Pro_5_2025_R9000P_White_R9_8945HX_32GB_RAM_1TB_SSD_RTX_5060_5070_ a ex:Product ;
+    ex:hasPrice 36400000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_8945HX,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_5600MHz_nh_n_5200MHz_h_tr_n_ng_c_p_,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.57kg .
+
+ex:Legion_Pro_5_2025_Y9000P_Black_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5060_5070_ a ex:Product ;
+    ex:hasPrice 42600000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_6400MHz_h_tr_n_ng_c_p_,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.57kg .
+
+ex:Legion_Pro_5_2025_Y9000P_White_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5060_5070_ a ex:Product ;
+    ex:hasPrice 46700000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_6400MHz_h_tr_n_ng_c_p_,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.57kg .
+
+ex:Legion_Pro_7i_2025_Y9000P_Black_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5080_ a ex:Product ;
+    ex:hasPrice 74200000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_6400MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.57kg .
+
+ex:Legion_Pro_7i_2025_Y9000P_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5070Ti_ a ex:Product ;
+    ex:hasPrice 66490000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_6400MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.57kg .
+
+ex:Legion_Pro_7i_2025_Y9000P_White_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5070Ti_ a ex:Product ;
+    ex:hasPrice 67290000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_6400MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.57kg .
+
+ex:Legion_Pro_7i_2025_Y9000P_White_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5080_ a ex:Product ;
+    ex:hasPrice 73000000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_6400MHz,
+        ex:Resolution_2560x1600,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.57kg .
+
+ex:ThinkBook_16P_2025_2_5k_165Hz_R9_8945HX_16GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 32500000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_8945HX,
+        ex:Battery_85wh,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5200MHz,
+        ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_350nits_t_n_s_qu_t_165Hz_100_sRGB_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.2kg .
+
+ex:ThinkBook_16P_2025_2_5k_240Hz_R9_8945HX_16GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 35690000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_8945HX,
+        ex:Battery_85wh,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5200MHz,
+        ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_240Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display_HDR_400,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.2kg .
+
+ex:ThinkBook_16P_2025_2_5k_240Hz_R9_8945HX_32GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 36900000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_9_8945HX,
+        ex:Battery_85wh,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_5200MHz,
+        ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_240Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display_HDR_400,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.2kg .
+
+ex:ThinkBook_16P_2025_2_5k_Ultra_7_255HX_16GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 38500000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_Core_Ultra_7_255HX,
+        ex:Lenovo,
+        ex:RAM_16GB_DDR5_5600MHz,
+        ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_240Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.2kg .
+
+ex:ThinkBook_16P_2025_2_5k_Ultra_7_255HX_32GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 40000000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_Core_Ultra_7_255HX,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_5600MHz,
+        ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_240Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.2kg .
+
+ex:ThinkBook_16P_2025_2_5k_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 46000000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_5600MHz_h_tr_n_ng_c_p_,
+        ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_240Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display_HDR_400,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.2kg .
+
+ex:ThinkBook_16P_2025_2_5k_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5070_ a ex:Product ;
+    ex:hasPrice 52500000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_5600MHz_h_tr_n_ng_c_p_,
+        ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_240Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display_HDR_400,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.2kg .
+
+ex:ThinkBook_16P_2025_3_2k_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 48000000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_5600MHz_h_tr_n_ng_c_p_,
+        ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.2kg .
+
+ex:ThinkBook_16P_2025_3_2k_Ultra_9_275HX_32GB_RAM_1TB_SSD_RTX_5070_ a ex:Product ;
+    ex:hasPrice 53500000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_Core_Ultra_9_275HX,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_5600MHz_h_tr_n_ng_c_p_,
+        ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display,
+        ex:Storage_1TB_SSD,
+        ex:Weight_2.2kg .
+
+ex:ThinkPad_T14P_AI_2025_Ultra_5_225H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 28500000.0 ;
+    ex:hasSpecification ex:Battery_75wh,
+        ex:Intel_Core_Ultra_5_225H,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_5600MHz_c_th_n_ng_c_p_c_,
+        ex:Resolution_14_5_3k_IPS_500nit_120Hz_100_DCI_P3_Eyesafe_certified_low_blue_light_E_1,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.56kg .
+
+ex:ThinkPad_T14P_AI_2025_Ultra_7_255H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 33200000.0 ;
+    ex:hasSpecification ex:Battery_75wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_5600MHz_c_th_n_ng_c_p_c_,
+        ex:Resolution_14_5_3k_IPS_500nit_120Hz_100_DCI_P3_Eyesafe_certified_low_blue_light_E_1,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.56kg .
+
+ex:ThinkPad_T14P_AI_2025_Ultra_9_285H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 34000000.0 ;
+    ex:hasSpecification ex:Battery_75wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_16_16_DDR5_5600MHz_c_th_n_ng_c_p_c_,
+        ex:Resolution_14_5_3k_IPS_500nit_120Hz_100_DCI_P3_Eyesafe_certified_low_blue_light_E_1,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.56kg .
+
+ex:ThinkPad_T14_Gen_4_R5_7540U_32GB_RAM_512GB_SSD_ a ex:Product ;
+    ex:hasPrice 18700000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen,
+        ex:Battery_52wh,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_6400MHz_kh_ng_h_tr_n_ng_c_p_c_,
+        ex:Resolution_14_WUXGA_1920_x_1200_IPS_300_nits_antiglare_45_NTSC,
+        ex:Storage_512GB_SSD,
+        ex:Weight_1.35kg .
+
+ex:ThinkPad_X9_14_2025_Touch_Ultra_7_258V_32GB_RAM_1TB_SSD_Aura_Edition a ex:Product ;
+    ex:hasPrice 41500000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_Ultra_7_258V_32GB,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8533MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_14_2_8K_2880_x_1800_OLED_m_n_g_ng_c_c_m_ng_t_n_s_qu_t_120Hz_s_ng_m_n_h_nh_500nits_100_DCI_P3_DisplayHDR_True_Black_600_Dolby_Vision_LOW_BLUE_LIGHT_t_ch_ng_nh_n_b_o_v_m_t_Eyesafe2_0_certification,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.21kg .
+
+ex:ThinkPad_X9_14_2025_Touch_Ultra_9_288V_32GB_RAM_2TB_SSD_Aura_Edition a ex:Product ;
+    ex:hasPrice 53400000.0 ;
+    ex:hasSpecification ex:Battery_55wh,
+        ex:Intel_Core_Ultra_9_288V,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8533MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_14_2_8K_2880_x_1800_OLED_m_n_g_ng_c_c_m_ng_t_n_s_qu_t_120Hz_s_ng_m_n_h_nh_500nits_100_DCI_P3_DisplayHDR_True_Black_600_Dolby_Vision_LOW_BLUE_LIGHT_t_ch_ng_nh_n_b_o_v_m_t_Eyesafe2_0_certification,
+        ex:Storage_2TB_SSD,
+        ex:Weight_1.21kg .
+
+ex:ThinkPad_X9_15_2025_Touch_Ultra_7_258V_32GB_RAM_1TB_SSD_Aura_Edition a ex:Product ;
+    ex:hasPrice 43000000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_Ultra_7_258V_32GB,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8533MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_15_3_2_8K_2880_x_1800_OLED_m_n_g_ng_c_c_m_ng_t_n_s_qu_t_120Hz_s_ng_m_n_h_nh_500nits_100_DCI_P3_DisplayHDR_True_Black_600_Dolby_Vision_LOW_BLUE_LIGHT_t_ch_ng_nh_n_b_o_v_m_t_Eyesafe2_0_certification_X_Rite_color_calibration,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.4kg .
+
+ex:ThinkPad_X9_15_2025_Touch_Ultra_9_288V_32GB_RAM_2TB_SSD_Aura_Edition a ex:Product ;
+    ex:hasPrice 54500000.0 ;
+    ex:hasSpecification ex:Battery_80wh,
+        ex:Intel_Core_Ultra_9_288V,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8533MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_15_3_2_8K_2880_x_1800_OLED_m_n_g_ng_c_c_m_ng_t_n_s_qu_t_120Hz_s_ng_m_n_h_nh_500nits_100_DCI_P3_DisplayHDR_True_Black_600_Dolby_Vision_LOW_BLUE_LIGHT_t_ch_ng_nh_n_b_o_v_m_t_Eyesafe2_0_certification_X_Rite_color_calibration,
+        ex:Storage_2TB_SSD,
+        ex:Weight_1.4kg .
+
+ex:Thinkbook_14_G7_2025_R7_H_260_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 20790000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_7_H_260,
+        ex:Battery_85wh,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_7500MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_14_5_3K_3072_1920_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_500nits_t_n_s_qu_t_120Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.5kg .
+
+ex:Thinkbook_14_G7_2025_Ultra_9_285H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 27890000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8533MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_14_5_3K_3072_1920_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_l_n_t_i_500nits_t_n_s_qu_t_120Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.5kg .
+
+ex:Thinkbook_16_G7_2025_R7_H_260_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 21390000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_7_H_260,
+        ex:Battery_85wh,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_7500MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_NVIDIA_G_SYNC_T_V_Low_Blue_Light_,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.9kg .
+
+ex:Thinkbook_16_G7_2025_Ultra_7_255H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 27490000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5,
+        ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_l_n_t_i_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.9kg .
+
+ex:Thinkbook_16_G7_2025_Ultra_7_255H_32GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 36400000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_5600MHz,
+        ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_l_n_t_i_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_c_c_th_ng_s_n_y_c_ng_b_tr_n_trang_c_a_ch_nh,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.9kg .
+
+ex:Thinkbook_16_G7_2025_Ultra_9_285H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 28190000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_5600MHz,
+        ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_l_n_t_i_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_c_c_th_ng_s_n_y_c_ng_b_tr_n_trang_c_a_ch_nh,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.9kg .
+
+ex:Thinkbook_16_G7_2025_Ultra_9_285H_32GB_RAM_1TB_SSD_RTX_5060_ a ex:Product ;
+    ex:hasPrice 38000000.0 ;
+    ex:hasSpecification ex:Battery_85wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_5600MHz,
+        ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_l_n_t_i_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_c_c_th_ng_s_n_y_c_ng_b_tr_n_trang_c_a_ch_nh,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.9kg .
+
+ex:Thinkbook_X_AI_2025_Kh_ng_Touch_Ultra_5_225H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 26990000.0 ;
+    ex:hasSpecification ex:Battery_74wh,
+        ex:Intel_Core_Ultra_5_225H,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8400MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_2880x1920,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.2kg .
+
+ex:Thinkbook_X_AI_2025_Kh_ng_Touch_Ultra_9_285H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 29390000.0 ;
+    ex:hasSpecification ex:Battery_74wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8400MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_2880x1920,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.2kg .
+
+ex:Thinkbook_X_AI_2025_Limited_Ultra_9_285H_32GB_RAM_1TB_SSD_Stainless_Magnesium_Edition a ex:Product ;
+    ex:hasPrice 36690000.0 ;
+    ex:hasSpecification ex:Battery_74wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8400MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_2880x1920,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1kg .
+
+ex:Thinkbook_X_AI_2025_Touch_Ultra_5_225H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 28090000.0 ;
+    ex:hasSpecification ex:Battery_74wh,
+        ex:Intel_Core_Ultra_5_225H,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8400MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_2880x1920,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.2kg .
+
+ex:Thinkbook_X_AI_2025_Touch_Ultra_9_285H_32GB_RAM_1TB_SSD_ a ex:Product ;
+    ex:hasPrice 32390000.0 ;
+    ex:hasSpecification ex:Battery_74wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8400MHz_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_2880x1920,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.2kg .
+
+ex:Thinkpad_X1_Carbon_Gen_13_Ultra_5_225H_32GB_RAM_1TB_SSD_Aura_Edition_ a ex:Product ;
+    ex:hasPrice 44500000.0 ;
+    ex:hasSpecification ex:Battery_57_Wh,
+        ex:Intel_Core_Ultra_5_225H,
+        ex:Lenovo,
+        ex:RAM_32_GB_RAM_LPDDR5X_8400_MT_s_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_2880x1800,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.09kg .
+
+ex:Xiaoxin_15c_2025_Lenovo_IdeaPad_Slim_3_R7_8745HS_16GB_RAM_512GB_SSD a ex:Product ;
+    ex:hasPrice 15800000.0 ;
+    ex:hasSpecification ex:Battery_60wh,
+        ex:Lenovo,
+        ex:RAM_16GB_8GB_onboard_8GB_in_slot_ram_h_tr_DDR5_5600MHz_,
+        ex:Resolution_2560x1600,
+        ex:Ryzen_7_8745HS_8_cores_x_16_threads_up_to_4_9_GHz_turbo_boost_,
+        ex:Storage_512GB_SSD,
+        ex:Weight_1.49kg .
+
+ex:Xiaoxin_16_2024_R7_8745H_16GB_RAM_512GB_SSD_Lenovo_IdeaPad_Slim_5_ a ex:Product ;
+    ex:hasPrice 14490000.0 ;
+    ex:hasSpecification ex:Battery_57wh,
+        ex:Lenovo,
+        ex:RAM_16GB_LPDDR5X_6400MHz_onboard_kh_ng_n_ng_c_p_c_,
+        ex:Resolution_1920x1200,
+        ex:Ryzen_7_8745H_8_cores_x_16_threads_up_to_4_9_GHz_turbo_boost_,
+        ex:Storage_512GB_SSD,
+        ex:Weight_1.89kg .
+
+ex:Xiaoxin_Pro_14_GT_2025_AI_9_H_365_32GB_RAM_1TB_SSD_IdeaPad_5_Pro_ a ex:Product ;
+    ex:hasPrice 26390000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_AI_9_H_365,
+        ex:Battery_84wh,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8000MT_s_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_2880x1800,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.39kg .
+
+ex:Xiaoxin_Pro_14_GT_2025_Ultra_9_285H_32GB_RAM_1TB_SSD_Lenovo_IdeaPad_5_Pro_ a ex:Product ;
+    ex:hasPrice 27690000.0 ;
+    ex:hasSpecification ex:Battery_84wh,
+        ex:Intel_AI_Boost,
+        ex:Lenovo,
+        ex:RAM_32GB_LPDDR5x_8533_MT_s_kh_ng_h_tr_n_ng_c_p_,
+        ex:Resolution_2880x1800,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.39kg .
+
+ex:Xiaoxin_Pro_14c_2025_AI_7_H_350_32GB_RAM_1TB_SSD_Lenovo_IdeaPad_Slim_5_ a ex:Product ;
+    ex:hasPrice 21490000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_AI_7_H_350,
+        ex:Battery_60wh,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_5600Mhz,
+        ex:Resolution_2880x1800,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.39kg .
+
+ex:Xiaoxin_Pro_14c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSD_Lenovo_IdeaPad_Slim_5_ a ex:Product ;
+    ex:hasPrice 18090000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen,
+        ex:Battery_60wh,
+        ex:Lenovo,
+        ex:RAM_24GB_DDR5_4800Mhz,
+        ex:Resolution_2880x1800,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.39kg .
+
+ex:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSD_Lenovo_IdeaPad_Slim_5_ a ex:Product ;
+    ex:hasPrice 21990000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen_AI_7_H_350,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_32GB_DDR5_5600Mhz,
+        ex:Resolution_2880x1800,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.76kg .
+
+ex:Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSD_Lenovo_IdeaPad_Slim_5_ a ex:Product ;
+    ex:hasPrice 18790000.0 ;
+    ex:hasSpecification ex:AMD_Ryzen,
+        ex:Battery_80wh,
+        ex:Lenovo,
+        ex:RAM_24GB_DDR5_4800Mhz,
+        ex:Resolution_2880x1800,
+        ex:Storage_1TB_SSD,
+        ex:Weight_1.76kg .
+
+ex:AMD_Ryzen_AI_9_H_365 a ex:CPU .
+
+ex:Battery_52wh a ex:Battery .
+
+ex:Battery_55wh a ex:Battery .
+
+ex:Battery_57_Wh a ex:Battery .
+
+ex:Battery_57wh a ex:Battery .
+
+ex:Intel_Core_i7_13650HX a ex:CPU .
+
+ex:Intel_Core_i9_14900HX a ex:CPU .
+
+ex:RAM_16GB_8GB_onboard_8GB_in_slot_ram_h_tr_DDR5_5600MHz_ a ex:RAM .
+
+ex:RAM_16GB_LPDDR5X_6400MHz_onboard_kh_ng_n_ng_c_p_c_ a ex:RAM .
+
+ex:RAM_24GB_DDR5 a ex:RAM .
+
+ex:RAM_24GB_DDR5_5600MHz a ex:RAM .
+
+ex:RAM_32GB_DDR5 a ex:RAM .
+
+ex:RAM_32GB_DDR5_5200MHz a ex:RAM .
+
+ex:RAM_32GB_LPDDR5x_6400MHz_kh_ng_h_tr_n_ng_c_p_c_ a ex:RAM .
+
+ex:RAM_32GB_LPDDR5x_8000MT_s_kh_ng_h_tr_n_ng_c_p_ a ex:RAM .
+
+ex:RAM_32GB_LPDDR5x_8533_MT_s_kh_ng_h_tr_n_ng_c_p_ a ex:RAM .
+
+ex:RAM_32_GB_RAM_LPDDR5X_8400_MT_s_kh_ng_h_tr_n_ng_c_p_ a ex:RAM .
+
+ex:Resolution_14_5_3K_3072_1920_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_500nits_t_n_s_qu_t_120Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_ a ex:Resolution .
+
+ex:Resolution_14_5_3K_3072_1920_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_l_n_t_i_500nits_t_n_s_qu_t_120Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_ a ex:Resolution .
+
+ex:Resolution_14_WUXGA_1920_x_1200_IPS_300_nits_antiglare_45_NTSC a ex:Resolution .
+
+ex:Resolution_15_3_FHD_1920_1200_IPS_300nits_m_n_nh_m_165Hz_100_sRGB_DC_dimmer a ex:Resolution .
+
+ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_350nits_t_n_s_qu_t_165Hz_100_sRGB_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display a ex:Resolution .
+
+ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_NVIDIA_G_SYNC_T_V_Low_Blue_Light_ a ex:Resolution .
+
+ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_l_n_t_i_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_ a ex:Resolution .
+
+ex:Resolution_1920x1200 a ex:Resolution .
+
+ex:Ryzen_7_8745HS_8_cores_x_16_threads_up_to_4_9_GHz_turbo_boost_ a ex:CPU .
+
+ex:Ryzen_7_8745H_8_cores_x_16_threads_up_to_4_9_GHz_turbo_boost_ a ex:CPU .
+
+ex:Weight_1.09kg a ex:Weight .
+
+ex:Weight_1.35kg a ex:Weight .
+
+ex:Weight_1.43kg a ex:Weight .
+
+ex:Weight_1.49kg a ex:Weight .
+
+ex:Weight_1.89kg a ex:Weight .
+
+ex:Weight_1kg a ex:Weight .
+
+ex:AMD_Ryzen_7_H_255 a ex:CPU .
+
+ex:AMD_Ryzen_7_H_260 a ex:CPU .
+
+ex:AMD_Ryzen_9_7945HX a ex:CPU .
+
+ex:AMD_Ryzen_9_8940HX a ex:CPU .
+
+ex:AMD_Ryzen_AI_7_H_350 a ex:CPU .
+
+ex:Intel_Core_Ultra_7_255HX a ex:CPU .
+
+ex:Intel_Core_Ultra_7_258V_32GB a ex:CPU .
+
+ex:Intel_Core_Ultra_9_288V a ex:CPU .
+
+ex:RAM_16GB_DDR5 a ex:RAM .
+
+ex:RAM_24GB_DDR5_4800Mhz a ex:RAM .
+
+ex:RAM_32GB_16_16_DDR5_5600MHz_nh_n_5200MHz_h_tr_n_ng_c_p_ a ex:RAM .
+
+ex:RAM_32GB_16_16_DDR5_6400MHz_h_tr_n_ng_c_p_ a ex:RAM .
+
+ex:RAM_32GB_DDR5_5600Mhz a ex:RAM .
+
+ex:RAM_32GB_LPDDR5x_7500MHz_kh_ng_h_tr_n_ng_c_p_ a ex:RAM .
+
+ex:Resolution_14_2_8K_2880_x_1800_OLED_m_n_g_ng_c_c_m_ng_t_n_s_qu_t_120Hz_s_ng_m_n_h_nh_500nits_100_DCI_P3_DisplayHDR_True_Black_600_Dolby_Vision_LOW_BLUE_LIGHT_t_ch_ng_nh_n_b_o_v_m_t_Eyesafe2_0_certification a ex:Resolution .
+
+ex:Resolution_15_3_2_8K_2880_x_1800_OLED_m_n_g_ng_c_c_m_ng_t_n_s_qu_t_120Hz_s_ng_m_n_h_nh_500nits_100_DCI_P3_DisplayHDR_True_Black_600_Dolby_Vision_LOW_BLUE_LIGHT_t_ch_ng_nh_n_b_o_v_m_t_Eyesafe2_0_certification_X_Rite_color_calibration a ex:Resolution .
+
+ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_240Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display a ex:Resolution .
+
+ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display a ex:Resolution .
+
+ex:Storage_2TB_SSD a ex:Storage .
+
+ex:Weight_1.21kg a ex:Weight .
+
+ex:Weight_1.4kg a ex:Weight .
+
+ex:Weight_1.5kg a ex:Weight .
+
+ex:Weight_1.76kg a ex:Weight .
+
+ex:Weight_1.98kg a ex:Weight .
+
+ex:Weight_2.4kg a ex:Weight .
+
+ex:Weight_2.55kg a ex:Weight .
+
+ex:Weight_2.5kg a ex:Weight .
+
+ex:AMD_Ryzen a ex:CPU .
+
+ex:Battery_75wh a ex:Battery .
+
+ex:Intel_Core_i7_14650HX a ex:CPU .
+
+ex:RAM_32GB_16_16_DDR5_5600MHz_c_th_n_ng_c_p_c_ a ex:RAM .
+
+ex:Resolution_14_5_3k_IPS_500nit_120Hz_100_DCI_P3_Eyesafe_certified_low_blue_light_E_1 a ex:Resolution .
+
+ex:Resolution_16_3_2K_3200_2000_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_t_l_t_ng_ph_n_1200_1_s_ng_l_n_t_i_500nits_t_n_s_qu_t_165Hz_100_DCI_P3_ch_s_DeltaE_1_Dolby_Vison_T_V_Low_Blue_Light_c_c_th_ng_s_n_y_c_ng_b_tr_n_trang_c_a_ch_nh a ex:Resolution .
+
+ex:Weight_1.56kg a ex:Weight .
+
+ex:Weight_2kg a ex:Weight .
+
+ex:Battery_84wh a ex:Battery .
+
+ex:Intel_Core_Ultra_5_225H a ex:CPU .
+
+ex:RAM_32GB_16_16_DDR5_5600MHz_h_tr_n_ng_c_p_ a ex:RAM .
+
+ex:Resolution_16_2_5K_2560_1600_IPS_m_n_nh_m_kh_ng_c_m_ng_t_l_khung_h_nh_16_10_s_ng_500nits_t_n_s_qu_t_240Hz_100_DCI_P3_ch_s_DeltaE_1_T_V_Low_Blue_Light_Eyesafe_Display_HDR_400 a ex:Resolution .
+
+ex:Weight_1.2kg a ex:Weight .
+
+ex:Weight_1.39kg a ex:Weight .
+
+ex:Battery_74wh a ex:Battery .
+
+ex:RAM_16GB_DDR5_5200MHz a ex:RAM .
+
+ex:RAM_16GB_DDR5_5600MHz a ex:RAM .
+
+ex:RAM_32GB_DDR5_5600MHz a ex:RAM .
+
+ex:RAM_32GB_LPDDR5x_8400MHz_kh_ng_h_tr_n_ng_c_p_ a ex:RAM .
+
+ex:RAM_32GB_LPDDR5x_8533MHz_kh_ng_h_tr_n_ng_c_p_ a ex:RAM .
+
+ex:Resolution_2880x1920 a ex:Resolution .
+
+ex:Storage_512GB_SSD a ex:Storage .
+
+ex:Weight_1.9kg a ex:Weight .
+
+ex:AMD_Ryzen_9_8945HX a ex:CPU .
+
+ex:Battery_60wh a ex:Battery .
+
+ex:RAM_32GB_DDR5_6400MHz a ex:RAM .
+
+ex:Resolution_2880x1800 a ex:Resolution .
+
+ex:Weight_2.57kg a ex:Weight .
+
+ex:Weight_2.2kg a ex:Weight .
+
+ex:Intel_AI_Boost a ex:CPU .
+
+ex:Intel_Core_Ultra_9_275HX a ex:CPU .
+
+ex:Battery_85wh a ex:Battery .
+
+ex:Resolution_2560x1600 a ex:Resolution .
+
+ex:Battery_80wh a ex:Battery .
+
+ex:Storage_1TB_SSD a ex:Storage .
+
+ex:Lenovo a ex:Brand .
+
