@@ -1,0 +1,58 @@
+[
+    {
+        "url": "https://sazo.vn/products/lecoo-pro-14-2025-ryzen-7-h-255-32gb-ram-1tb-ssd",
+        "title": "Lecoo Pro 14 2025 (Ryzen 7 H 255| 32GB RAM| 1TB SSD)",
+        "price": "15,790,000₫",
+        "description": null,
+        "image_url": "https://sazo.vn/storage/products/lecoo-pro-14/1-1.png",
+        "brand": "Lenovo",
+        "specifications": {
+            "CPU": "AMD Ryzen 7 H 255 (8 cores 16 threads, can reach up to 4.9GHz with turbo boost, 24MB Cache)",
+            "Ram": "32GB DDR5-5600MHz (upgradeable)",
+            "Storage": "1TB PCIe® NVMe™ M.2 SSD (2 slots)",
+            "Resolution": "14″, 2.8K (2880x1800) IPS, LED, 400 nits brightness, 16:10 aspect ratio, 100% sRGB color gamut, 120Hz refresh rate, low blue light eye protection screen, DC dimmer",
+            "Graphics card": "AMD Radeon™ 780M",
+            "Ports": "1x microSD card reader/writer, 1x headphone jack, 3x USB-A 3.2 Gen 1, 1x LAN port, 1x USB-C 3.2 Gen 2 (also a charging port), 1x USB4 port, HDMI 2.1, 1x Oculink port (the same as TGX on Thinkbook 14 G7+ used for connecting to e-GPU)",
+            "Wireless connectivity": "Wifi 6 + Bluetooth 5.2",
+            "Camera": "FHD camera",
+            "Charger": "100W",
+            "Weight": "~1.43 kg",
+            "Dimensions": ">15mm",
+            "Keyboard": "Compact, with keyboard lighting",
+            "Battery": "80wh",
+            "Operating system": "Windows 11 Home",
+            "Condition": "100% New - FullBox, imported",
+            "Chassis material": "Metal",
+            "Warranty": "12 months"
+        },
+        "scraped_at": "2025-09-02 16:01:12"
+    },
+    {
+        "url": "https://sazo.vn/products/msi-ge68-hx-14-i7-14700hx-32gb-ram-1tb-ssd-rtx-5080",
+        "title": "MSI GE68 HX 14 (i7-14700HX| 32GB RAM| 1TB SSD| RTX 5080)",
+        "price": "61,500,000₫",
+        "description": null,
+        "image_url": "https://sazo.vn/storage/products/msi-ge68hx-14/1-1.png",
+        "brand": "MSI",
+        "specifications": {
+            "CPU": "Intel Core i7 14700HX (20 nhân 28 luồng, xung nhịp cơ bản 2.1GHz có thể đạt tới 5.5GHz với turbo boost, 33MB Cache)",
+            "Ram": "32GB DDR5-5600MHz",
+            "Ổ cứng": "1TB PCIe® 4.0 x4 NVME M.2 SSD",
+            "Độ phân giải": "16.0-inch, FHD+ (1920x1200) IPS, màn nhám, không cảm ứng, độ sáng 500nits, tần số quét 240Hz, tỷ lệ khung hình 16:10, độ phủ màu 100% DCI-P3",
+            "Card màn hình": "NVIDIA® GeForce RTX™ 5080 Laptop GPU 16GB GDDR7",
+            "Cổng kết nối": "1x USB 3.2 Gen 2 Type-A, 1x USB-C 3.2 Gen 2 (DisplayPort), 1x Thunderbolt 4, 1x HDMI 2.1, 1x Jack 3.5mm, 1x RJ45, 1x khe thẻ SD, 1x DC-in",
+            "Kết nối không dây": "Wifi 7 + Bluetooth 5.4",
+            "Camera": "FHD camera, IR camera",
+            "Sạc": "280W",
+            "Trọng lượng": "2.7 kg",
+            "Kích thước": "360 x 272 x 28 mm",
+            "Bàn Phím": "Full size, có led phím RGB",
+            "Pin": "4 cell, 99.9wh",
+            "Hệ điều hành": "Windows 11 Home",
+            "Tình trạng": "Mới 100% - FullBox, nhập khẩu",
+            "Chất liệu vỏ": "Kim loại",
+            "Bảo hành": "12 tháng"
+        },
+        "scraped_at": "2025-09-02 16:06:36"
+    }
+]
