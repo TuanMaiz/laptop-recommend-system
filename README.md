@@ -109,3 +109,4 @@ i.e
 ```
 python -m data_process.process.***
 ```
+python -m uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
