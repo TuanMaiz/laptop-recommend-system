@@ -14,6 +14,10 @@ from .sub_process.item_map import (
     SCREEN_MAP,
 )
 
+# from transformers import pipeline
+
+# qa = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
+
 
 class ResolutionSubInfo(Enum):
     BRIGHTNESS = "brightness"
@@ -129,11 +133,13 @@ class ParseOtherEntitiesJSONToOWL:
         )
         model = re.sub(r"\(.*?\)", "", model).strip()
 
-        cores = re.search(r"(\d+)\s*cores?", raw)
-        threads = re.search(r"(\d+)\s*threads?", raw)
+        cores = re.search(r"(\d+)\s*(?:cores?|nhân)", raw)
+        threads = re.search(r"(\d+)\s*(?:threads?|luồng)", raw)
         base = re.search(r"base clock\s*([\d\.]+)\s*GHz", raw, re.I)
         boost = re.search(r"up to\s*([\d\.]+)\s*GHz", raw, re.I)
         cache = re.search(r"(\d+MB)\s+(?:L3|Cache)", raw, re.I)
+        if not cache:
+            cache = re.search(r"(\d+MB)\s+(?:\w+\s+)*", raw, re.I)
 
         return f"""
         :{id} rdf:type :CPU ;
@@ -406,7 +412,10 @@ def json_to_owl(json_data):
 
         # Add price
         price = extract_price(item["price"])
-        owl_content.append(f'    :hasPrice "{price}"^^xsd:decimal .')
+        owl_content.append(f'    :hasPrice "{price}"^^xsd:decimal ;')
+
+        img_url = extract_price(item["image_url"])
+        owl_content.append(f'    :hasImage "{img_url}".')
 
         owl_content.append("")  # Empty line between products
 
@@ -428,7 +437,7 @@ def transform():
 
     # Write output to file
     with open(
-        "./data_process/process/owl_outputs/output.owl", "w", encoding="utf-8"
+        "./data_process/process/owl_outputs/output_2.owl", "w", encoding="utf-8"
     ) as file:
         file.write(owl_output)
 
