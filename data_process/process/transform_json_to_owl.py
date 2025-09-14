@@ -126,7 +126,7 @@ class AggregateData:
 
 class ParseOtherEntitiesJSONToOWL:
     @staticmethod
-    def cpu_entity(id: str, raw: str) -> str:
+    def cpu_entity(id: str, raw: str, functionality_map: dict) -> str:
         brand = "AMD" if "AMD" in raw else "Intel" if "Intel" in raw else "Unknown"
         model = (
             raw.replace("AMD", "").replace("Intel", "").replace("Processor", "").strip()
@@ -143,13 +143,14 @@ class ParseOtherEntitiesJSONToOWL:
 
         return f"""
         :{id} rdf:type :CPU ;
-            :brand "{brand}" ;
-            :model "{model}" ;
-            :cores "{cores.group(1) if cores else '?'}"^^xsd:integer ;
-            :threads "{threads.group(1) if threads else '?'}"^^xsd:integer ;
-            :baseClock "{base.group(1)+'GHz' if base else '?'}" ;
-            :boostClock "{boost.group(1)+'GHz' if boost else '?'}" ;
-            :cache "{cache.group(1) if cache else '?'}" .
+                :brand "{brand}" ;
+                :model "{model}" ;
+                :cores "{cores.group(1) if cores else '?'}"^^xsd:integer ;
+                :threads "{threads.group(1) if threads else '?'}"^^xsd:integer ;
+                :baseClock "{base.group(1)+'GHz' if base else '?'}" ;
+                :boostClock "{boost.group(1)+'GHz' if boost else '?'}" ;
+                :cache "{cache.group(1) if cache else '?'}" .
+            :satisfiesRequirement :{functionality_map.get(id, 'UnknownRequirement')[0]} .
         """
 
     @staticmethod
@@ -269,7 +270,7 @@ def extract_price(price_str):
     return re.sub(r"[^\d]", "", price_str)
 
 
-def parse_specifications(product, other_entities):
+def parse_specifications(product, other_entities, func_map):
     """Convert specifications to OWL format specifications"""
     owl_specs = []
     specs = product.get("specifications", {})
@@ -281,7 +282,7 @@ def parse_specifications(product, other_entities):
     if specs.get("CPU"):
         owl_specs.append(f":{CPU_MAP[specs['CPU']]}")
         _tmp = ParseOtherEntitiesJSONToOWL.cpu_entity(
-            CPU_MAP[specs["CPU"]], specs["CPU"]
+            CPU_MAP[specs["CPU"]], specs["CPU"], func_map["CPU"]
         )
         other_entities[CPU_MAP[specs["CPU"]]] = _tmp
 
@@ -394,6 +395,13 @@ def json_to_owl(json_data):
     owl_content = []
     other_entities = {}
 
+    with open(
+        "./data_process/process/sub_process/unique_key.json",
+        "r",
+        encoding="utf-8",
+    ) as file:
+        func_map = json.load(file)
+
     for item in json_data:
         # Create product identifier from title
         product_id = clean_string(item["title"])
@@ -402,7 +410,7 @@ def json_to_owl(json_data):
         owl_content.append(f":{product_id} rdf:type :Product ;")
 
         # Add specifications
-        specs, other_entities = parse_specifications(item, other_entities)
+        specs, other_entities = parse_specifications(item, other_entities, func_map)
         if specs:
             owl_content.append(
                 "    :hasSpecification "
@@ -416,6 +424,8 @@ def json_to_owl(json_data):
 
         img_url = item["image_url"]
         owl_content.append(f'    :hasImage "{img_url}".')
+
+        # Suitable for
 
         owl_content.append("")  # Empty line between products
 
@@ -437,7 +447,7 @@ def transform():
 
     # Write output to file
     with open(
-        "./data_process/process/owl_outputs/output_2.owl", "w", encoding="utf-8"
+        "./data_process/process/owl_outputs/output_3.owl", "w", encoding="utf-8"
     ) as file:
         file.write(owl_output)
 
