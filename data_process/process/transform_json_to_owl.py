@@ -414,7 +414,7 @@ def json_to_owl(json_data):
         price = extract_price(item["price"])
         owl_content.append(f'    :hasPrice "{price}"^^xsd:decimal ;')
 
-        img_url = extract_price(item["image_url"])
+        img_url = item["image_url"]
         owl_content.append(f'    :hasImage "{img_url}".')
 
         owl_content.append("")  # Empty line between products
