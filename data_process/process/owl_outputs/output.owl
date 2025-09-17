@@ -1,4 +1,4 @@
-:Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h255 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie_nvme_m2_dual ,
@@ -10,7 +10,7 @@
     :hasImage "https://sazo.vn/storage/products/lecoo-pro-14/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Lecoo_Fighter_7000_2025_R98940HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Lecoo_Fighter_7000_2025_R98940HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_9_8940hx ,
                       :ram_16gb_ddr5_5200_up ,
                       :storage_1tb_pcie_nvme_m2_dual ,
@@ -22,7 +22,7 @@
     :hasImage "https://sazo.vn/storage/products/lecoo-fighter-7000-r9/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Lecoo_Fighter_7000_2025_I714650HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Lecoo_Fighter_7000_2025_I714650HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14650hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie_nvme_m2_dual ,
@@ -34,7 +34,7 @@
     :hasImage "https://sazo.vn/storage/products/lecoo-fighter-7000/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ThinkPad_T14P_AI_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T14P_AI_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -46,7 +46,7 @@
     :hasImage "https://sazo.vn/storage/products/t14p-2025/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Legion_Pro_7i_2025_Y9000P_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :Product ;
+:Legion_Pro_7i_2025_Y9000P_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -58,7 +58,7 @@
     :hasImage "https://sazo.vn/storage/products/y9000p-2025/1-1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -70,7 +70,7 @@
     :hasImage "https://sazo.vn/storage/products/y9000x-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -82,7 +82,7 @@
     :hasImage "https://sazo.vn/storage/products/y9000x-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Thinkbook_16_G7_2025_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Thinkbook_16_G7_2025_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -94,7 +94,7 @@
     :hasImage "https://sazo.vn/storage/products/16g7-u5-225/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Xiaoxin_Pro_14c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+:Xiaoxin_Pro_14c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h255 ,
                       :ram_24gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -106,7 +106,7 @@
     :hasImage "https://sazo.vn/storage/products/14pro-2025/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+:Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h255 ,
                       :ram_24gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -118,7 +118,7 @@
     :hasImage "https://sazo.vn/storage/products/pro-16c/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_h350 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -130,7 +130,7 @@
     :hasImage "https://sazo.vn/storage/products/pro-16c/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Thinkbook_16_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkbook_16_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h260 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -142,7 +142,7 @@
     :hasImage "https://sazo.vn/storage/products/16g7-ai7/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Thinkbook_14_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkbook_14_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h260 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -154,7 +154,7 @@
     :hasImage "https://sazo.vn/storage/products/14g7-ai7/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Thinkpad_X1_Carbon_Gen_13_Ultra_5225H_32GB_RAM_1TB_SSDAura_Edition rdf:type :Product ;
+:Thinkpad_X1_Carbon_Gen_13_Ultra_5225H_32GB_RAM_1TB_SSDAura_Edition rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_ssd ,
@@ -166,7 +166,7 @@
     :hasImage "https://sazo.vn/storage/products/thinkpad-x1-g13-china/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ThinkBook_14P_AI_2025_Ultra_9275H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkBook_14P_AI_2025_Ultra_9275H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275h ,
                       :ram_32gb_lpddr5x_7467_nonup ,
                       :storage_1tb_pcie4_nvme ,
@@ -178,7 +178,7 @@
     :hasImage "https://sazo.vn/storage/products/thinkbook-14p-ai-2025/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:ThinkBook_16P_2025_25k_Ultra_7255HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_25k_Ultra_7255HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -190,7 +190,7 @@
     :hasImage "https://sazo.vn/storage/products/16p-2025-intel/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_9_8945hx ,
                       :ram_16gb_ddr5_5200_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -202,7 +202,7 @@
     :hasImage "https://sazo.vn/storage/products/16p-2025-amd/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -214,7 +214,7 @@
     :hasImage "https://sazo.vn/storage/products/16p-2025-intel/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ThinkBook_16P_2025_25k_240Hz_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_25k_240Hz_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -226,7 +226,7 @@
     :hasImage "https://sazo.vn/storage/products/16p-2025-intel/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Legion_Pro_7_2025_R78845HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Legion_Pro_7_2025_R78845HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -238,7 +238,7 @@
     :hasImage "https://sazo.vn/storage/products/legion-pro-7-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ThinkPad_T14P_AI_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T14P_AI_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -250,7 +250,7 @@
     :hasImage "https://sazo.vn/storage/products/t14p-2025/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ThinkPad_X1_Carbon_Gen_13_Ultra_5225H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_X1_Carbon_Gen_13_Ultra_5225H_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_16gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_ssd ,
@@ -262,7 +262,7 @@
     :hasImage "https://sazo.vn/storage/products/x1-g13/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Thinkbook_X_AI_2025__Touch_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkbook_X_AI_2025__Touch_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -274,7 +274,7 @@
     :hasImage "https://sazo.vn/storage/products/thinkbook-x-2025-touch/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:HP_Elitebook_6_G1a_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_Elitebook_6_G1a_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h255 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie_nvme_tlc_m2 ,
@@ -286,7 +286,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-6-g1i-14/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:HP_ZBook_X_G1i_16_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_ZBook_X_G1i_16_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -298,7 +298,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-zbook-x-g1i-16/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_64GB_RAM_1TB_SSD_DreamColor rdf:type :Product ;
+:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_64GB_RAM_1TB_SSD_DreamColor rdf:type :HighEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_hx_pro_375 ,
                       :ram_64gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -310,7 +310,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-zbook-8-g1a/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_hx_pro_375 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -322,7 +322,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-zbook-8-g1a/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_Inspiron_5420_i51240P_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_5420_i51240P_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_1240p ,
                       :ram_16gb_ddr4_3200_up ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -334,7 +334,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-5420/artboard-1.png" ;
     :satisfiesRequirement :Office .
 
-:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_9_8945hx ,
                       :ram_16gb_ddr5_5200_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -346,7 +346,7 @@
     :hasImage "https://sazo.vn/storage/products/16p-2025-amd/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -358,7 +358,7 @@
     :hasImage "https://sazo.vn/storage/products/16p-2025-intel/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ThinkPad_P16s_2025_Ryzen_Pro_R9_H_375_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_P16s_2025_Ryzen_Pro_R9_H_375_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_pro_375 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2_dual ,
@@ -370,7 +370,7 @@
     :hasImage "https://sazo.vn/storage/products/thinkpad-p16s-amd/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:ThinkPad_P16s_2025_Ultra_5225H_32GB_RAM_1TB_SSD_T1000 rdf:type :Product ;
+:ThinkPad_P16s_2025_Ultra_5225H_32GB_RAM_1TB_SSD_T1000 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2_dual ,
@@ -382,7 +382,7 @@
     :hasImage "https://sazo.vn/storage/products/thinkpad-p16s-intel/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ThinkPad_P16V_2025_Ultra_9275HX_64GB_RAM_2TB_SSD_RTX_5000 rdf:type :Product ;
+:ThinkPad_P16V_2025_Ultra_9275HX_64GB_RAM_2TB_SSD_RTX_5000 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_64gb_ddr5_5600_dual_up ,
                       :storage_2tb_pcie4_nvme_dual ,
@@ -394,7 +394,7 @@
     :hasImage "https://sazo.vn/storage/products/thinkpad-p16v-intel/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Legion_7_2025_Y9000X_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Legion_7_2025_Y9000X_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -406,7 +406,7 @@
     :hasImage "https://sazo.vn/storage/products/y9000x-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Thinkbook_X_AI_2025__Touch_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkbook_X_AI_2025__Touch_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_285h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -418,7 +418,7 @@
     :hasImage "https://sazo.vn/storage/products/thinkbook-x-2025-touch/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Legion_7_2025_Y9000X_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+:Legion_7_2025_Y9000X_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -430,7 +430,7 @@
     :hasImage "https://sazo.vn/storage/products/y9000x-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ThinkPad_T14_Gen_6_2025_AI_7_350_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T14_Gen_6_2025_AI_7_350_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_350 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -442,7 +442,7 @@
     :hasImage "https://sazo.vn/storage/products/t14-g6/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:ThinkPad_P1_Gen_8_2025_Ultra_9275HX_64GB_RAM_1TB_SSD_RTX_5000 rdf:type :Product ;
+:ThinkPad_P1_Gen_8_2025_Ultra_9275HX_64GB_RAM_1TB_SSD_RTX_5000 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_64gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -454,7 +454,7 @@
     :hasImage "https://sazo.vn/storage/products/thinkpad-p1-g8/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -466,7 +466,7 @@
     :hasImage "https://sazo.vn/storage/products/y9000p-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Legion_5_2025_Y7000P_I914900HX_16GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+:Legion_5_2025_Y7000P_I914900HX_16GB_RAM_1TB_SSD_RTX_50605070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -478,7 +478,7 @@
     :hasImage "https://sazo.vn/storage/products/y7000p-2025/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:ThinkPad_T14P_AI_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T14P_AI_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -490,7 +490,7 @@
     :hasImage "https://sazo.vn/storage/products/t14p-2025/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :Product ;
+:Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -502,7 +502,7 @@
     :hasImage "https://sazo.vn/storage/products/y9000p-2025/1-1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Xiaoxin_15c_2025_Lenovo_IdeaPad_Slim_3_R78745HS_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Xiaoxin_15c_2025_Lenovo_IdeaPad_Slim_3_R78745HS_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8745hs ,
                       :ram_16gb_ddr5_5600_hybrid ,
                       :storage_512gb_pcie_nvme_m2_dual ,
@@ -514,7 +514,7 @@
     :hasImage "https://sazo.vn/storage/products/xx-15c/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Xiaoxin_Pro_14c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+:Xiaoxin_Pro_14c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_h350 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -526,7 +526,7 @@
     :hasImage "https://sazo.vn/storage/products/14pro-2025/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:ThinkPad_T16_Gen_3_2025_AI_7_350_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T16_Gen_3_2025_AI_7_350_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_350 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -538,7 +538,7 @@
     :hasImage "https://sazo.vn/storage/products/t16-g3/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:ThinkPad_T16_Gen_3_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T16_Gen_3_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -550,7 +550,7 @@
     :hasImage "https://sazo.vn/storage/products/t16-g3/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ThinkPad_X1_Yoga_Gen_10_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_X1_Yoga_Gen_10_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme ,
@@ -562,7 +562,7 @@
     :hasImage "https://sazo.vn/storage/products/x1-yoga-g10/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ThinkPad_X1_Yoga_Gen_10_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_X1_Yoga_Gen_10_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme ,
@@ -574,7 +574,7 @@
     :hasImage "https://sazo.vn/storage/products/x1-yoga-g10/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Thinkpad_X1_Carbon_Gen_13_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkpad_X1_Carbon_Gen_13_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_ssd ,
@@ -586,7 +586,7 @@
     :hasImage "https://sazo.vn/storage/products/thinkpad-x1-g13/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Zenbook_14_2024_Ultra_7_155H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Zenbook_14_2024_Ultra_7_155H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -598,7 +598,7 @@
     :hasImage "https://sazo.vn/storage/products/zenbook-14/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_15_2024_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ASUS_Vivobook_Pro_15_2024_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -610,7 +610,7 @@
     :hasImage "https://sazo.vn/storage/products/vivobook-pro-15-intel/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ASUS_Vivobook_Pro_15_2024_Ultra_7155H_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :Product ;
+:ASUS_Vivobook_Pro_15_2024_Ultra_7155H_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -622,7 +622,7 @@
     :hasImage "https://sazo.vn/storage/products/vivobook-pro-15-intel/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ASUS_Vivobook_S_14_OLED_2024_R78845H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Vivobook_S_14_OLED_2024_R78845H_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -634,7 +634,7 @@
     :hasImage "https://sazo.vn/storage/products/s-14-oled/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_S_16_OLED_2024_R78845H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Vivobook_S_16_OLED_2024_R78845H_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -646,7 +646,7 @@
     :hasImage "https://sazo.vn/storage/products/s-16-oled/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_S_16_OLED_2024_Ultra_7155H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Vivobook_S_16_OLED_2024_Ultra_7155H_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -658,7 +658,7 @@
     :hasImage "https://sazo.vn/storage/products/s-16-oled-intel/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_S_16_OLED_2024_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_S_16_OLED_2024_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -670,7 +670,7 @@
     :hasImage "https://sazo.vn/storage/products/s-16-oled-intel/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_R98945H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_R98945H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_9_8945h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -682,7 +682,7 @@
     :hasImage "https://sazo.vn/storage/products/pro-16-k6606mc/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_9185H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_9185H_16GB_RAM_1TB_SSD rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -694,7 +694,7 @@
     :hasImage "https://sazo.vn/storage/products/pro-16-k6606mc/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -706,7 +706,7 @@
     :hasImage "https://sazo.vn/storage/products/pro-16-k6606mc/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -718,7 +718,7 @@
     :hasImage "https://sazo.vn/storage/products/pro-16-k6606mc/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -730,7 +730,7 @@
     :hasImage "https://sazo.vn/storage/products/vivobook-pro-16-n9606/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -742,7 +742,7 @@
     :hasImage "https://sazo.vn/storage/products/vivobook-pro-16-n9606/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -754,7 +754,7 @@
     :hasImage "https://sazo.vn/storage/products/vivobook-pro-16-n9606/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_7155H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_7155H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -766,7 +766,7 @@
     :hasImage "https://sazo.vn/storage/products/vivobook-pro-16-n9606/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Acer_Swift_X_14_2024_SFXX_Ultra_7155H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:Acer_Swift_X_14_2024_SFXX_Ultra_7155H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -778,7 +778,7 @@
     :hasImage "https://sazo.vn/storage/products/acer-swift-x-14-5050/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Acer_Swift_X_14_2024_SFXX_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Acer_Swift_X_14_2024_SFXX_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -790,7 +790,7 @@
     :hasImage "https://sazo.vn/storage/products/acer-swift-x-14-5060/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Acer_Swift_Go_14_2024_SFXX_Ultra_7155H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Acer_Swift_Go_14_2024_SFXX_Ultra_7155H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -802,7 +802,7 @@
     :hasImage "https://sazo.vn/storage/products/acer-swift-go-14/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Acer_Swift_Go_14_2024_SFXX_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Acer_Swift_Go_14_2024_SFXX_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -814,7 +814,7 @@
     :hasImage "https://sazo.vn/storage/products/acer-swift-go-14/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Acer_Swift_Go_14_2024_SFXX_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Acer_Swift_Go_14_2024_SFXX_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -826,7 +826,7 @@
     :hasImage "https://sazo.vn/storage/products/acer-swift-go-14/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:Dell_Inspiron_5420_i5_1240P_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_5420_i5_1240P_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_1240p ,
                       :ram_16gb_ddr4_3200_up ,
                       :storage_512gb_pcie_nvme_m2_replaceable ,
@@ -838,7 +838,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-5420/artboard-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_Inspiron_14_5430_i7_1360P_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_14_5430_i7_1360P_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_1360p ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -850,7 +850,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-5430/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R9375_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R9375_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_pro_375 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -862,7 +862,7 @@
     :hasImage "https://sazo.vn/storage/products/xps-9335/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_pro_350 ,
                       :ram_16gb_lpddr5x_7500_nonup ,
                       :storage_512gb_pcie4_nvme_m2 ,
@@ -874,7 +874,7 @@
     :hasImage "https://sazo.vn/storage/products/xps-9335/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_XPS_16_9635_Ultra_9275H_64GB_RAM_2TB_SSD_RTX_5060 rdf:type :Product ;
+:Dell_XPS_16_9635_Ultra_9275H_64GB_RAM_2TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275h ,
                       :ram_64gb_lpddr5x_8400_nonup ,
                       :storage_2tb_pcie4_nvme_m2 ,
@@ -886,7 +886,7 @@
     :hasImage "https://sazo.vn/storage/products/xps-16/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_i7_1360P_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_i7_1360P_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_1360p ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -898,7 +898,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_i5_1340P_8GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_i5_1340P_8GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_1340p ,
                       :ram_8gb_lpddr5_4800_nonup ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -910,7 +910,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_125u ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -922,7 +922,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_1TB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_125u ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -934,7 +934,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_Ultra_7155U_16GB_RAM_1TB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_Ultra_7155U_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_155u ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -946,7 +946,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_G15_5530_i9_13900HX_16GB_RAM_1TB_SSD_RTX_4060 rdf:type :Product ;
+:Dell_G15_5530_i9_13900HX_16GB_RAM_1TB_SSD_RTX_4060 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i9_13900hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -958,7 +958,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i7_13650HX_16GB_RAM_512GB_SSD_RTX_4060 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_16GB_RAM_512GB_SSD_RTX_4060 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_512gb_pcie4_nvme_m2_dual ,
@@ -970,7 +970,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i9_13900HX_32GB_RAM_1TB_SSD_RTX_4070 rdf:type :Product ;
+:Dell_G15_5530_i9_13900HX_32GB_RAM_1TB_SSD_RTX_4070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i9_13900hx ,
                       :ram_32gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -982,7 +982,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i7_13650HX_32GB_RAM_1TB_SSD_RTX_4070 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_32GB_RAM_1TB_SSD_RTX_4070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_32gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -994,7 +994,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i7_13650HX_16GB_RAM_1TB_SSD_RTX_4050 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_16GB_RAM_1TB_SSD_RTX_4050 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -1006,7 +1006,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i5_13450HX_16GB_RAM_512GB_SSD_RTX_4050 rdf:type :Product ;
+:Dell_G15_5530_i5_13450HX_16GB_RAM_512GB_SSD_RTX_4050 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_13450hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_512gb_pcie4_nvme_m2_dual ,
@@ -1018,7 +1018,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_G15_5530_i7_13650HX_16GB_RAM_512GB_SSD_RTX_4060 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_16GB_RAM_512GB_SSD_RTX_4060 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_512gb_pcie4_nvme_m2_dual ,
@@ -1030,7 +1030,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i7_13650HX_16GB_RAM_1TB_SSD_RTX_4070 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_16GB_RAM_1TB_SSD_RTX_4070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -1042,7 +1042,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_Alienware_M18_R2_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Dell_Alienware_M18_R2_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -1054,7 +1054,7 @@
     :hasImage "https://sazo.vn/storage/products/alienware-m18/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_Alienware_M18_R2_2025_i914900HX_64GB_RAM_2TB_SSD_RTX_5080 rdf:type :Product ;
+:Dell_Alienware_M18_R2_2025_i914900HX_64GB_RAM_2TB_SSD_RTX_5080 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_64gb_ddr5_5600_up ,
                       :storage_2tb_pcie4_nvme_m2_dual ,
@@ -1066,7 +1066,7 @@
     :hasImage "https://sazo.vn/storage/products/alienware-m18/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_Alienware_M18_R2_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Dell_Alienware_M18_R2_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -1078,7 +1078,7 @@
     :hasImage "https://sazo.vn/storage/products/alienware-m18/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_Alienware_M18_R2_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:Dell_Alienware_M18_R2_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -1090,7 +1090,7 @@
     :hasImage "https://sazo.vn/storage/products/alienware-m18/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R9375_64GB_RAM_2TB_SSD rdf:type :Product ;
+:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R9375_64GB_RAM_2TB_SSD rdf:type :HighEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_pro_375 ,
                       :ram_64gb_lpddr5x_7500_nonup ,
                       :storage_2tb_pcie4_nvme_m2 ,
@@ -1102,7 +1102,7 @@
     :hasImage "https://sazo.vn/storage/products/xps-9335/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_pro_350 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1114,7 +1114,7 @@
     :hasImage "https://sazo.vn/storage/products/xps-9335/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_XPS_14_9440_Touch_OLED_Ultra_9275H_64GB_RAM_2TB_SSD_RTX_5060 rdf:type :Product ;
+:Dell_XPS_14_9440_Touch_OLED_Ultra_9275H_64GB_RAM_2TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275h ,
                       :ram_64gb_lpddr5x_8400_nonup ,
                       :storage_2tb_pcie4_nvme_m2 ,
@@ -1126,7 +1126,7 @@
     :hasImage "https://sazo.vn/storage/products/xps-14/1-1.png" ;
     :satisfiesRequirement :Office .
 
-:Dell_XPS_14_9440_Touch_OLED_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:Dell_XPS_14_9440_Touch_OLED_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1138,7 +1138,7 @@
     :hasImage "https://sazo.vn/storage/products/xps-14/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:Dell_Inspiron_14_5440_Plus_Ultra_7155H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:Dell_Inspiron_14_5440_Plus_Ultra_7155H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1150,7 +1150,7 @@
     :hasImage "https://sazo.vn/storage/products/dell-5440/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+:HP_OMEN_17_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -1162,7 +1162,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i714700HX_16GB_RAM_512GB_SSD_RTX_5060 rdf:type :Product ;
+:HP_OMEN_17_2025_i714700HX_16GB_RAM_512GB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_512gb_pcie4_nvme_tlc_m2 ,
@@ -1174,7 +1174,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i514500HX_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :Product ;
+:HP_OMEN_17_2025_i514500HX_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_14500hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_512gb_pcie4_nvme_tlc_m2 ,
@@ -1186,7 +1186,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Spectre_x360_14_2025_Ultra_7155H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_Spectre_x360_14_2025_Ultra_7155H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1198,7 +1198,7 @@
     :hasImage "https://sazo.vn/storage/products/spectre-x360-14/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:HP_Spectre_x360_14_2025_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:HP_Spectre_x360_14_2025_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -1210,7 +1210,7 @@
     :hasImage "https://sazo.vn/storage/products/spectre-x360-14/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:HP_Spectre_x360_14_2025_Ultra_9185H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_Spectre_x360_14_2025_Ultra_9185H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1222,7 +1222,7 @@
     :hasImage "https://sazo.vn/storage/products/spectre-x360-14/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:HP_Spectre_x360_16_2025_Ultra_9185H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Spectre_x360_16_2025_Ultra_9185H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1234,7 +1234,7 @@
     :hasImage "https://sazo.vn/storage/products/spectre-x360-16/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Spectre_x360_16_2025_Ultra_7155H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:HP_Spectre_x360_16_2025_Ultra_7155H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1246,7 +1246,7 @@
     :hasImage "https://sazo.vn/storage/products/spectre-x360-16/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Spectre_x360_16_2025_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:HP_Spectre_x360_16_2025_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -1258,7 +1258,7 @@
     :hasImage "https://sazo.vn/storage/products/spectre-x360-16/1-1.png" ;
     :satisfiesRequirement :Graphic .
 
-:HP_OMEN_17_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :Product ;
+:HP_OMEN_17_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -1270,7 +1270,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_OMEN_17_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -1282,7 +1282,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:HP_OMEN_17_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -1294,7 +1294,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i514500HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_OMEN_17_2025_i514500HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_14500hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -1306,7 +1306,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R78845H_16GB_RAM_512GB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R78845H_16GB_RAM_512GB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -1318,7 +1318,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R58545H_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R58545H_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_5_8545h ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -1330,7 +1330,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R78845H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R78845H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1342,7 +1342,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R78845H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R78845H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1354,7 +1354,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R58545H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R58545H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_5_8545h ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1366,7 +1366,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R58545H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R58545H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_5_8545h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1378,7 +1378,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R58545H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R58545H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_5_8545h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1390,7 +1390,7 @@
     :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:MSI_GE68_HX_14_i914900HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :Product ;
+:MSI_GE68_HX_14_i914900HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1402,7 +1402,7 @@
     :hasImage "https://sazo.vn/storage/products/msi-ge68hx-14/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:MSI_GE68_HX_14_i714700HX_16GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+:MSI_GE68_HX_14_i714700HX_16GB_RAM_1TB_SSD_RTX_5070 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1414,7 +1414,7 @@
     :hasImage "https://sazo.vn/storage/products/msi-ge68hx-14/1-1.png" ;
     :satisfiesRequirement :Gaming .
 
-:MSI_GE68_HX_14_i714700HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :Product ;
+:MSI_GE68_HX_14_i714700HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1425,6 +1425,7 @@
     :hasPrice "61500000"^^xsd:decimal ;
     :hasImage "https://sazo.vn/storage/products/msi-ge68hx-14/1-1.png" ;
     :satisfiesRequirement :Gaming .
+
 :cpu_amd_ryzen_7_h255 rdf:type :CPU ;
     :brand "AMD" ;
     :model "Ryzen™ 7 H 255" ;
