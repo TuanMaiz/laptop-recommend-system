@@ -26,38 +26,56 @@ def get_db():
 @router.get("/")
 def list_laptops(limit: int = 20):
     service = LaptopService()
-    laptop_uris = service.list_laptop()
+    laptops = service.list_laptop()
     
     laptop_list = []
-    for uri in laptop_uris[:limit]:
-        laptop_data = service.get_laptop(uri)
+    for laptop in laptops[:limit]:
+        laptop_data = laptop['properties']
         # Extract friendly name from URI
-        friendly_name = uri.split("#")[-1].replace("_", " ")
+        friendly_name = laptop['name']
         
         # Parse specifications into human-readable format
         print(50*"=")
         print(laptop_data.items())
         print(50*"=")
+        
+        # Get specifications from laptop object
+        specifications = laptop.get('specifications', [])
         parsed_specs = {}
-        for spec_uri, spec_value in laptop_data.items():
-            spec_name = spec_uri.split("#")[-1]
-            if "price" in spec_name.lower():
-                parsed_specs["price"] = spec_value
-            elif "cpu" in spec_name.lower():
-                parsed_specs["cpu"] = spec_value
-            elif "ram" in spec_name.lower():
-                parsed_specs["ram"] = spec_value
-            elif "storage" in spec_name.lower():
-                parsed_specs["storage"] = spec_value
-            elif "gpu" in spec_name.lower():
-                parsed_specs["gpu"] = spec_value
-            elif "battery" in spec_name.lower():
-                parsed_specs["battery"] = spec_value
-            elif "weight" in spec_name.lower():
-                parsed_specs["weight"] = spec_value
+        
+        # Process basic properties
+        for prop_uri, prop_value in laptop_data.items():
+            prop_name = prop_uri.split("#")[-1]
+            if "price" in prop_name.lower():
+                parsed_specs["price"] = prop_value
+            elif "image" in prop_name.lower():
+                parsed_specs["image"] = prop_value
+            elif "satisfiesRequirement" in prop_name.lower():
+                parsed_specs["requirement"] = prop_value.split("#")[-1] if "#" in prop_value else prop_value
+        
+        # Process detailed specifications
+        for spec in specifications:
+            spec_name = spec['name']
+            spec_type = spec['type']
+            
+            # Extract readable spec name
+            readable_name = spec_name.replace('_', ' ').replace('gb', 'GB').replace('tb', 'TB').replace('ssd', 'SSD')
+            
+            # Extract spec properties
+            for prop_name, prop_value in spec['properties'].items():
+                if prop_name.lower() == 'name':
+                    parsed_specs[spec_type.lower()] = f"{readable_name}"
+                elif prop_name.lower() == 'value':
+                    if spec_type.lower() in parsed_specs:
+                        parsed_specs[spec_type.lower()] += f" {prop_value}"
+                    else:
+                        parsed_specs[spec_type.lower()] = prop_value
+                else:
+                    prop_display_name = prop_name.replace('_', ' ').lower()
+                    parsed_specs[prop_display_name] = prop_value
         
         laptop_list.append({
-            "id": uri,
+            "id": laptop['uri'],
             "name": friendly_name,
             "specifications": parsed_specs
         })
@@ -97,35 +115,6 @@ class BaseEventModel(BaseModel):
     priority: Optional[str] = None
     userAgent: Optional[str] = None
     
-@router.post("/track-interaction", status_code=status.HTTP_201_CREATED)
-def track_interaction(events: List[BaseEventModel], db: Session = Depends(get_db)):
-    """
-    Track user interaction for recommendation system.
-    laptop_id may or may not be present in event.data.
-    """
-
-    recommendation_service = RecommendationService(db)
-    for event in events:
-        recommendation_service.record_interaction(
-            timestamp=event.timestamp,
-            url=event.pageUrl,
-            user_id=event.userId,
-            session_id=event.sessionId,
-            fingerprint=event.fingerprint,
-            event_type = event.eventType,
-            ip_address=event.ipAddress,
-            user_agent=event.userAgent,
-            device_info=event.deviceInfo,
-            data = event.eventData
-        )
-
-    # Optionally, you can log or handle the missing laptop_id case here
-    # For example:
-    # if laptop_id is None:
-    #     logger.warning("track_interaction called without laptop_id in event data")
-
-    return {"message": "interaction recorded"}
-
 
 @router.post("/is-first-time", status_code=status.HTTP_201_CREATED)
 def track_interaction_first_time(fingerprint: FingerprintCheckRequest, db: Session = Depends(get_db)):
@@ -141,8 +130,6 @@ def track_interaction_first_time(fingerprint: FingerprintCheckRequest, db: Sessi
     # print(fingerprint)
 
     # return {"status": "interaction recorded" }
-
-
 
 @router.post("/track-interaction-first-time", status_code=status.HTTP_201_CREATED)
 def track_interaction_first_time(events: List[BaseEventModel], db: Session = Depends(get_db)):    
