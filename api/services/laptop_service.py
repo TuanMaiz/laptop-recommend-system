@@ -22,9 +22,9 @@ class LaptopService:
         }}
         """
         results = self.graph.query(query)
-        print(30*"=")
-        print(results)
-        print(30*"=")
+        # print(30*"=")
+        # print(results)
+        # print(30*"=")
         laptop_data = {}
         for row in results:
             prop = str(row.property)
@@ -37,8 +37,7 @@ class LaptopService:
         query = """
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         SELECT ?laptop WHERE {
-            ?laptop rdf:type ?type .
-            FILTER regex(str(?type), "Laptop", "i")
+            ?laptop rdf:type :Product .
         }
         """
         results = self.graph.query(query)

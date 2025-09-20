@@ -1,4 +1,195 @@
+@prefix : <http://example.org/laptop#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+############################
+# Classes
+############################
+
+:Functionality rdf:type owl:Class .
+:Specification rdf:type owl:Class .
+:PriceRange rdf:type owl:Class .
+:Product rdf:type owl:Class .
+
+# Subclasses of Functionality
+:Gaming rdf:type owl:Class ;
+        rdfs:subClassOf :Functionality .
+
+:Office rdf:type owl:Class ;
+        rdfs:subClassOf :Functionality .
+
+:Graphic rdf:type owl:Class ;
+         rdfs:subClassOf :Functionality .
+
+# Subclasses of Product
+:HighEnd rdf:type owl:Class ;
+        rdfs:subClassOf :Product .
+
+:MiddleEnd rdf:type owl:Class ;
+        rdfs:subClassOf :Product .
+
+:LowEnd rdf:type owl:Class ;
+        rdfs:subClassOf :Product .
+
+# Subclasses of Specification
+:CPU rdf:type owl:Class ;
+     rdfs:subClassOf :Specification .
+
+:RAM rdf:type owl:Class ;
+     rdfs:subClassOf :Specification .
+
+:GPU rdf:type owl:Class ;
+     rdfs:subClassOf :Specification .
+
+:ScreenSize rdf:type owl:Class ;
+            rdfs:subClassOf :Specification .
+
+:RefreshRate rdf:type owl:Class ;
+             rdfs:subClassOf :Specification .
+
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf :Specification .
+
+:Weight rdf:type owl:Class ;
+        rdfs:subClassOf :Specification .
+
+:Battery rdf:type owl:Class ;
+         rdfs:subClassOf :Specification .
+
+:Brand rdf:type owl:Class ;
+       rdfs:subClassOf :Specification .
+
+# Subclasses of PriceRange
+:LowPrice rdf:type owl:Class ;
+          rdfs:subClassOf :PriceRange .
+
+:MidPrice rdf:type owl:Class ;
+          rdfs:subClassOf :PriceRange .
+
+:HighPrice rdf:type owl:Class ;
+           rdfs:subClassOf :PriceRange .
+
+
+############################
+# Object Properties
+############################
+
+:hasSpecification rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Product ;
+                  rdfs:range :Specification .
+
+:satisfiesRequirement rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Product ;
+                      rdfs:range :Functionality .
+
+:hasPriceRange rdf:type owl:ObjectProperty ;
+               rdfs:domain :Product ;
+               rdfs:range :PriceRange .
+
+############################
+# Data Properties
+############################
+
+:hasPrice rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Product ;
+          rdfs:range xsd:decimal .
+
+:cores rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:integer .
+
+:threads rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:integer .
+
+:baseClock rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:string .
+
+:boostClock rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:string .
+
+:cache rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:string .
+
+:memory rdf:type owl:DatatypeProperty ;
+    rdfs:domain :RAM ;
+    rdfs:range xsd:integer .
+
+:type rdf:type owl:DatatypeProperty ;
+    rdfs:domain :RAM ;
+    rdfs:range xsd:string .
+
+:speed rdf:type owl:DatatypeProperty ;
+    rdfs:domain :RAM ;
+    rdfs:range xsd:string .
+
+:vramMemory rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GPU ;
+    rdfs:range xsd:integer .
+
+:brand rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GPU ;
+    rdfs:range xsd:string .
+
+:model rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GPU ;
+    rdfs:range xsd:string .
+
+############################
+# Individuals (Example)
+############################
+
+:gamingReq  rdf:type :Gaming, :Functionality .
+:graphicReq rdf:type :Graphic, :Functionality .
+:officeReq  rdf:type :Office,  :Functionality .
+
+:Dell_Inspiron_3525 rdf:type :Product ;
+                    :hasSpecification :CPU_i5, :RAM_16GB ;
+                    :satisfiesRequirement :Gaming ;
+                    :hasPrice "750"^^xsd:decimal ;
+                    :hasPriceRange :MidPrice .
+
+:CPU_i5 rdf:type :CPU .
+:RAM_16GB rdf:type :RAM .
+
 :Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_7_H_255_8_nhn_16_lung_c_th_t_ti_49GHz_vi_turbo_boost_24MB_Cache ,
+                      :32GB_DDR55600MHz_h_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_2_slots ,
+                      :Brightness_400nits ,
+                      :RefreshRate_120Hz ,
+                      :Battery_80wh ,
+                      :Weight_1_43kg ;
+    :hasPrice "15790000"^^xsd:decimal .
+
+:Lecoo_Fighter_7000_2025_R98940HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :AMD_Ryzen_9_8940HX_16_nhn_32_lung_xung_nhp_c_bn_24GHz_c_th_t_ti_53GHz_n_nhn_vi_turbo_boost_16MB_L2_Cache_64MB_L3_Cache ,
+                      :16GB_DDR55200MHzh_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_2_slots ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_180Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_4kg ;
+    :hasPrice "27000000"^^xsd:decimal .
+
+:Lecoo_Fighter_7000_2025_I714650HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+    :hasSpecification :Intel_Core_i7_14650HX_16_nhn_24_lung_xung_nhp_c_th_t_ti_a_52GHz_vi_Turbo_boost_30MB_Intel_Smart_Cache ,
+                      :16GB_DDR55600MHzh_tr_nng_cp ,
+                      :1TB_PCIe_NVMe_M2_SSD_2_slots ,
+                      :Resolution_2560x1600 ,
+                      :Brightness_500nits ,
+                      :RefreshRate_180Hz ,
+                      :Battery_80wh ,
+                      :Weight_2_4kg ;
+    :hasPrice "27190000"^^xsd:decimal .
+
+:Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h255 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie_nvme_m2_dual ,
@@ -6,9 +197,11 @@
                       :resolution_2880x1800 ,
                       :battery_80WH ,
                       :weight_1.43kg ;
-    :hasPrice "15790000"^^xsd:decimal .
+    :hasPrice "15790000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/lecoo-pro-14/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Lecoo_Fighter_7000_2025_R98940HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Lecoo_Fighter_7000_2025_R98940HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_9_8940hx ,
                       :ram_16gb_ddr5_5200_up ,
                       :storage_1tb_pcie_nvme_m2_dual ,
@@ -16,9 +209,11 @@
                       :resolution_2560x1600 ,
                       :battery_80WH ,
                       :weight_2.4kg ;
-    :hasPrice "27000000"^^xsd:decimal .
+    :hasPrice "27000000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/lecoo-fighter-7000-r9/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Lecoo_Fighter_7000_2025_I714650HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Lecoo_Fighter_7000_2025_I714650HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14650hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie_nvme_m2_dual ,
@@ -26,9 +221,11 @@
                       :resolution_2560x1600 ,
                       :battery_80WH ,
                       :weight_2.4kg ;
-    :hasPrice "27190000"^^xsd:decimal .
+    :hasPrice "27190000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/lecoo-fighter-7000/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ThinkPad_T14P_AI_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T14P_AI_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -36,9 +233,11 @@
                       :refresh_rate_120Hz ,
                       :battery_75WH ,
                       :weight_1.56kg ;
-    :hasPrice "33200000"^^xsd:decimal .
+    :hasPrice "33200000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/t14p-2025/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Legion_Pro_7i_2025_Y9000P_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :Product ;
+:Legion_Pro_7i_2025_Y9000P_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -46,9 +245,11 @@
                       :resolution_2560x1600 ,
                       :battery_80WH ,
                       :weight_2.57kg ;
-    :hasPrice "67290000"^^xsd:decimal .
+    :hasPrice "67290000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/y9000p-2025/1-1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -56,9 +257,11 @@
                       :resolution_2560x1600 ,
                       :battery_84WH ,
                       :weight_1.98kg ;
-    :hasPrice "56800000"^^xsd:decimal .
+    :hasPrice "56800000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/y9000x-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Legion_7_2025_Y9000X_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -66,9 +269,11 @@
                       :resolution_2560x1600 ,
                       :battery_84WH ,
                       :weight_1.98kg ;
-    :hasPrice "53200000"^^xsd:decimal .
+    :hasPrice "53200000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/y9000x-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Thinkbook_16_G7_2025_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Thinkbook_16_G7_2025_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -76,9 +281,11 @@
                       :resolution_3200x2000 ,
                       :battery_85WH ,
                       :weight_1.9kg ;
-    :hasPrice "36400000"^^xsd:decimal .
+    :hasPrice "36400000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/16g7-u5-225/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Xiaoxin_Pro_14c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+:Xiaoxin_Pro_14c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h255 ,
                       :ram_24gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -86,9 +293,11 @@
                       :resolution_2880x1800 ,
                       :battery_60WH ,
                       :weight_1.39kg ;
-    :hasPrice "18090000"^^xsd:decimal .
+    :hasPrice "18090000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/14pro-2025/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+:Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h255 ,
                       :ram_24gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -96,9 +305,11 @@
                       :resolution_2880x1800 ,
                       :battery_80WH ,
                       :weight_1.76kg ;
-    :hasPrice "18790000"^^xsd:decimal .
+    :hasPrice "18790000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/pro-16c/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_h350 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -106,9 +317,11 @@
                       :resolution_2880x1800 ,
                       :battery_80WH ,
                       :weight_1.76kg ;
-    :hasPrice "21990000"^^xsd:decimal .
+    :hasPrice "21990000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/pro-16c/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Thinkbook_16_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkbook_16_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h260 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -116,9 +329,11 @@
                       :resolution_3200x2000 ,
                       :battery_85WH ,
                       :weight_1.9kg ;
-    :hasPrice "21390000"^^xsd:decimal .
+    :hasPrice "21390000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/16g7-ai7/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Thinkbook_14_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkbook_14_G7_2025_R7_H_260_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h260 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -126,9 +341,11 @@
                       :resolution_3072x1920 ,
                       :battery_85WH ,
                       :weight_1.5kg ;
-    :hasPrice "20790000"^^xsd:decimal .
+    :hasPrice "20790000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/14g7-ai7/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Thinkpad_X1_Carbon_Gen_13_Ultra_5225H_32GB_RAM_1TB_SSDAura_Edition rdf:type :Product ;
+:Thinkpad_X1_Carbon_Gen_13_Ultra_5225H_32GB_RAM_1TB_SSDAura_Edition rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_ssd ,
@@ -136,9 +353,11 @@
                       :resolution_2880x1800 ,
                       :battery_57WH ,
                       :weight_1.12kg ;
-    :hasPrice "44500000"^^xsd:decimal .
+    :hasPrice "44500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/thinkpad-x1-g13-china/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ThinkBook_14P_AI_2025_Ultra_9275H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkBook_14P_AI_2025_Ultra_9275H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275h ,
                       :ram_32gb_lpddr5x_7467_nonup ,
                       :storage_1tb_pcie4_nvme ,
@@ -146,9 +365,11 @@
                       :resolution_2880x1800 ,
                       :battery_85WH ,
                       :weight_1.69kg ;
-    :hasPrice "36900000"^^xsd:decimal .
+    :hasPrice "36900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/thinkbook-14p-ai-2025/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:ThinkBook_16P_2025_25k_Ultra_7255HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_25k_Ultra_7255HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -156,9 +377,11 @@
                       :resolution_2560x1600 ,
                       :battery_85WH ,
                       :weight_2.2kg ;
-    :hasPrice "40000000"^^xsd:decimal .
+    :hasPrice "40000000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/16p-2025-intel/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_9_8945hx ,
                       :ram_16gb_ddr5_5200_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -166,9 +389,11 @@
                       :resolution_2560x1600 ,
                       :battery_85WH ,
                       :weight_2.2kg ;
-    :hasPrice "35690000"^^xsd:decimal .
+    :hasPrice "35690000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/16p-2025-amd/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -176,9 +401,11 @@
                       :resolution_3200x2000 ,
                       :battery_85WH ,
                       :weight_2.2kg ;
-    :hasPrice "48000000"^^xsd:decimal .
+    :hasPrice "48000000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/16p-2025-intel/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ThinkBook_16P_2025_25k_240Hz_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_25k_240Hz_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -186,9 +413,11 @@
                       :resolution_2560x1600 ,
                       :battery_85WH ,
                       :weight_2.2kg ;
-    :hasPrice "43490000"^^xsd:decimal .
+    :hasPrice "43490000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/16p-2025-intel/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Legion_Pro_7_2025_R78845HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Legion_Pro_7_2025_R78845HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -196,9 +425,11 @@
                       :resolution_2560x1600 ,
                       :battery_80WH ,
                       :weight_2.57kg ;
-    :hasPrice "39500000"^^xsd:decimal .
+    :hasPrice "39500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/legion-pro-7-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ThinkPad_T14P_AI_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T14P_AI_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -206,9 +437,11 @@
                       :brightness_500nits ,
                       :battery_75WH ,
                       :weight_1.56kg ;
-    :hasPrice "29400000"^^xsd:decimal .
+    :hasPrice "29400000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/t14p-2025/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ThinkPad_X1_Carbon_Gen_13_Ultra_5225H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_X1_Carbon_Gen_13_Ultra_5225H_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_16gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_ssd ,
@@ -216,9 +449,11 @@
                       :resolution_2880x1800 ,
                       :battery_57WH ,
                       :weight_1.12kg ;
-    :hasPrice "39990000"^^xsd:decimal .
+    :hasPrice "39990000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/x1-g13/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Thinkbook_X_AI_2025__Touch_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkbook_X_AI_2025__Touch_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -226,9 +461,11 @@
                       :resolution_2880x1920 ,
                       :battery_74WH ,
                       :weight_1.2kg ;
-    :hasPrice "29900000"^^xsd:decimal .
+    :hasPrice "29900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/thinkbook-x-2025-touch/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:HP_Elitebook_6_G1a_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_Elitebook_6_G1a_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_7_h255 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie_nvme_tlc_m2 ,
@@ -236,9 +473,11 @@
                       :resolution_2560x1600 ,
                       :battery_56WH ,
                       :weight_1.4kg ;
-    :hasPrice "21600000"^^xsd:decimal .
+    :hasPrice "21600000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-6-g1i-14/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:HP_ZBook_X_G1i_16_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_ZBook_X_G1i_16_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -246,9 +485,11 @@
                       :resolution_2560x1600 ,
                       :battery_83WH ,
                       :weight_2.04kg ;
-    :hasPrice "25800000"^^xsd:decimal .
+    :hasPrice "25800000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-zbook-x-g1i-16/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_64GB_RAM_1TB_SSD_DreamColor rdf:type :Product ;
+:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_64GB_RAM_1TB_SSD_DreamColor rdf:type :HighEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_hx_pro_375 ,
                       :ram_64gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -256,9 +497,11 @@
                       :resolution_2560x1600 ,
                       :battery_62WH ,
                       :weight_1.44kg ;
-    :hasPrice "55000000"^^xsd:decimal .
+    :hasPrice "55000000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-zbook-8-g1a/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_ZBook_8_G1a_14_2025_AI_9_HX_PRO_375_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_hx_pro_375 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -266,9 +509,11 @@
                       :resolution_2560x1600 ,
                       :battery_62WH ,
                       :weight_1.44kg ;
-    :hasPrice "35000000"^^xsd:decimal .
+    :hasPrice "35000000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-zbook-8-g1a/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_Inspiron_5420_i51240P_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_5420_i51240P_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_1240p ,
                       :ram_16gb_ddr4_3200_up ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -276,9 +521,11 @@
                       :resolution_2240x1400 ,
                       :battery_54WH ,
                       :weight_1.5kg ;
-    :hasPrice "14990000"^^xsd:decimal .
+    :hasPrice "14990000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-inspiron-5420/artboard-1.png" ;
+    :satisfiesRequirement :Office .
 
-:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_amd_ryzen_9_8945hx ,
                       :ram_16gb_ddr5_5200_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -286,9 +533,11 @@
                       :resolution_2560x1600 ,
                       :battery_85WH ,
                       :weight_2.2kg ;
-    :hasPrice "35690000"^^xsd:decimal .
+    :hasPrice "35690000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/16p-2025-amd/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ThinkBook_16P_2025_32k_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme ,
@@ -296,9 +545,11 @@
                       :resolution_3200x2000 ,
                       :battery_85WH ,
                       :weight_2.2kg ;
-    :hasPrice "48000000"^^xsd:decimal .
+    :hasPrice "48000000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/16p-2025-intel/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ThinkPad_P16s_2025_Ryzen_Pro_R9_H_375_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_P16s_2025_Ryzen_Pro_R9_H_375_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_pro_375 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2_dual ,
@@ -306,9 +557,11 @@
                       :resolution_1920x1200 ,
                       :battery_86WH ,
                       :weight_1.79kg ;
-    :hasPrice "34900000"^^xsd:decimal .
+    :hasPrice "34900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/thinkpad-p16s-amd/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:ThinkPad_P16s_2025_Ultra_5225H_32GB_RAM_1TB_SSD_T1000 rdf:type :Product ;
+:ThinkPad_P16s_2025_Ultra_5225H_32GB_RAM_1TB_SSD_T1000 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2_dual ,
@@ -316,9 +569,11 @@
                       :resolution_1920x1200 ,
                       :battery_86WH ,
                       :weight_1.79kg ;
-    :hasPrice "31900000"^^xsd:decimal .
+    :hasPrice "31900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/thinkpad-p16s-intel/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ThinkPad_P16V_2025_Ultra_9275HX_64GB_RAM_2TB_SSD_RTX_5000 rdf:type :Product ;
+:ThinkPad_P16V_2025_Ultra_9275HX_64GB_RAM_2TB_SSD_RTX_5000 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_64gb_ddr5_5600_dual_up ,
                       :storage_2tb_pcie4_nvme_dual ,
@@ -326,9 +581,11 @@
                       :resolution_1920x1200 ,
                       :battery_86WH ,
                       :weight_2.22kg ;
-    :hasPrice "89900000"^^xsd:decimal .
+    :hasPrice "89900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/thinkpad-p16v-intel/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Legion_7_2025_Y9000X_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Legion_7_2025_Y9000X_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -336,9 +593,11 @@
                       :resolution_2560x1600 ,
                       :battery_84WH ,
                       :weight_1.98kg ;
-    :hasPrice "53200000"^^xsd:decimal .
+    :hasPrice "53200000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/y9000x-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Thinkbook_X_AI_2025__Touch_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkbook_X_AI_2025__Touch_Ultra_9285H_32GB_RAM_1TB_SSD rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_285h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -346,9 +605,11 @@
                       :resolution_2880x1920 ,
                       :battery_74WH ,
                       :weight_1.2kg ;
-    :hasPrice "32390000"^^xsd:decimal .
+    :hasPrice "32390000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/thinkbook-x-2025-touch/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Legion_7_2025_Y9000X_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+:Legion_7_2025_Y9000X_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -356,9 +617,11 @@
                       :resolution_2560x1600 ,
                       :battery_84WH ,
                       :weight_1.98kg ;
-    :hasPrice "56800000"^^xsd:decimal .
+    :hasPrice "56800000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/y9000x-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ThinkPad_T14_Gen_6_2025_AI_7_350_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T14_Gen_6_2025_AI_7_350_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_350 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -366,9 +629,11 @@
                       :resolution_1920x1200 ,
                       :battery_52.5WH ,
                       :weight_1.49kg ;
-    :hasPrice "27700000"^^xsd:decimal .
+    :hasPrice "27700000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/t14-g6/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:ThinkPad_P1_Gen_8_2025_Ultra_9275HX_64GB_RAM_1TB_SSD_RTX_5000 rdf:type :Product ;
+:ThinkPad_P1_Gen_8_2025_Ultra_9275HX_64GB_RAM_1TB_SSD_RTX_5000 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_64gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -376,9 +641,11 @@
                       :resolution_1920x1200 ,
                       :battery_90WH ,
                       :weight_1.79kg ;
-    :hasPrice "89900000"^^xsd:decimal .
+    :hasPrice "89900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/thinkpad-p1-g8/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -386,9 +653,11 @@
                       :resolution_2560x1600 ,
                       :battery_80WH ,
                       :weight_2.57kg ;
-    :hasPrice "63590000"^^xsd:decimal .
+    :hasPrice "63590000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/y9000p-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Legion_5_2025_Y7000P_I914900HX_16GB_RAM_1TB_SSD_RTX_50605070 rdf:type :Product ;
+:Legion_5_2025_Y7000P_I914900HX_16GB_RAM_1TB_SSD_RTX_50605070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -396,9 +665,11 @@
                       :resolution_2560x1600 ,
                       :battery_80WH ,
                       :weight_2.57kg ;
-    :hasPrice "34190000"^^xsd:decimal .
+    :hasPrice "34190000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/y7000p-2025/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:ThinkPad_T14P_AI_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T14P_AI_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -406,9 +677,11 @@
                       :refresh_rate_120Hz ,
                       :battery_75WH ,
                       :weight_1.56kg ;
-    :hasPrice "28500000"^^xsd:decimal .
+    :hasPrice "28500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/t14p-2025/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :Product ;
+:Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275hx ,
                       :ram_32gb_ddr5_6400_up ,
                       :storage_1tb_pcie4_nvme_gen4_gen5 ,
@@ -416,9 +689,11 @@
                       :resolution_2560x1600 ,
                       :battery_80WH ,
                       :weight_2.57kg ;
-    :hasPrice "67290000"^^xsd:decimal .
+    :hasPrice "67290000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/y9000p-2025/1-1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Xiaoxin_15c_2025_Lenovo_IdeaPad_Slim_3_R78745HS_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Xiaoxin_15c_2025_Lenovo_IdeaPad_Slim_3_R78745HS_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8745hs ,
                       :ram_16gb_ddr5_5600_hybrid ,
                       :storage_512gb_pcie_nvme_m2_dual ,
@@ -426,9 +701,11 @@
                       :resolution_2560x1600 ,
                       :battery_75WH ,
                       :weight_1.79kg ;
-    :hasPrice "15800000"^^xsd:decimal .
+    :hasPrice "15800000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/xx-15c/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Xiaoxin_Pro_14c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :Product ;
+:Xiaoxin_Pro_14c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_h350 ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_2242_m2 ,
@@ -436,9 +713,11 @@
                       :resolution_2880x1800 ,
                       :battery_60WH ,
                       :weight_1.39kg ;
-    :hasPrice "21790000"^^xsd:decimal .
+    :hasPrice "21790000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/14pro-2025/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:ThinkPad_T16_Gen_3_2025_AI_7_350_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T16_Gen_3_2025_AI_7_350_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_350 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -446,9 +725,11 @@
                       :resolution_1920x1200 ,
                       :battery_52.5WH ,
                       :weight_1.63kg ;
-    :hasPrice "28600000"^^xsd:decimal .
+    :hasPrice "28600000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/t16-g3/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:ThinkPad_T16_Gen_3_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_T16_Gen_3_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_ddr5_5600_dual_up ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -456,9 +737,11 @@
                       :resolution_1920x1200 ,
                       :battery_52.5WH ,
                       :weight_1.63kg ;
-    :hasPrice "31800000"^^xsd:decimal .
+    :hasPrice "31800000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/t16-g3/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ThinkPad_X1_Yoga_Gen_10_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_X1_Yoga_Gen_10_2025_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme ,
@@ -466,9 +749,11 @@
                       :resolution_2880x1800 ,
                       :battery_57WH ,
                       :weight_1.38kg ;
-    :hasPrice "47500000"^^xsd:decimal .
+    :hasPrice "47500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/x1-yoga-g10/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ThinkPad_X1_Yoga_Gen_10_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ThinkPad_X1_Yoga_Gen_10_2025_Ultra_5225H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_225h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme ,
@@ -476,9 +761,11 @@
                       :resolution_2880x1800 ,
                       :battery_57WH ,
                       :weight_1.38kg ;
-    :hasPrice "43500000"^^xsd:decimal .
+    :hasPrice "43500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/x1-yoga-g10/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Thinkpad_X1_Carbon_Gen_13_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Thinkpad_X1_Carbon_Gen_13_Ultra_7255H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_ssd ,
@@ -486,9 +773,11 @@
                       :resolution_2880x1800 ,
                       :battery_57WH ,
                       :weight_1.09kg ;
-    :hasPrice "47500000"^^xsd:decimal .
+    :hasPrice "47500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/thinkpad-x1-g13/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Zenbook_14_2024_Ultra_7_155H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Zenbook_14_2024_Ultra_7_155H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -496,9 +785,11 @@
                       :resolution_2880x1800 ,
                       :battery_75WH ,
                       :weight_1.2kg ;
-    :hasPrice "26000000"^^xsd:decimal .
+    :hasPrice "26000000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/zenbook-14/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_15_2024_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ASUS_Vivobook_Pro_15_2024_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -506,9 +797,11 @@
                       :resolution_2880x1620 ,
                       :battery_75WH ,
                       :weight_1.8kg ;
-    :hasPrice "31890000"^^xsd:decimal .
+    :hasPrice "31890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/vivobook-pro-15-intel/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ASUS_Vivobook_Pro_15_2024_Ultra_7155H_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :Product ;
+:ASUS_Vivobook_Pro_15_2024_Ultra_7155H_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -516,9 +809,11 @@
                       :resolution_2880x1620 ,
                       :battery_75WH ,
                       :weight_1.8kg ;
-    :hasPrice "27990000"^^xsd:decimal .
+    :hasPrice "27990000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/vivobook-pro-15-intel/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ASUS_Vivobook_S_14_OLED_2024_R78845H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Vivobook_S_14_OLED_2024_R78845H_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -526,9 +821,11 @@
                       :resolution_2880x1800 ,
                       :battery_75WH ,
                       :weight_1.3kg ;
-    :hasPrice "21600000"^^xsd:decimal .
+    :hasPrice "21600000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/s-14-oled/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_S_16_OLED_2024_R78845H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Vivobook_S_16_OLED_2024_R78845H_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -536,9 +833,11 @@
                       :resolution_2880x1800 ,
                       :battery_75WH ,
                       :weight_1.5kg ;
-    :hasPrice "22990000"^^xsd:decimal .
+    :hasPrice "22990000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/s-16-oled/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_S_16_OLED_2024_Ultra_7155H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Vivobook_S_16_OLED_2024_Ultra_7155H_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -546,9 +845,11 @@
                       :resolution_2880x1800 ,
                       :battery_75WH ,
                       :weight_1.5kg ;
-    :hasPrice "23290000"^^xsd:decimal .
+    :hasPrice "23290000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/s-16-oled-intel/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_S_16_OLED_2024_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_S_16_OLED_2024_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -556,9 +857,11 @@
                       :resolution_2880x1800 ,
                       :battery_75WH ,
                       :weight_1.5kg ;
-    :hasPrice "21800000"^^xsd:decimal .
+    :hasPrice "21800000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/s-16-oled-intel/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_R98945H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_R98945H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_9_8945h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -566,9 +869,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.7kg ;
-    :hasPrice "23990000"^^xsd:decimal .
+    :hasPrice "23990000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/pro-16-k6606mc/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_9185H_16GB_RAM_1TB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_9185H_16GB_RAM_1TB_SSD rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -576,9 +881,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.7kg ;
-    :hasPrice "27990000"^^xsd:decimal .
+    :hasPrice "27990000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/pro-16-k6606mc/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -586,9 +893,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.7kg ;
-    :hasPrice "24890000"^^xsd:decimal .
+    :hasPrice "24890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/pro-16-k6606mc/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_K6606MC_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -596,9 +905,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.7kg ;
-    :hasPrice "22590000"^^xsd:decimal .
+    :hasPrice "22590000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/pro-16-k6606mc/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -606,9 +917,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.8kg ;
-    :hasPrice "31890000"^^xsd:decimal .
+    :hasPrice "31890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/vivobook-pro-16-n9606/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -616,9 +929,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.7kg ;
-    :hasPrice "24890000"^^xsd:decimal .
+    :hasPrice "24890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/vivobook-pro-16-n9606/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -626,9 +941,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.7kg ;
-    :hasPrice "22590000"^^xsd:decimal .
+    :hasPrice "22590000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/vivobook-pro-16-n9606/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_7155H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:ASUS_Vivobook_Pro_16_OLED_2024_N9606_Ultra_7155H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -636,9 +953,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.8kg ;
-    :hasPrice "27990000"^^xsd:decimal .
+    :hasPrice "27990000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/vivobook-pro-16-n9606/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Acer_Swift_X_14_2024_SFXX_Ultra_7155H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:Acer_Swift_X_14_2024_SFXX_Ultra_7155H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -646,9 +965,11 @@
                       :resolution_2880x1800 ,
                       :battery_75WH ,
                       :weight_1.8kg ;
-    :hasPrice "26890000"^^xsd:decimal .
+    :hasPrice "26890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/acer-swift-x-14-5050/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Acer_Swift_X_14_2024_SFXX_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Acer_Swift_X_14_2024_SFXX_Ultra_9185H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -656,9 +977,11 @@
                       :resolution_2880x1800 ,
                       :battery_75WH ,
                       :weight_1.8kg ;
-    :hasPrice "31890000"^^xsd:decimal .
+    :hasPrice "31890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/acer-swift-x-14-5060/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Acer_Swift_Go_14_2024_SFXX_Ultra_7155H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Acer_Swift_Go_14_2024_SFXX_Ultra_7155H_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -666,9 +989,11 @@
                       :resolution_2880x1800 ,
                       :battery_65WH ,
                       :weight_1.2kg ;
-    :hasPrice "24500000"^^xsd:decimal .
+    :hasPrice "24500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/acer-swift-go-14/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Acer_Swift_Go_14_2024_SFXX_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Acer_Swift_Go_14_2024_SFXX_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -676,9 +1001,11 @@
                       :resolution_2880x1800 ,
                       :battery_65WH ,
                       :weight_1.2kg ;
-    :hasPrice "21500000"^^xsd:decimal .
+    :hasPrice "21500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/acer-swift-go-14/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Acer_Swift_Go_14_2024_SFXX_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Acer_Swift_Go_14_2024_SFXX_Ultra_7155H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -686,9 +1013,11 @@
                       :resolution_2880x1800 ,
                       :battery_65WH ,
                       :weight_1.2kg ;
-    :hasPrice "22500000"^^xsd:decimal .
+    :hasPrice "22500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/acer-swift-go-14/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:Dell_Inspiron_5420_i5_1240P_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_5420_i5_1240P_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_1240p ,
                       :ram_16gb_ddr4_3200_up ,
                       :storage_512gb_pcie_nvme_m2_replaceable ,
@@ -696,9 +1025,11 @@
                       :resolution_2240x1400 ,
                       :battery_54WH ,
                       :weight_1.5kg ;
-    :hasPrice "14500000"^^xsd:decimal .
+    :hasPrice "14500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-inspiron-5420/artboard-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_Inspiron_14_5430_i7_1360P_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_14_5430_i7_1360P_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_1360p ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -706,9 +1037,11 @@
                       :resolution_1920x1200 ,
                       :battery_54WH ,
                       :weight_1.55kg ;
-    :hasPrice "19500000"^^xsd:decimal .
+    :hasPrice "19500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-inspiron-5430/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R9375_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R9375_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_pro_375 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -716,9 +1049,11 @@
                       :resolution_2880x1800 ,
                       :battery_55WH ,
                       :weight_1.17kg ;
-    :hasPrice "39500000"^^xsd:decimal .
+    :hasPrice "39500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/xps-9335/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_pro_350 ,
                       :ram_16gb_lpddr5x_7500_nonup ,
                       :storage_512gb_pcie4_nvme_m2 ,
@@ -726,9 +1061,11 @@
                       :resolution_2880x1800 ,
                       :battery_55WH ,
                       :weight_1.17kg ;
-    :hasPrice "34900000"^^xsd:decimal .
+    :hasPrice "34900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/xps-9335/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_XPS_16_9635_Ultra_9275H_64GB_RAM_2TB_SSD_RTX_5060 rdf:type :Product ;
+:Dell_XPS_16_9635_Ultra_9275H_64GB_RAM_2TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275h ,
                       :ram_64gb_lpddr5x_8400_nonup ,
                       :storage_2tb_pcie4_nvme_m2 ,
@@ -736,9 +1073,11 @@
                       :resolution_3840x2400 ,
                       :battery_90WH ,
                       :weight_2.13kg ;
-    :hasPrice "56900000"^^xsd:decimal .
+    :hasPrice "56900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/xps-16/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_i7_1360P_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_i7_1360P_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_1360p ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -746,9 +1085,11 @@
                       :resolution_1920x1200 ,
                       :battery_54WH ,
                       :weight_1.8kg ;
-    :hasPrice "21000000"^^xsd:decimal .
+    :hasPrice "21000000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_i5_1340P_8GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_i5_1340P_8GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_1340p ,
                       :ram_8gb_lpddr5_4800_nonup ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -756,9 +1097,11 @@
                       :resolution_1920x1200 ,
                       :battery_54WH ,
                       :weight_1.8kg ;
-    :hasPrice "18500000"^^xsd:decimal .
+    :hasPrice "18500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_512GB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_125u ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_512gb_pcie_nvme_m2 ,
@@ -766,9 +1109,11 @@
                       :resolution_1920x1200 ,
                       :battery_54WH ,
                       :weight_1.8kg ;
-    :hasPrice "20500000"^^xsd:decimal .
+    :hasPrice "20500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_1TB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_125u ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -776,9 +1121,11 @@
                       :resolution_1920x1200 ,
                       :battery_54WH ,
                       :weight_1.8kg ;
-    :hasPrice "21500000"^^xsd:decimal .
+    :hasPrice "21500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_Inspiron_16_5630_Ultra_7155U_16GB_RAM_1TB_SSD rdf:type :Product ;
+:Dell_Inspiron_16_5630_Ultra_7155U_16GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_155u ,
                       :ram_16gb_lpddr5_4800_nonup ,
                       :storage_1tb_pcie_nvme_m2 ,
@@ -786,9 +1133,11 @@
                       :resolution_1920x1200 ,
                       :battery_54WH ,
                       :weight_1.8kg ;
-    :hasPrice "24500000"^^xsd:decimal .
+    :hasPrice "24500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_G15_5530_i9_13900HX_16GB_RAM_1TB_SSD_RTX_4060 rdf:type :Product ;
+:Dell_G15_5530_i9_13900HX_16GB_RAM_1TB_SSD_RTX_4060 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i9_13900hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -796,9 +1145,11 @@
                       :resolution_1920x1080 ,
                       :battery_86WH ,
                       :weight_2.65kg ;
-    :hasPrice "29500000"^^xsd:decimal .
+    :hasPrice "29500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i7_13650HX_16GB_RAM_512GB_SSD_RTX_4060 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_16GB_RAM_512GB_SSD_RTX_4060 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_512gb_pcie4_nvme_m2_dual ,
@@ -806,9 +1157,11 @@
                       :resolution_1920x1080 ,
                       :battery_86WH ,
                       :weight_2.65kg ;
-    :hasPrice "26500000"^^xsd:decimal .
+    :hasPrice "26500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i9_13900HX_32GB_RAM_1TB_SSD_RTX_4070 rdf:type :Product ;
+:Dell_G15_5530_i9_13900HX_32GB_RAM_1TB_SSD_RTX_4070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i9_13900hx ,
                       :ram_32gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -816,9 +1169,11 @@
                       :resolution_2560x1440 ,
                       :battery_86WH ,
                       :weight_2.65kg ;
-    :hasPrice "34500000"^^xsd:decimal .
+    :hasPrice "34500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i7_13650HX_32GB_RAM_1TB_SSD_RTX_4070 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_32GB_RAM_1TB_SSD_RTX_4070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_32gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -826,9 +1181,11 @@
                       :resolution_2560x1440 ,
                       :battery_86WH ,
                       :weight_2.65kg ;
-    :hasPrice "31890000"^^xsd:decimal .
+    :hasPrice "31890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i7_13650HX_16GB_RAM_1TB_SSD_RTX_4050 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_16GB_RAM_1TB_SSD_RTX_4050 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -836,9 +1193,11 @@
                       :resolution_1920x1080 ,
                       :battery_86WH ,
                       :weight_2.65kg ;
-    :hasPrice "24500000"^^xsd:decimal .
+    :hasPrice "24500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i5_13450HX_16GB_RAM_512GB_SSD_RTX_4050 rdf:type :Product ;
+:Dell_G15_5530_i5_13450HX_16GB_RAM_512GB_SSD_RTX_4050 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_13450hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_512gb_pcie4_nvme_m2_dual ,
@@ -846,9 +1205,11 @@
                       :resolution_1920x1080 ,
                       :battery_86WH ,
                       :weight_2.65kg ;
-    :hasPrice "23500000"^^xsd:decimal .
+    :hasPrice "23500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_G15_5530_i7_13650HX_16GB_RAM_512GB_SSD_RTX_4060 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_16GB_RAM_512GB_SSD_RTX_4060 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_512gb_pcie4_nvme_m2_dual ,
@@ -856,9 +1217,11 @@
                       :resolution_2560x1440 ,
                       :battery_86WH ,
                       :weight_2.65kg ;
-    :hasPrice "26500000"^^xsd:decimal .
+    :hasPrice "26500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_G15_5530_i7_13650HX_16GB_RAM_1TB_SSD_RTX_4070 rdf:type :Product ;
+:Dell_G15_5530_i7_13650HX_16GB_RAM_1TB_SSD_RTX_4070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_13650hx ,
                       :ram_16gb_ddr5_4800_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -866,9 +1229,11 @@
                       :resolution_2560x1440 ,
                       :battery_86WH ,
                       :weight_2.65kg ;
-    :hasPrice "31890000"^^xsd:decimal .
+    :hasPrice "31890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-g15-5530/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_Alienware_M18_R2_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Dell_Alienware_M18_R2_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -876,9 +1241,11 @@
                       :resolution_2560x1600 ,
                       :battery_97WH ,
                       :weight_4.04kg ;
-    :hasPrice "56900000"^^xsd:decimal .
+    :hasPrice "56900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/alienware-m18/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_Alienware_M18_R2_2025_i914900HX_64GB_RAM_2TB_SSD_RTX_5080 rdf:type :Product ;
+:Dell_Alienware_M18_R2_2025_i914900HX_64GB_RAM_2TB_SSD_RTX_5080 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_64gb_ddr5_5600_up ,
                       :storage_2tb_pcie4_nvme_m2_dual ,
@@ -886,9 +1253,11 @@
                       :resolution_2560x1600 ,
                       :battery_97WH ,
                       :weight_4.04kg ;
-    :hasPrice "79900000"^^xsd:decimal .
+    :hasPrice "79900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/alienware-m18/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_Alienware_M18_R2_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:Dell_Alienware_M18_R2_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -896,9 +1265,11 @@
                       :resolution_2560x1600 ,
                       :battery_97WH ,
                       :weight_4.04kg ;
-    :hasPrice "51500000"^^xsd:decimal .
+    :hasPrice "51500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/alienware-m18/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_Alienware_M18_R2_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:Dell_Alienware_M18_R2_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2_dual ,
@@ -906,9 +1277,11 @@
                       :resolution_2560x1600 ,
                       :battery_97WH ,
                       :weight_4.04kg ;
-    :hasPrice "47500000"^^xsd:decimal .
+    :hasPrice "47500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/alienware-m18/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R9375_64GB_RAM_2TB_SSD rdf:type :Product ;
+:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R9375_64GB_RAM_2TB_SSD rdf:type :HighEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_9_pro_375 ,
                       :ram_64gb_lpddr5x_7500_nonup ,
                       :storage_2tb_pcie4_nvme_m2 ,
@@ -916,9 +1289,11 @@
                       :resolution_2880x1800 ,
                       :battery_55WH ,
                       :weight_1.17kg ;
-    :hasPrice "43500000"^^xsd:decimal .
+    :hasPrice "43500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/xps-9335/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_32GB_RAM_1TB_SSD rdf:type :Product ;
+:Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_32GB_RAM_1TB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_ai_7_pro_350 ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -926,9 +1301,11 @@
                       :resolution_2880x1800 ,
                       :battery_55WH ,
                       :weight_1.17kg ;
-    :hasPrice "36500000"^^xsd:decimal .
+    :hasPrice "36500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/xps-9335/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_XPS_14_9440_Touch_OLED_Ultra_9275H_64GB_RAM_2TB_SSD_RTX_5060 rdf:type :Product ;
+:Dell_XPS_14_9440_Touch_OLED_Ultra_9275H_64GB_RAM_2TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_275h ,
                       :ram_64gb_lpddr5x_8400_nonup ,
                       :storage_2tb_pcie4_nvme_m2 ,
@@ -936,9 +1313,11 @@
                       :resolution_3200x2000 ,
                       :battery_69.5WH ,
                       :weight_1.74kg ;
-    :hasPrice "48900000"^^xsd:decimal .
+    :hasPrice "48900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/xps-14/1-1.png" ;
+    :satisfiesRequirement :Office .
 
-:Dell_XPS_14_9440_Touch_OLED_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:Dell_XPS_14_9440_Touch_OLED_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_255h ,
                       :ram_32gb_lpddr5x_8400_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -946,9 +1325,11 @@
                       :resolution_3200x2000 ,
                       :battery_69.5WH ,
                       :weight_1.74kg ;
-    :hasPrice "43500000"^^xsd:decimal .
+    :hasPrice "43500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/xps-14/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:Dell_Inspiron_14_5440_Plus_Ultra_7155H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:Dell_Inspiron_14_5440_Plus_Ultra_7155H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_7500_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -956,9 +1337,11 @@
                       :resolution_1920x1200 ,
                       :battery_54WH ,
                       :weight_1.64kg ;
-    :hasPrice "29500000"^^xsd:decimal .
+    :hasPrice "29500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/dell-5440/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+:HP_OMEN_17_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5070 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -966,9 +1349,11 @@
                       :resolution_2560x1440 ,
                       :battery_83WH ,
                       :weight_2.8kg ;
-    :hasPrice "39500000"^^xsd:decimal .
+    :hasPrice "39500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i714700HX_16GB_RAM_512GB_SSD_RTX_5060 rdf:type :Product ;
+:HP_OMEN_17_2025_i714700HX_16GB_RAM_512GB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_512gb_pcie4_nvme_tlc_m2 ,
@@ -976,9 +1361,11 @@
                       :resolution_2560x1440 ,
                       :battery_83WH ,
                       :weight_2.8kg ;
-    :hasPrice "34900000"^^xsd:decimal .
+    :hasPrice "34900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i514500HX_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :Product ;
+:HP_OMEN_17_2025_i514500HX_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_14500hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_512gb_pcie4_nvme_tlc_m2 ,
@@ -986,9 +1373,11 @@
                       :resolution_2560x1440 ,
                       :battery_83WH ,
                       :weight_2.8kg ;
-    :hasPrice "29890000"^^xsd:decimal .
+    :hasPrice "29890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Spectre_x360_14_2025_Ultra_7155H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_Spectre_x360_14_2025_Ultra_7155H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -996,9 +1385,11 @@
                       :resolution_2880x1800 ,
                       :battery_68WH ,
                       :weight_1.35kg ;
-    :hasPrice "34900000"^^xsd:decimal .
+    :hasPrice "34900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/spectre-x360-14/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:HP_Spectre_x360_14_2025_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:HP_Spectre_x360_14_2025_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -1006,9 +1397,11 @@
                       :resolution_2880x1800 ,
                       :battery_68WH ,
                       :weight_1.35kg ;
-    :hasPrice "29500000"^^xsd:decimal .
+    :hasPrice "29500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/spectre-x360-14/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:HP_Spectre_x360_14_2025_Ultra_9185H_32GB_RAM_1TB_SSD rdf:type :Product ;
+:HP_Spectre_x360_14_2025_Ultra_9185H_32GB_RAM_1TB_SSD rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1016,9 +1409,11 @@
                       :resolution_2880x1800 ,
                       :battery_68WH ,
                       :weight_1.35kg ;
-    :hasPrice "39500000"^^xsd:decimal .
+    :hasPrice "39500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/spectre-x360-14/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:HP_Spectre_x360_16_2025_Ultra_9185H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Spectre_x360_16_2025_Ultra_9185H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_ultra_9_processor_185h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1026,9 +1421,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.7kg ;
-    :hasPrice "47900000"^^xsd:decimal .
+    :hasPrice "47900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/spectre-x360-16/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Spectre_x360_16_2025_Ultra_7155H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:HP_Spectre_x360_16_2025_Ultra_7155H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_ultra_7_processor_155h ,
                       :ram_32gb_lpddr5x_nonup ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1036,9 +1433,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.7kg ;
-    :hasPrice "43900000"^^xsd:decimal .
+    :hasPrice "43900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/spectre-x360-16/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Spectre_x360_16_2025_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :Product ;
+:HP_Spectre_x360_16_2025_Ultra_5125H_16GB_RAM_512GB_SSD rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_ultra_5_processor_125h ,
                       :ram_16gb_lpddr5x_nonup ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -1046,9 +1445,11 @@
                       :resolution_3200x2000 ,
                       :battery_75WH ,
                       :weight_1.7kg ;
-    :hasPrice "38500000"^^xsd:decimal .
+    :hasPrice "38500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/spectre-x360-16/1-1.png" ;
+    :satisfiesRequirement :Graphic .
 
-:HP_OMEN_17_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :Product ;
+:HP_OMEN_17_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -1056,9 +1457,11 @@
                       :resolution_2560x1440 ,
                       :battery_83WH ,
                       :weight_2.8kg ;
-    :hasPrice "43890000"^^xsd:decimal .
+    :hasPrice "43890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_OMEN_17_2025_i914900HX_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -1066,9 +1469,11 @@
                       :resolution_2560x1440 ,
                       :battery_83WH ,
                       :weight_2.8kg ;
-    :hasPrice "39500000"^^xsd:decimal .
+    :hasPrice "39500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:HP_OMEN_17_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -1076,9 +1481,11 @@
                       :resolution_2560x1440 ,
                       :battery_83WH ,
                       :weight_2.8kg ;
-    :hasPrice "34900000"^^xsd:decimal .
+    :hasPrice "34900000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_OMEN_17_2025_i514500HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_OMEN_17_2025_i514500HX_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i5_14500hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_tlc_m2 ,
@@ -1086,9 +1493,11 @@
                       :resolution_2560x1440 ,
                       :battery_83WH ,
                       :weight_2.8kg ;
-    :hasPrice "31890000"^^xsd:decimal .
+    :hasPrice "31890000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-omen-17-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R78845H_16GB_RAM_512GB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R78845H_16GB_RAM_512GB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -1096,9 +1505,11 @@
                       :resolution_1920x1080 ,
                       :battery_70WH ,
                       :weight_2.23kg ;
-    :hasPrice "27500000"^^xsd:decimal .
+    :hasPrice "27500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R58545H_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R58545H_16GB_RAM_512GB_SSD_RTX_5050 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_5_8545h ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_512gb_pcie4_nvme_x4_m2 ,
@@ -1106,9 +1517,11 @@
                       :resolution_1920x1080 ,
                       :battery_70WH ,
                       :weight_2.23kg ;
-    :hasPrice "24500000"^^xsd:decimal .
+    :hasPrice "24500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R78845H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R78845H_16GB_RAM_1TB_SSD_RTX_5050 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1116,9 +1529,11 @@
                       :resolution_1920x1080 ,
                       :battery_70WH ,
                       :weight_2.23kg ;
-    :hasPrice "29500000"^^xsd:decimal .
+    :hasPrice "29500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R78845H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R78845H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_7_8845h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1126,9 +1541,11 @@
                       :resolution_1920x1080 ,
                       :battery_70WH ,
                       :weight_2.23kg ;
-    :hasPrice "29500000"^^xsd:decimal .
+    :hasPrice "29500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R58545H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R58545H_16GB_RAM_1TB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_5_8545h ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1136,9 +1553,11 @@
                       :resolution_1920x1080 ,
                       :battery_70WH ,
                       :weight_2.23kg ;
-    :hasPrice "26500000"^^xsd:decimal .
+    :hasPrice "26500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R58545H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R58545H_32GB_RAM_1TB_SSD_RTX_5050 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_5_8545h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1146,9 +1565,11 @@
                       :resolution_1920x1080 ,
                       :battery_70WH ,
                       :weight_2.23kg ;
-    :hasPrice "26500000"^^xsd:decimal .
+    :hasPrice "26500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:HP_Pavilion_Gaming_15_2025_R58545H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :Product ;
+:HP_Pavilion_Gaming_15_2025_R58545H_32GB_RAM_1TB_SSD_RTX_5060 rdf:type :LowEnd ;
     :hasSpecification :cpu_amd_ryzen_5_8545h ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1156,9 +1577,11 @@
                       :resolution_1920x1080 ,
                       :battery_70WH ,
                       :weight_2.23kg ;
-    :hasPrice "28500000"^^xsd:decimal .
+    :hasPrice "28500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/hp-pavilion-gaming-15-2025/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:MSI_GE68_HX_14_i914900HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :Product ;
+:MSI_GE68_HX_14_i914900HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :HighEnd ;
     :hasSpecification :cpu_intel_core_i9_14900hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1166,9 +1589,11 @@
                       :resolution_1920x1200 ,
                       :battery_99.9WH ,
                       :weight_2.7kg ;
-    :hasPrice "67500000"^^xsd:decimal .
+    :hasPrice "67500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/msi-ge68hx-14/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:MSI_GE68_HX_14_i714700HX_16GB_RAM_1TB_SSD_RTX_5070 rdf:type :Product ;
+:MSI_GE68_HX_14_i714700HX_16GB_RAM_1TB_SSD_RTX_5070 rdf:type :LowEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_16gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1176,9 +1601,11 @@
                       :resolution_1920x1200 ,
                       :battery_99.9WH ,
                       :weight_2.7kg ;
-    :hasPrice "56500000"^^xsd:decimal .
+    :hasPrice "56500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/msi-ge68hx-14/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
-:MSI_GE68_HX_14_i714700HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :Product ;
+:MSI_GE68_HX_14_i714700HX_32GB_RAM_1TB_SSD_RTX_5080 rdf:type :MiddleEnd ;
     :hasSpecification :cpu_intel_core_i7_14700hx ,
                       :ram_32gb_ddr5_5600_up ,
                       :storage_1tb_pcie4_nvme_m2 ,
@@ -1186,21 +1613,22 @@
                       :resolution_1920x1200 ,
                       :battery_99.9WH ,
                       :weight_2.7kg ;
-    :hasPrice "61500000"^^xsd:decimal .
-
+    :hasPrice "61500000"^^xsd:decimal ;
+    :hasImage "https://sazo.vn/storage/products/msi-ge68hx-14/1-1.png" ;
+    :satisfiesRequirement :Gaming .
 
 :cpu_amd_ryzen_7_h255 rdf:type :CPU ;
     :brand "AMD" ;
     :model "Ryzen™ 7 H 255" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
+    :cores "8"^^xsd:integer ;
+    :threads "16"^^xsd:integer ;
+    :baseClock "0" ;
     :boostClock "4.9GHz" ;
     :cache "16MB" .
 
 
 :ram_32gb_ddr5_5600_up rdf:type :RAM ;
-    :capacity "32"^^xsd:integer ;
+    :memory "32"^^xsd:integer ;
     :type "DDR5-5600" ;
     :speed "5600MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1215,7 +1643,7 @@
 :gpu_amd_radeon_780m rdf:type :GPU ;
     :brand "AMD" ;
     :model "Radeon 780M" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :battery_80WH rdf:type :Battery ;
@@ -1238,7 +1666,7 @@
 
 
 :ram_16gb_ddr5_5200_up rdf:type :RAM ;
-    :capacity "16"^^xsd:integer ;
+    :memory "16"^^xsd:integer ;
     :type "DDR5-5200" ;
     :speed "5200MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1247,7 +1675,7 @@
 :gpu_nvidia_rtx_5060_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® GeForce RTX™ 5060 Laptop GPU 8GB GDDR7" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :weight_2.4kg rdf:type :Weight ;
@@ -1260,13 +1688,13 @@
     :model "Core i7 14650HX" ;
     :cores "16"^^xsd:integer ;
     :threads "24"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :baseClock "" ;
+    :boostClock "4.9GHz" ;
+    :cache "24MB" .
 
 
 :ram_16gb_ddr5_5600_up rdf:type :RAM ;
-    :capacity "16"^^xsd:integer ;
+    :memory "16"^^xsd:integer ;
     :type "DDR5-5600" ;
     :speed "5600MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1275,21 +1703,21 @@
 :gpu_combo_intel_integrated_nvidia_rtx_5060_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Graphics + ® GeForce RTX 5060 Laptop GPU 8GB GDDR7" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :cpu_intel_core_ultra_7_255h rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core Ultra 7 255H   AI Boost" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "16"^^xsd:integer ;
+    :threads "16"^^xsd:integer ;
+    :baseClock "0" ;
+    :boostClock "5.4GHz" ;
+    :cache "24MB" .
 
 
 :ram_32gb_ddr5_5600_dual_up rdf:type :RAM ;
-    :capacity "32"^^xsd:integer ;
+    :memory "32"^^xsd:integer ;
     :type "DDR5-5600" ;
     :speed "5600MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1304,7 +1732,7 @@
 :gpu_intel_arc_140t rdf:type :GPU ;
     :brand "Intel" ;
     :model "® Arc™ 140T (onboard)" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :battery_75WH rdf:type :Battery ;
@@ -1319,15 +1747,15 @@
 :cpu_intel_core_ultra_9_275hx rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core Ultra 9 275HX  24 luồng, xung nhịp cơ bản từ 2.1GHz có thể đạt max với turbo boost lên tới 5.4GHz, 36MB Cache)" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "24"^^xsd:integer ;
+    :threads "24"^^xsd:integer ;
+    :baseClock "2.1GHz" ;
+    :boostClock "5.4GHz" ;
     :cache "36MB" .
 
 
 :ram_32gb_ddr5_6400_up rdf:type :RAM ;
-    :capacity "32"^^xsd:integer ;
+    :memory "32"^^xsd:integer ;
     :type "DDR5-6400" ;
     :speed "6400MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1342,7 +1770,7 @@
 :gpu_combo_intel_integrated_nvidia_rtx_5070ti_12gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Graphics + ® GeForce RTX 5070Ti Laptop GPU 12GB GDDR7" ;
-    :memory "12"^^xsd:integer .
+    :vramMemory "12"^^xsd:integer .
 
 
 :weight_2.57kg rdf:type :Weight ;
@@ -1353,7 +1781,7 @@
 :gpu_combo_intel_integrated_nvidia_rtx_5070_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Graphics + ® GeForce RTX 5070 Laptop GPU 8GB GDDR7" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :battery_84WH rdf:type :Battery ;
@@ -1374,7 +1802,7 @@
 :gpu_combo_intel_arc_140t_nvidia_rtx_5060_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Arc™ 140T (onboard) + ® GeForce RTX™ 5060 Laptop GPU 8GB GDDR7" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :battery_85WH rdf:type :Battery ;
@@ -1387,7 +1815,7 @@
 
 
 :ram_24gb_ddr5_4800_up rdf:type :RAM ;
-    :capacity "24"^^xsd:integer ;
+    :memory "24"^^xsd:integer ;
     :type "DDR5-4800" ;
     :speed "4800MHz" ;
     :upgradeable "true"^^xsd:boolean .
@@ -1416,17 +1844,17 @@
 :cpu_amd_ryzen_ai_7_h350 rdf:type :CPU ;
     :brand "AMD" ;
     :model "Ryzen AI 7 H 350" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "8"^^xsd:integer ;
+    :threads "16"^^xsd:integer ;
+    :baseClock "2GHz" ;
+    :boostClock "5GHz" ;
     :cache "16MB" .
 
 
 :gpu_amd_radeon_860m rdf:type :GPU ;
     :brand "AMD" ;
     :model "Radeon™ 860M Graphics" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :cpu_amd_ryzen_7_h260 rdf:type :CPU ;
@@ -1434,13 +1862,13 @@
     :model "Ryzen 7 H 260" ;
     :cores "8"^^xsd:integer ;
     :threads "16"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :baseClock "2GHz" ;
+    :boostClock "5.1GHz" ;
+    :cache "16MB" .
 
 
 :ram_32gb_lpddr5x_7500_nonup rdf:type :RAM ;
-    :capacity "32"^^xsd:integer ;
+    :memory "32"^^xsd:integer ;
     :type "DDR5" ;
     :speed "7500MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1454,17 +1882,17 @@
 :cpu_intel_core_ultra_5_225h rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core Ultra 5-225H" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "14"^^xsd:integer ;
+    :threads "14"^^xsd:integer ;
+    :baseClock "0" ;
+    :boostClock "4.9GHz" ;
+    :cache "18MB" .
 
 
 :ram_32gb_lpddr5x_8400_nonup rdf:type :RAM ;
-    :capacity "32"^^xsd:integer ;
+    :memory "32"^^xsd:integer ;
     :type "DDR5" ;
-    :speed "?" ;
+    :speed "0" ;
     :upgradeable "false"^^xsd:boolean .
 
 
@@ -1477,7 +1905,7 @@
 :gpu_intel_arc_130t rdf:type :GPU ;
     :brand "Intel" ;
     :model "® Arc™ 130T (onboard)" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :battery_57WH rdf:type :Battery ;
@@ -1492,15 +1920,15 @@
 :cpu_intel_core_ultra_9_275h rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core Ultra 9 275H   AI Boost" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "16"^^xsd:integer ;
+    :threads "22"^^xsd:integer ;
+    :baseClock "1.9GHz" ;
+    :boostClock "5.4GHz" ;
+    :cache "24MB" .
 
 
 :ram_32gb_lpddr5x_7467_nonup rdf:type :RAM ;
-    :capacity "32"^^xsd:integer ;
+    :memory "32"^^xsd:integer ;
     :type "DDR5" ;
     :speed "7467MHz" ;
     :upgradeable "true"^^xsd:boolean .
@@ -1515,7 +1943,7 @@
 :gpu_intel_arc_185t rdf:type :GPU ;
     :brand "Intel" ;
     :model "® Arc™ 185T" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :weight_1.69kg rdf:type :Weight ;
@@ -1541,10 +1969,10 @@
 :cpu_amd_ryzen_9_8945hx rdf:type :CPU ;
     :brand "AMD" ;
     :model "Ryzen 9 8945HX" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "16"^^xsd:integer ;
+    :threads "32"^^xsd:integer ;
+    :baseClock "2.5GHz" ;
+    :boostClock "5.4GHz" ;
     :cache "64MB" .
 
 
@@ -1561,13 +1989,13 @@
 :gpu_combo_amd_radeon_780m_nvidia_rtx_5060_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "Radeon™ 780M + ® GeForce RTX 5060 Laptop GPU 8GB GDDR7" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :ram_16gb_lpddr5x_8400_nonup rdf:type :RAM ;
-    :capacity "16"^^xsd:integer ;
+    :memory "16"^^xsd:integer ;
     :type "DDR5" ;
-    :speed "?" ;
+    :speed "0" ;
     :upgradeable "true"^^xsd:boolean .
 
 
@@ -1609,13 +2037,13 @@
     :model "Ryzen AI 9 HX Pro 375" ;
     :cores "12"^^xsd:integer ;
     :threads "24"^^xsd:integer ;
-    :baseClock "?" ;
+    :baseClock "0" ;
     :boostClock "5.1GHz" ;
     :cache "24MB" .
 
 
 :ram_64gb_ddr5_5600_up rdf:type :RAM ;
-    :capacity "64"^^xsd:integer ;
+    :memory "64"^^xsd:integer ;
     :type "DDR5" ;
     :speed "5600MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1624,7 +2052,7 @@
 :gpu_amd_radeon_890m rdf:type :GPU ;
     :brand "AMD" ;
     :model "Radeon™ 890M Graphics" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :battery_62WH rdf:type :Battery ;
@@ -1639,16 +2067,16 @@
 :cpu_intel_core_i5_1240p rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core i5 1240P" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "12"^^xsd:integer ;
+    :threads "16"^^xsd:integer ;
+    :baseClock "1.7GHz" ;
+    :boostClock "4.4GHz" ;
+    :cache "12MB" .
 
 
 :ram_16gb_ddr4_3200_up rdf:type :RAM ;
-    :capacity "16"^^xsd:integer ;
-    :type "?" ;
+    :memory "16"^^xsd:integer ;
+    :type "0" ;
     :speed "3200MHz" ;
     :upgradeable "false"^^xsd:boolean .
 
@@ -1662,7 +2090,7 @@
 :gpu_intel_iris_xe rdf:type :GPU ;
     :brand "Intel" ;
     :model "® Iris® Xe" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :battery_54WH rdf:type :Battery ;
@@ -1672,10 +2100,10 @@
 :cpu_amd_ryzen_ai_9_pro_375 rdf:type :CPU ;
     :brand "AMD" ;
     :model "Ryzen AI 9 PRO 375" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "12"^^xsd:integer ;
+    :threads "24"^^xsd:integer ;
+    :baseClock "2.1GHz" ;
+    :boostClock "5.4GHz" ;
     :cache "24MB" .
 
 
@@ -1697,11 +2125,11 @@
 :gpu_combo_intel_arc_130t_nvidia_rtx_t1000_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Arc™ 130T (onboard) + ® RTX™ T1000 Ada Generation Laptop GPU 8GB GDDR6" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :ram_64gb_ddr5_5600_dual_up rdf:type :RAM ;
-    :capacity "64"^^xsd:integer ;
+    :memory "64"^^xsd:integer ;
     :type "DDR5-5600" ;
     :speed "5600MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1716,7 +2144,7 @@
 :gpu_combo_intel_arc_140t_nvidia_rtx_5000_12gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Arc™ 140T (onboard) + ® RTX™ 5000 Ada Generation Laptop GPU 12GB GDDR6" ;
-    :memory "12"^^xsd:integer .
+    :vramMemory "12"^^xsd:integer .
 
 
 :weight_2.22kg rdf:type :Weight ;
@@ -1727,21 +2155,21 @@
 :cpu_intel_core_ultra_9_285h rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core Ultra 9 285H   AI Boost" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "16"^^xsd:integer ;
+    :threads "22"^^xsd:integer ;
+    :baseClock "0" ;
+    :boostClock "5.1GHz" ;
+    :cache "24MB" .
 
 
 :cpu_amd_ryzen_ai_7_350 rdf:type :CPU ;
     :brand "AMD" ;
     :model "Ryzen AI 7 350" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "8"^^xsd:integer ;
+    :threads "16"^^xsd:integer ;
+    :baseClock "2" ;
+    :boostClock "5" ;
+    :cache "16MB" .
 
 
 :battery_52.5WH rdf:type :Battery ;
@@ -1760,17 +2188,17 @@
 :cpu_intel_core_i9_14900hx rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core i9 14900HX" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "24"^^xsd:integer ;
+    :threads "32"^^xsd:integer ;
+    :baseClock "2.2GHz" ;
+    :boostClock "5.8GHz" ;
     :cache "36MB" .
 
 
 :gpu_combo_intel_integrated_nvidia_multi_115w rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Graphics + ® GeForce RTX 5060 Laptop GPU 8GB GDDR7 115W, ® Graphics + ® GeForce RTX 5070 Laptop GPU 8GB GDDR7 115W" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :cpu_amd_ryzen_7_8745hs rdf:type :CPU ;
@@ -1778,13 +2206,13 @@
     :model "Ryzen 7 8745HS" ;
     :cores "8"^^xsd:integer ;
     :threads "16"^^xsd:integer ;
-    :baseClock "?" ;
+    :baseClock "0" ;
     :boostClock "4.9GHz" ;
-    :cache "?" .
+    :cache "16MB" .
 
 
 :ram_16gb_ddr5_5600_hybrid rdf:type :RAM ;
-    :capacity "16"^^xsd:integer ;
+    :memory "16"^^xsd:integer ;
     :type "DDR5" ;
     :speed "5600MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1815,16 +2243,16 @@
     :brand "Intel" ;
     :model "® Core™ Ultra 7  155H 1.4 GHz ; ® AI Boost NPU" ;
     :cores "16"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
+    :threads "22"^^xsd:integer ;
+    :baseClock "0" ;
     :boostClock "4.8GHz" ;
     :cache "24MB" .
 
 
 :ram_32gb_lpddr5x_nonup rdf:type :RAM ;
-    :capacity "32"^^xsd:integer ;
+    :memory "32"^^xsd:integer ;
     :type "DDR5" ;
-    :speed "?" ;
+    :speed "0" ;
     :upgradeable "false"^^xsd:boolean .
 
 
@@ -1837,30 +2265,30 @@
 :gpu_intel_arc_integrated rdf:type :GPU ;
     :brand "Intel" ;
     :model "® Arc™ Graphics" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :cpu_intel_core_ultra_9_processor_185h rdf:type :CPU ;
     :brand "Intel" ;
     :model "® Core™ Ultra 9  185H 2.3 GHz ; ® AI Boost NPU" ;
     :cores "16"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
+    :threads "22"^^xsd:integer ;
+    :baseClock "0" ;
     :boostClock "5.1GHz" ;
     :cache "24MB" .
 
 
 :ram_16gb_lpddr5x_nonup rdf:type :RAM ;
-    :capacity "16"^^xsd:integer ;
+    :memory "16"^^xsd:integer ;
     :type "DDR5" ;
-    :speed "?" ;
+    :speed "0" ;
     :upgradeable "false"^^xsd:boolean .
 
 
 :gpu_combo_intel_arc_integrated_nvidia_rtx_5060_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Arc™ Graphics + ® GeForce RTX™ 5060 Laptop GPU 8GB GDDR7" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :weight_1.8kg rdf:type :Weight ;
@@ -1877,7 +2305,7 @@
 :gpu_combo_intel_arc_integrated_nvidia_rtx_5050_6gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Arc™ Graphics + ® GeForce RTX™ 5050 Laptop GPU 6GB GDDR7" ;
-    :memory "6"^^xsd:integer .
+    :vramMemory "6"^^xsd:integer .
 
 
 :cpu_amd_ryzen_7_8845h rdf:type :CPU ;
@@ -1885,7 +2313,7 @@
     :model "Ryzen™ 7 8845H" ;
     :cores "8"^^xsd:integer ;
     :threads "16"^^xsd:integer ;
-    :baseClock "?" ;
+    :baseClock "0" ;
     :boostClock "5.1GHz" ;
     :cache "16MB" .
 
@@ -1893,7 +2321,7 @@
 :gpu_amd_radeon_integrated rdf:type :GPU ;
     :brand "AMD" ;
     :model "Radeon™ Graphics" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :weight_1.3kg rdf:type :Weight ;
@@ -1905,8 +2333,8 @@
     :brand "Intel" ;
     :model "® Core™ Ultra 5  125H" ;
     :cores "14"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
+    :threads "18"^^xsd:integer ;
+    :baseClock "0" ;
     :boostClock "4.5GHz" ;
     :cache "18MB" .
 
@@ -1916,9 +2344,9 @@
     :model "Ryzen™ 9 8945H" ;
     :cores "8"^^xsd:integer ;
     :threads "16"^^xsd:integer ;
-    :baseClock "?" ;
+    :baseClock "0" ;
     :boostClock "5.2GHz" ;
-    :cache "?" .
+    :cache "16MB" .
 
 
 :weight_1.7kg rdf:type :Weight ;
@@ -1939,15 +2367,15 @@
 :cpu_intel_core_i7_1360p rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core i7 1360P" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "12"^^xsd:integer ;
+    :threads "16"^^xsd:integer ;
+    :baseClock "1.7GHz" ;
+    :boostClock "5.0GHz" ;
+    :cache "18MB" .
 
 
 :ram_16gb_lpddr5_4800_nonup rdf:type :RAM ;
-    :capacity "16"^^xsd:integer ;
+    :memory "16"^^xsd:integer ;
     :type "DDR5" ;
     :speed "4800MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1970,15 +2398,15 @@
 :cpu_amd_ryzen_ai_7_pro_350 rdf:type :CPU ;
     :brand "AMD" ;
     :model "Ryzen AI 7 PRO 350" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "8"^^xsd:integer ;
+    :threads "16"^^xsd:integer ;
+    :baseClock "2GHz" ;
+    :boostClock "5GHz" ;
+    :cache "16MB" .
 
 
 :ram_16gb_lpddr5x_7500_nonup rdf:type :RAM ;
-    :capacity "16"^^xsd:integer ;
+    :memory "16"^^xsd:integer ;
     :type "DDR5" ;
     :speed "7500MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -1991,9 +2419,9 @@
 
 
 :ram_64gb_lpddr5x_8400_nonup rdf:type :RAM ;
-    :capacity "64"^^xsd:integer ;
+    :memory "64"^^xsd:integer ;
     :type "DDR5" ;
-    :speed "?" ;
+    :speed "0" ;
     :upgradeable "false"^^xsd:boolean .
 
 
@@ -2011,15 +2439,15 @@
 :cpu_intel_core_i5_1340p rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core i5 1340P" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "12"^^xsd:integer ;
+    :threads "16"^^xsd:integer ;
+    :baseClock "1.7GHz" ;
+    :boostClock "4.6GHz" ;
+    :cache "12MB" .
 
 
 :ram_8gb_lpddr5_4800_nonup rdf:type :RAM ;
-    :capacity "8"^^xsd:integer ;
+    :memory "8"^^xsd:integer ;
     :type "DDR5" ;
     :speed "4800MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -2028,41 +2456,41 @@
 :cpu_intel_core_ultra_5_125u rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core Ultra 5-125U   AI Boost" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "12"^^xsd:integer ;
+    :threads "14"^^xsd:integer ;
+    :baseClock "0" ;
+    :boostClock "4.3GHz" ;
+    :cache "12MB" .
 
 
 :gpu_intel_integrated rdf:type :GPU ;
     :brand "Intel" ;
     :model "® Graphics" ;
-    :memory "?"^^xsd:integer .
+    :vramMemory "0"^^xsd:integer .
 
 
 :cpu_intel_core_ultra_7_155u rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core Ultra 7-155U   AI Boost" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
-    :cache "?" .
+    :cores "16"^^xsd:integer ;
+    :threads "18"^^xsd:integer ;
+    :baseClock "0" ;
+    :boostClock "4.8GHz" ;
+    :cache "16MB" .
 
 
 :cpu_intel_core_i9_13900hx rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core i9 13900HX" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "24"^^xsd:integer ;
+    :threads "32"^^xsd:integer ;
+    :baseClock "2.2GHz" ;
+    :boostClock "5.4GHz" ;
     :cache "36MB" .
 
 
 :ram_16gb_ddr5_4800_up rdf:type :RAM ;
-    :capacity "16"^^xsd:integer ;
+    :memory "16"^^xsd:integer ;
     :type "DDR5" ;
     :speed "4800MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -2077,7 +2505,7 @@
 :gpu_nvidia_rtx_4060_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® GeForce RTX™ 4060 8GB GDDR6" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :weight_2.65kg rdf:type :Weight ;
@@ -2088,10 +2516,10 @@
 :cpu_intel_core_i7_13650hx rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core i7 13650HX" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "14"^^xsd:integer ;
+    :threads "20"^^xsd:integer ;
+    :baseClock "1.9GHz" ;
+    :boostClock "4.9GHz" ;
     :cache "24MB" .
 
 
@@ -2102,7 +2530,7 @@
 
 
 :ram_32gb_ddr5_4800_up rdf:type :RAM ;
-    :capacity "32"^^xsd:integer ;
+    :memory "32"^^xsd:integer ;
     :type "DDR5" ;
     :speed "4800MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -2111,22 +2539,22 @@
 :gpu_nvidia_rtx_4070_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® GeForce RTX™ 4070 8GB GDDR6" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :gpu_nvidia_rtx_4050_6gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® GeForce RTX™ 4050 6GB GDDR6" ;
-    :memory "6"^^xsd:integer .
+    :vramMemory "6"^^xsd:integer .
 
 
 :cpu_intel_core_i5_13450hx rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core i5 13450HX" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "10"^^xsd:integer ;
+    :threads "16"^^xsd:integer ;
+    :baseClock "1.9GHz" ;
+    :boostClock "4.6GHz" ;
     :cache "20MB" .
 
 
@@ -2148,27 +2576,27 @@
 :gpu_nvidia_rtx_5080_16gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® GeForce RTX™ 5080 Laptop GPU 16GB GDDR7" ;
-    :memory "16"^^xsd:integer .
+    :vramMemory "16"^^xsd:integer .
 
 
 :cpu_intel_core_i7_14700hx rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core i7 14700HX" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "20"^^xsd:integer ;
+    :threads "28"^^xsd:integer ;
+    :baseClock "2.1GHz" ;
+    :boostClock "5.5GHz" ;
     :cache "33MB" .
 
 
 :gpu_nvidia_rtx_5050_6gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® GeForce RTX™ 5050 Laptop GPU 6GB GDDR7" ;
-    :memory "6"^^xsd:integer .
+    :vramMemory "6"^^xsd:integer .
 
 
 :ram_64gb_lpddr5x_7500_nonup rdf:type :RAM ;
-    :capacity "64"^^xsd:integer ;
+    :memory "64"^^xsd:integer ;
     :type "DDR5" ;
     :speed "7500MHz" ;
     :upgradeable "false"^^xsd:boolean .
@@ -2186,7 +2614,7 @@
 :gpu_combo_intel_arc_140t_nvidia_rtx_5050_6gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® Arc™ 140T (onboard) + ® GeForce RTX™ 5050 Laptop GPU 6GB GDDR7" ;
-    :memory "6"^^xsd:integer .
+    :vramMemory "6"^^xsd:integer .
 
 
 :weight_1.64kg rdf:type :Weight ;
@@ -2197,7 +2625,7 @@
 :gpu_nvidia_rtx_5070_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "® GeForce RTX™ 5070 Laptop GPU 8GB GDDR7" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :weight_2.8kg rdf:type :Weight ;
@@ -2214,10 +2642,10 @@
 :cpu_intel_core_i5_14500hx rdf:type :CPU ;
     :brand "Intel" ;
     :model "Core i5 14500HX" ;
-    :cores "?"^^xsd:integer ;
-    :threads "?"^^xsd:integer ;
-    :baseClock "?" ;
-    :boostClock "?" ;
+    :cores "14"^^xsd:integer ;
+    :threads "20"^^xsd:integer ;
+    :baseClock "1.9GHz" ;
+    :boostClock "4.9GHz" ;
     :cache "24MB" .
 
 
@@ -2233,7 +2661,7 @@
 :gpu_combo_amd_radeon_integrated_nvidia_rtx_5060_8gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "Radeon™ Graphics + ® GeForce RTX™ 5060 Laptop GPU 8GB GDDR7" ;
-    :memory "8"^^xsd:integer .
+    :vramMemory "8"^^xsd:integer .
 
 
 :battery_70WH rdf:type :Battery ;
@@ -2250,7 +2678,7 @@
     :model "Ryzen™ 5 8545H" ;
     :cores "6"^^xsd:integer ;
     :threads "12"^^xsd:integer ;
-    :baseClock "?" ;
+    :baseClock "0" ;
     :boostClock "4.9GHz" ;
     :cache "16MB" .
 
@@ -2258,7 +2686,7 @@
 :gpu_combo_amd_radeon_integrated_nvidia_rtx_5050_6gb rdf:type :GPU ;
     :brand "NVIDIA" ;
     :model "Radeon™ Graphics + ® GeForce RTX™ 5050 Laptop GPU 6GB GDDR7" ;
-    :memory "6"^^xsd:integer .
+    :vramMemory "6"^^xsd:integer .
 
 
 :battery_99.9WH rdf:type :Battery ;
