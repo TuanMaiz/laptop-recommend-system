@@ -8,10 +8,12 @@
 # Classes
 ############################
 
+:User rdf:type owl:Class .
 :Functionality rdf:type owl:Class .
 :Specification rdf:type owl:Class .
 :PriceRange rdf:type owl:Class .
 :Product rdf:type owl:Class .
+:Rating rdf:type owl:Class .
 
 # Subclasses of Functionality
 :Gaming rdf:type owl:Class ;
@@ -76,6 +78,10 @@
 # Object Properties
 ############################
 
+:HAS_FUNCREQ rdf:type owl:ObjectProperty ; rdfs:domain :User ; rdfs:range :Functionality .
+:PREFERS_RANGE rdf:type owl:ObjectProperty ; rdfs:domain :User ; rdfs:range :PriceRange .
+:RATED rdf:type owl:ObjectProperty ; rdfs:domain :User ; rdfs:range :Product .
+
 :hasSpecification rdf:type owl:ObjectProperty ;
                   rdfs:domain :Product ;
                   rdfs:range :Specification .
@@ -91,6 +97,8 @@
 ############################
 # Data Properties
 ############################
+
+:score rdf:type owl:DatatypeProperty ; rdfs:domain :Rating ; rdfs:range xsd:float .
 
 :hasPrice rdf:type owl:DatatypeProperty ;
           rdfs:domain :Product ;
@@ -147,6 +155,49 @@
 :gamingReq  rdf:type :Gaming, :Functionality .
 :graphicReq rdf:type :Graphic, :Functionality .
 :officeReq  rdf:type :Office,  :Functionality .
+
+:User_abc123 rdf:type :User ;
+    :HAS_FUNCREQ :Gaming ;
+    :PREFERS_RANGE :HighEnd .
+
+:Rating1 rdf:type :Rating ;
+    :forUser :User_abc123 ;
+    :forProduct :Legion_Pro_7i_2025_Y9000P_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti ;
+    :score "4.5"^^xsd:float .
+:Rating2 rdf:type :Rating ;
+    :forUser :User_abc123 ;
+    :forProduct :Thinkbook_16_G7_2025_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5060 ;
+    :score "4"^^xsd:float .
+:Rating3 rdf:type :Rating ;
+    :forUser :User_abc123 ;
+    :forProduct :Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti ;
+    :score "4.5"^^xsd:float .
+
+:User_xyz456 rdf:type :User ;
+    :HAS_FUNCREQ :Office ;
+    :PREFERS_RANGE :MiddleEnd .
+
+:Rating4 rdf:type :Rating ;
+    :forUser :User_xyz456 ;
+    :forProduct :Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 ;
+    :score "5"^^xsd:float .
+:Rating5 rdf:type :Rating ;
+    :forUser :User_xyz456 ;
+    :forProduct :ThinkBook_14P_AI_2025_Ultra_9275H_32GB_RAM_1TB_SSD ;
+    :score "4"^^xsd:float .
+
+:User_xyz789 rdf:type :User ;
+    :HAS_FUNCREQ :Office ;
+    :PREFERS_RANGE :MiddleEnd .
+
+:Rating4 rdf:type :Rating ;
+    :forUser :User_xyz789 ;
+    :forProduct :Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_16GB_RAM_512GB_SSD ;
+    :score "4.5"^^xsd:float .
+:Rating5 rdf:type :Rating ;
+    :forUser :User_xyz789 ;
+    :forProduct :Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_512GB_SSD ;
+    :score "5"^^xsd:float .
 
 :Dell_Inspiron_3525 rdf:type :Product ;
                     :hasSpecification :CPU_i5, :RAM_16GB ;
