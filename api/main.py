@@ -3,23 +3,25 @@ from pydantic import BaseModel
 from typing import List, Optional
 import uvicorn
 
-from api.routers import laptop_router, chat_router
+from api.routers import laptop_router, chat_router, user_router
 import os
 from fastapi.middleware.cors import CORSMiddleware
 
 from dotenv import load_dotenv
+
 load_dotenv()  # loads .env file into environment
 # Models for request/response
 app = FastAPI(title="Laptop Recommendation API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],      # allow all origins
-    allow_credentials=False,  # must be False when using "*" 
-    allow_methods=["*"],      # allow all HTTP methods
-    allow_headers=["*"],      # allow all headers
+    allow_origins=["*"],  # allow all origins
+    allow_credentials=False,  # must be False when using "*"
+    allow_methods=["*"],  # allow all HTTP methods
+    allow_headers=["*"],  # allow all headers
 )
 app.include_router(laptop_router.router)
 app.include_router(chat_router.router)
+app.include_router(user_router.router)
 
 
 @app.get("/")

@@ -1,85 +1,76 @@
 @prefix : <http://example.org/laptop#> .
+@prefix default1: <http://www.semanticweb.org/ontologies/laptop#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-############################
-# Classes
-############################
+:Battery a owl:Class ;
+    rdfs:subClassOf :Specification .
 
-:Functionality rdf:type owl:Class .
-:Specification rdf:type owl:Class .
-:PriceRange rdf:type owl:Class .
-:Product rdf:type owl:Class .
+:Brand a owl:Class ;
+    rdfs:subClassOf :Specification .
 
-# Subclasses of Functionality
-:Gaming rdf:type owl:Class ;
-        rdfs:subClassOf :Functionality .
+:CPU a owl:Class ;
+    rdfs:subClassOf :Specification .
 
-:Office rdf:type owl:Class ;
-        rdfs:subClassOf :Functionality .
+:Gaming a owl:Class ;
+    rdfs:subClassOf :Functionality .
 
-:Graphic rdf:type owl:Class ;
-         rdfs:subClassOf :Functionality .
+:Graphic a owl:Class ;
+    rdfs:subClassOf :Functionality .
 
-# Subclasses of Specification
-:CPU rdf:type owl:Class ;
-     rdfs:subClassOf :Specification .
+:HighPrice a owl:Class ;
+    rdfs:subClassOf :PriceRange .
 
-:RAM rdf:type owl:Class ;
-     rdfs:subClassOf :Specification .
+:LowPrice a owl:Class ;
+    rdfs:subClassOf :PriceRange .
 
-:ScreenSize rdf:type owl:Class ;
-            rdfs:subClassOf :Specification .
+:MidPrice a owl:Class ;
+    rdfs:subClassOf :PriceRange .
 
-:RefreshRate rdf:type owl:Class ;
-             rdfs:subClassOf :Specification .
+:Office a owl:Class ;
+    rdfs:subClassOf :Functionality .
 
-:Storage rdf:type owl:Class ;
-         rdfs:subClassOf :Specification .
+:RAM a owl:Class ;
+    rdfs:subClassOf :Specification .
 
-:Weight rdf:type owl:Class ;
-        rdfs:subClassOf :Specification .
+:RefreshRate a owl:Class ;
+    rdfs:subClassOf :Specification .
 
-:Battery rdf:type owl:Class ;
-         rdfs:subClassOf :Specification .
+:ScreenSize a owl:Class ;
+    rdfs:subClassOf :Specification .
 
-:Brand rdf:type owl:Class ;
-       rdfs:subClassOf :Specification .
+:Storage a owl:Class ;
+    rdfs:subClassOf :Specification .
 
-# Subclasses of PriceRange
-:LowPrice rdf:type owl:Class ;
-          rdfs:subClassOf :PriceRange .
+:Weight a owl:Class ;
+    rdfs:subClassOf :Specification .
 
-:MidPrice rdf:type owl:Class ;
-          rdfs:subClassOf :PriceRange .
+:hasPrice a owl:DatatypeProperty ;
+    rdfs:domain :Product ;
+    rdfs:range xsd:decimal .
 
-:HighPrice rdf:type owl:Class ;
-           rdfs:subClassOf :PriceRange .
+:hasPriceRange a owl:ObjectProperty ;
+    rdfs:domain :Product ;
+    rdfs:range :PriceRange .
 
+:hasSpecification a owl:ObjectProperty ;
+    rdfs:domain :Product ;
+    rdfs:range :Specification .
 
-############################
-# Object Properties
-############################
+:satisfiesRequirement a owl:ObjectProperty ;
+    rdfs:domain :Product ;
+    rdfs:range :Functionality .
 
-:hasSpecification rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Product ;
-                  rdfs:range :Specification .
+default1:user_a-b-b-c a default1:User ;
+    default1:HAS_FUNCREQ default1:Graphic ;
+    default1:PREFERS_RANGE default1:HighEnd .
 
-:satisfiesRequirement rdf:type owl:ObjectProperty ;
-                      rdfs:domain :Product ;
-                      rdfs:range :Functionality .
+:Functionality a owl:Class .
 
-:hasPriceRange rdf:type owl:ObjectProperty ;
-               rdfs:domain :Product ;
-               rdfs:range :PriceRange .
+:PriceRange a owl:Class .
 
-############################
-# Data Properties
-############################
+:Product a owl:Class .
 
-:hasPrice rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Product ;
-          rdfs:range xsd:decimal .
+:Specification a owl:Class .
 

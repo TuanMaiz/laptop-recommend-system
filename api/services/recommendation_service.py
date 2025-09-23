@@ -3,15 +3,19 @@ from typing import List, Dict, Any, Optional, Tuple
 from sqlalchemy.orm import Session
 from sqlalchemy import text, func, and_
 from api.db.models.laptop_model import Laptop
+from api.services.recommendation_helper.collab_filtering_service import RDFUSM as USM
 import json
 from collections import defaultdict, Counter
 import uuid
+
 
 class RecommendationService:
     def __init__(self, db: Session):
         self.db = db
 
-    def initialize_fingerprint(self, fingerprint: str, user_id: Optional[str] = None) -> bool:
+    def initialize_fingerprint(
+        self, fingerprint: str, user_id: Optional[str] = None
+    ) -> bool:
         """
         Initialize a fingerprint (and optionally user) in Neo4j.
         If new, attach ontology-based neutral profile (weight=0.0, confidence=0.0).
@@ -27,7 +31,9 @@ class RecommendationService:
             ON MATCH SET f.last_seen = timestamp()
             RETURN f
             """
-            record = self.db.run(query, fingerprint=fingerprint, user_id=user_id).single()
+            record = self.db.run(
+                query, fingerprint=fingerprint, user_id=user_id
+            ).single()
         else:
             query = """
             MERGE (f:Fingerprint {id:$fingerprint})
@@ -53,9 +59,11 @@ class RecommendationService:
         ON CREATE SET r.weight = 0.0, r.confidence = 0.0
         """
         self.db.run(query_prefs, fingerprint=fingerprint)
-        return False  # fingerprint initialized fresh 
-    
-    def update_tracking_graph_by_fingerprint(self, fingerprint: str, interactions: List[Dict[str, Any]]) -> None:
+        return False  # fingerprint initialized fresh
+
+    def update_tracking_graph_by_fingerprint(
+        self, fingerprint: str, interactions: List[Dict[str, Any]]
+    ) -> None:
         """
         Update the tracking graph in Neo4j with user interactions based on the fingerprint.
         Each interaction is represented as a relationship with relevant properties.
@@ -73,27 +81,45 @@ class RecommendationService:
         ip_address: str,
         user_agent: str,
         device_info: Dict[str, Any],
-        data: Dict[str, Any]
+        data: Dict[str, Any],
     ):
         """
         Record user interaction for future recommendations
         """
 
         # Insert to track_events table
-        self.db.execute(text("""
+        self.db.execute(
+            text(
+                """
             INSERT INTO public.tracking_events (id, timestamp, page_url, user_id, session_id, fingerprint, event_type, event_data, ip_address, user_agent, device_info)
             VALUES (:id, :timestamp, :page_url, :user_id, :session_id, :fingerprint, :event_type, :event_data, :ip_address, :user_agent, :device_info)
-        """), {
-            "id": str(uuid.uuid4()),
-            "timestamp": timestamp,
-            "page_url": url,
-            "user_id": user_id,
-            "session_id": session_id,
-            "fingerprint": fingerprint,
-            "event_type": event_type,
-            "event_data": json.dumps(data) if data else None,
-            "ip_address": ip_address,
-            "user_agent": user_agent,
-            "device_info": json.dumps(device_info) if device_info else None
-        })
+        """
+            ),
+            {
+                "id": str(uuid.uuid4()),
+                "timestamp": timestamp,
+                "page_url": url,
+                "user_id": user_id,
+                "session_id": session_id,
+                "fingerprint": fingerprint,
+                "event_type": event_type,
+                "event_data": json.dumps(data) if data else None,
+                "ip_address": ip_address,
+                "user_agent": user_agent,
+                "device_info": json.dumps(device_info) if device_info else None,
+            },
+        )
         self.db.commit()
+
+    def get_recommendations(self, fingerprint: str, top_k: int = 5) -> List[Laptop]:
+        """
+        Recommend laptops based on fingerprint.
+        """
+        try:
+            usm = USM()
+            recommendations = usm.recommend(fingerprint, top_k)
+        except Exception as e:
+            print(f"Error in recommendation engine: {e}")
+            return {"success": False, "message": str(e), "code": 500}
+
+        return {"success": True, "payload": recommendations, "code": 200}

@@ -9,6 +9,7 @@ from api.db.session import SessionLocal
 from api.schemas.laptop_schema import LaptopBase
 from api.schemas.chat_request_schema import ChatRequest
 from api.db.models.laptop_model import Laptop
+
 # from api.services.chat_query_service import makeChat
 router = APIRouter(prefix="/chatbot")
 
@@ -25,4 +26,3 @@ def get_db():
 @router.post("/")
 def chatbot(req: ChatRequest):
     pass
-    

@@ -8,19 +8,9 @@ import os
 BASE = "http://example.org/laptop#"
 ns = Namespace(BASE)
 
-GRAPH_PATH = "ontology.ttl"  # change if needed
-
 
 class RDFUSM:
     def __init__(self, owl_file_path: str = None):
-        # self.path = path
-        # self.g = Graph()
-        # if os.path.exists(path):
-        #     self.g.parse(path, format="turtle")
-        # else:
-        #     # create empty graph with base namespace
-        #     self.g.bind("", ns)
-
         if owl_file_path is None:
             # Get the directory where this script is located
             current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -302,7 +292,7 @@ class RDFUSM:
         candidates = self.get_candidates_by_ontology(fingerprint)
         # predict CF scores
         preds = self.predict_scores_for_user(fingerprint, candidates)
-        print("Predicted CF scores:", preds)
+
         # prepare list with ontology rank + CF score
         results = []
         for prod in candidates:
@@ -322,4 +312,4 @@ class RDFUSM:
             ),
             reverse=True,
         )
-        return results_sorted  # [:top_k]
+        return results_sorted[:top_k]
