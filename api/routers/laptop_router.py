@@ -1,5 +1,5 @@
 import os
-from typing import List, Optional, Any
+from typing import List, Optional, Any, Dict, Union
 from fastapi import APIRouter, HTTPException, Query, Header
 from fastapi.params import Depends
 import psycopg2
@@ -147,3 +147,35 @@ def track_interaction_first_time(
     events: List[BaseEventModel], db: Session = Depends(get_db)
 ):
     return {"status": "interaction recorded"}
+
+
+class RecommendationItem(BaseModel):
+    product_uri: str
+    model: str
+    price: Optional[float] = None
+    image: Optional[str] = None
+    specs: List[Dict[str, Any]]
+    cf_score: Optional[float] = None
+
+
+class RecommendationResponse(BaseModel):
+    recommendations: List[RecommendationItem]
+
+
+class APIResponse(BaseModel):
+    success: bool
+    payload: Union[RecommendationResponse, Dict[str, Any], List[Any], None] = None
+    code: int
+
+
+@router.get("/recommend/{fingerprint}", response_model=APIResponse)
+def get_recommendations(
+    fingerprint: str, top_k: int = 5, db: Session = Depends(get_db)
+):
+    try:
+        service = RecommendationService(db)
+        items = service.get_recommendations(fingerprint, top_k)
+        # return {"recommendations": items}
+        return {"success": True, "payload": items, "code": 200}
+    except Exception as e:
+        return {"success": False, "message": str(e), "code": 500}

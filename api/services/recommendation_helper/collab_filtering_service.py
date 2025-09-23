@@ -49,7 +49,7 @@ class RDFUSM:
 
     # --- Add/update rating triple (fingerprint, product_id, score) ---
     def rate_product(self, fingerprint: str, product_id: str, score: float):
-        u = ns["User_" + fingerprint]
+        u = ns[fingerprint]
         p = ns[product_id]
         # ensure user/product nodes exist (product probably exists in ontology)
         self.g.add((u, RDF.type, ns.User))
@@ -72,7 +72,7 @@ class RDFUSM:
 
     # --- Get candidate laptops by ontology filtering ---
     def get_candidates_by_ontology(self, fingerprint: str):
-        u = ns["User_" + fingerprint]
+        u = ns[fingerprint]
         candidates = set()
 
         # 1. Get user's functionality requirements
@@ -201,7 +201,7 @@ class RDFUSM:
 
         sim_cf = self.compute_item_similarity(users_map, items_map, mat)
 
-        u_uri = str(ns["User_" + fingerprint])
+        u_uri = str(ns[fingerprint])
         if u_uri not in users_map:
             return {}
 
@@ -289,20 +289,63 @@ class RDFUSM:
 
     # --- main recommend flow ---
     def recommend(self, fingerprint: str, top_k=5):
+        ns = rdflib.Namespace("http://example.org/laptop#")
+
         candidates = self.get_candidates_by_ontology(fingerprint)
-        # predict CF scores
         preds = self.predict_scores_for_user(fingerprint, candidates)
 
-        # prepare list with ontology rank + CF score
         results = []
         for prod in candidates:
+            prod_uri = str(prod)
+
+            # --- Get label/model ---
             model_vals = list(self.g.objects(prod, ns.model))
             model = str(model_vals[0]) if model_vals else prod.split("#")[-1]
-            prod_uri = str(prod)
+
+            # --- Get price ---
+            price_vals = list(self.g.objects(prod, ns.hasPrice))
+            price = float(price_vals[0]) if price_vals else None
+
+            # --- Get image ---
+            image_vals = list(self.g.objects(prod, ns.hasImage))
+            image = str(image_vals[0]) if image_vals else None
+
+            # --- Build nested specs ---
+            specs = {}
+            for spec in self.g.objects(prod, ns.hasSpecification):
+                # type of spec (CPU, RAM, Battery, etc.)
+                classes = list(self.g.objects(spec, rdflib.RDF.type))
+                spec_type = classes[0].split("#")[-1] if classes else "Specification"
+
+                # Collect data properties of this spec
+                spec_details = {}
+                for p, o in self.g.predicate_objects(spec):
+                    pname = p.split("#")[-1]
+                    if pname != "type":  # skip rdf:type
+                        # Convert literals to Python types if possible
+                        if isinstance(o, rdflib.Literal):
+                            val = o.toPython()
+                        else:
+                            val = str(o).split("#")[-1]
+                        spec_details[pname] = val
+
+                # Group by class name (e.g. "CPU", "Battery")
+                specs[spec_type] = spec_details
+
+            # --- Get CF score ---
             cf_score = preds.get(prod_uri, None)
+
             results.append(
-                {"product_uri": prod_uri, "model": model, "cf_score": cf_score}
+                {
+                    "product_uri": prod_uri,
+                    "model": model,
+                    "price": price,
+                    "image": image,
+                    "specs": specs,
+                    "cf_score": cf_score,
+                }
             )
+
         # sort: if cf_score exists, by cf_score desc, otherwise keep ontology order
         results_sorted = sorted(
             results,

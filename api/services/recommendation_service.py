@@ -111,7 +111,7 @@ class RecommendationService:
         )
         self.db.commit()
 
-    def get_recommendations(self, fingerprint: str, top_k: int = 5) -> List[Laptop]:
+    def get_recommendations(self, fingerprint: str, top_k: int = 5) -> List:
         """
         Recommend laptops based on fingerprint.
         """
@@ -120,6 +120,6 @@ class RecommendationService:
             recommendations = usm.recommend(fingerprint, top_k)
         except Exception as e:
             print(f"Error in recommendation engine: {e}")
-            return {"success": False, "message": str(e), "code": 500}
+            return []
 
-        return {"success": True, "payload": recommendations, "code": 200}
+        return recommendations

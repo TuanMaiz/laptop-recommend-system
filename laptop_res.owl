@@ -1053,6 +1053,11 @@
     :score "4.0"^^xsd:float,
         "5.0"^^xsd:float .
 
+:Rating_User_abc123_Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 a :Rating ;
+    :forProduct :Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 ;
+    :forUser :User_abc123 ;
+    :score "2.0"^^xsd:float .
+
 :ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 a :MiddleEnd ;
     :hasImage "https://sazo.vn/storage/products/16p-2025-amd/1-1.png" ;
     :hasPrice 35690000.0 ;
@@ -1460,18 +1465,6 @@
         :storage_1tb_pcie_nvme_m2,
         :weight_1.9kg ;
     :satisfiesRequirement :Gaming .
-
-:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 a :MiddleEnd ;
-    :hasImage "https://sazo.vn/storage/products/pro-16c/1-1.png" ;
-    :hasPrice 21990000.0 ;
-    :hasSpecification :battery_80WH,
-        :cpu_amd_ryzen_ai_7_h350,
-        :gpu_amd_radeon_860m,
-        :ram_32gb_ddr5_5600_up,
-        :resolution_2880x1800,
-        :storage_1tb_pcie4_nvme_2242_m2,
-        :weight_1.76kg ;
-    :satisfiesRequirement :Office .
 
 :battery_56WH a :Battery ;
     :capacity "56Wh" .
@@ -1944,9 +1937,17 @@
     :unit "kg" ;
     :value 2.4 .
 
-:User_abc123 a :User ;
-    :HAS_FUNCREQ :Gaming ;
-    :PREFERS_RANGE :HighEnd .
+:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 a :MiddleEnd ;
+    :hasImage "https://sazo.vn/storage/products/pro-16c/1-1.png" ;
+    :hasPrice 21990000.0 ;
+    :hasSpecification :battery_80WH,
+        :cpu_amd_ryzen_ai_7_h350,
+        :gpu_amd_radeon_860m,
+        :ram_32gb_ddr5_5600_up,
+        :resolution_2880x1800,
+        :storage_1tb_pcie4_nvme_2242_m2,
+        :weight_1.76kg ;
+    :satisfiesRequirement :Office .
 
 :battery_52.5WH a :Battery ;
     :capacity "5Wh" .
@@ -2031,6 +2032,11 @@
 :weight_2.7kg a :Weight ;
     :unit "kg" ;
     :value 2.7 .
+
+:User_abc123 a :User ;
+    :HAS_FUNCREQ :Gaming ;
+    :PREFERS_RANGE :HighEnd ;
+    :RATED :Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 .
 
 :battery_55WH a :Battery ;
     :capacity "55Wh" .

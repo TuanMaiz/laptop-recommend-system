@@ -28,7 +28,8 @@ def create_user(user: UserCreateRequest):
     """
     try:
         user_service = UserProfileNeo4j()
-        user_service.create_user_preferences(
+        user_service.init_owl_local()
+        user_service.create_or_update_user_preference(
             fingerprint=user.fingerprint,
             func_req=user.func_req,
             prefers_range=user.prefers_range,

@@ -1,7 +1,7 @@
 import os
 from typing import Dict, List, Optional
 from neo4j import Driver, GraphDatabase
-import hashlib
+import rdflib
 import datetime
 from dataclasses import dataclass
 
@@ -377,52 +377,81 @@ class UserProfileNeo4j:
 
     # ==== New methods to init User Preference in ontology ====
     def init_owl_local(self, owl_file_path: str = None):
-        import rdflib
-
+        """Load ontology into memory"""
         self.graph = rdflib.Graph()
-        self.graph.parse(owl_file_path, format="turtle")
-
-    def create_user_preferences(
-        self,
-        fingerprint: str,
-        func_req: str,
-        prefers_range: str,
-        owl_file_path: str = None,
-    ) -> None:
-        """
-        Initialize ontology-based user preferences and add user instance to OWL file using rdflib.
-        """
-        import rdflib
-
-        validated_fingerprint = self._validate_fingerprint(fingerprint)
-
-        if owl_file_path is None:
+        if not owl_file_path:
             from pathlib import Path
 
             root_dir = Path(__file__).resolve().parents[2]
-            owl_file_path = os.path.join(
-                root_dir,
-                # "laptop-recommend-system",
-                # "api",
-                # "services",
-                # "recommendation_helper",
-                "laptops.owl",
+            owl_file_path = os.path.join(root_dir, "laptops.owl")
+        self.graph.parse(owl_file_path, format="turtle")
+        self.owl_file_path = owl_file_path
+
+    def recommend(self, fingerprint: str, top_k=5):
+        ns = rdflib.Namespace("http://example.org/laptop#")
+
+        candidates = self.get_candidates_by_ontology(fingerprint)
+        preds = self.predict_scores_for_user(fingerprint, candidates)
+
+        results = []
+        for prod in candidates:
+            prod_uri = str(prod)
+
+            # --- Get label/model ---
+            model_vals = list(self.g.objects(prod, ns.model))
+            model = str(model_vals[0]) if model_vals else prod.split("#")[-1]
+
+            # --- Get price ---
+            price_vals = list(self.g.objects(prod, ns.hasPrice))
+            price = float(price_vals[0]) if price_vals else None
+
+            # --- Get image ---
+            image_vals = list(self.g.objects(prod, ns.hasImage))
+            image = str(image_vals[0]) if image_vals else None
+
+            # --- Build nested specs ---
+            specs = {}
+            for spec in self.g.objects(prod, ns.hasSpecification):
+                # type of spec (CPU, RAM, Battery, etc.)
+                classes = list(self.g.objects(spec, rdflib.RDF.type))
+                spec_type = classes[0].split("#")[-1] if classes else "Specification"
+
+                # Collect data properties of this spec
+                spec_details = {}
+                for p, o in self.g.predicate_objects(spec):
+                    pname = p.split("#")[-1]
+                    if pname != "type":  # skip rdf:type
+                        # Convert literals to Python types if possible
+                        if isinstance(o, rdflib.Literal):
+                            val = o.toPython()
+                        else:
+                            val = str(o).split("#")[-1]
+                        spec_details[pname] = val
+
+                # Group by class name (e.g. "CPU", "Battery")
+                specs[spec_type] = spec_details
+
+            # --- Get CF score ---
+            cf_score = preds.get(prod_uri, None)
+
+            results.append(
+                {
+                    "product_uri": prod_uri,
+                    "model": model,
+                    "price": price,
+                    "image": image,
+                    "specs": specs,
+                    "cf_score": cf_score,
+                }
             )
 
-        # Ensure the graph is loaded
-        if not hasattr(self, "graph"):
-            self.init_owl_local(owl_file_path)
-
-        g = self.graph
-        ns = rdflib.Namespace("http://www.semanticweb.org/ontologies/laptop#")
-        g.bind("", ns, override=True)
-        user_uri = ns[validated_fingerprint]
-        func_req_uri = ns[func_req]
-        prefers_range_uri = ns[prefers_range]
-
-        g.add((user_uri, rdflib.RDF.type, ns.User))
-        g.add((user_uri, ns.HAS_FUNCREQ, func_req_uri))
-        g.add((user_uri, ns.PREFERS_RANGE, prefers_range_uri))
-
-        # Save back to file
-        g.serialize(destination=owl_file_path, format="turtle")
+        # sort: if cf_score exists, by cf_score desc, otherwise keep ontology order
+        results_sorted = sorted(
+            results,
+            key=lambda r: (
+                r["cf_score"] is not None,
+                r["cf_score"] if r["cf_score"] is not None else 0,
+            ),
+            reverse=True,
+        )
+        return results_sorted[:top_k]

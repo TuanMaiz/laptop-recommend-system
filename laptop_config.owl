@@ -1,0 +1,150 @@
+@prefix : <http://example.org/laptop#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+############################
+# Classes
+############################
+
+:User rdf:type owl:Class .
+:Functionality rdf:type owl:Class .
+:Specification rdf:type owl:Class .
+:PriceRange rdf:type owl:Class .
+:Product rdf:type owl:Class .
+:Rating rdf:type owl:Class .
+
+# Subclasses of Functionality
+:Gaming rdf:type owl:Class ;
+        rdfs:subClassOf :Functionality .
+
+:Office rdf:type owl:Class ;
+        rdfs:subClassOf :Functionality .
+
+:Graphic rdf:type owl:Class ;
+         rdfs:subClassOf :Functionality .
+
+# Subclasses of Product
+:HighEnd rdf:type owl:Class ;
+        rdfs:subClassOf :Product .
+
+:MiddleEnd rdf:type owl:Class ;
+        rdfs:subClassOf :Product .
+
+:LowEnd rdf:type owl:Class ;
+        rdfs:subClassOf :Product .
+
+# Subclasses of Specification
+:CPU rdf:type owl:Class ;
+     rdfs:subClassOf :Specification .
+
+:RAM rdf:type owl:Class ;
+     rdfs:subClassOf :Specification .
+
+:GPU rdf:type owl:Class ;
+     rdfs:subClassOf :Specification .
+
+:ScreenSize rdf:type owl:Class ;
+            rdfs:subClassOf :Specification .
+
+:RefreshRate rdf:type owl:Class ;
+             rdfs:subClassOf :Specification .
+
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf :Specification .
+
+:Weight rdf:type owl:Class ;
+        rdfs:subClassOf :Specification .
+
+:Battery rdf:type owl:Class ;
+         rdfs:subClassOf :Specification .
+
+:Brand rdf:type owl:Class ;
+       rdfs:subClassOf :Specification .
+
+# Subclasses of PriceRange
+:LowPrice rdf:type owl:Class ;
+          rdfs:subClassOf :PriceRange .
+
+:MidPrice rdf:type owl:Class ;
+          rdfs:subClassOf :PriceRange .
+
+:HighPrice rdf:type owl:Class ;
+           rdfs:subClassOf :PriceRange .
+
+
+############################
+# Object Properties
+############################
+
+:HAS_FUNCREQ rdf:type owl:ObjectProperty ; rdfs:domain :User ; rdfs:range :Functionality .
+:PREFERS_RANGE rdf:type owl:ObjectProperty ; rdfs:domain :User ; rdfs:range :PriceRange .
+:RATED rdf:type owl:ObjectProperty ; rdfs:domain :User ; rdfs:range :Product .
+
+:hasSpecification rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Product ;
+                  rdfs:range :Specification .
+
+:satisfiesRequirement rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Product ;
+                      rdfs:range :Functionality .
+
+:hasPriceRange rdf:type owl:ObjectProperty ;
+               rdfs:domain :Product ;
+               rdfs:range :PriceRange .
+
+############################
+# Data Properties
+############################
+
+:score rdf:type owl:DatatypeProperty ; rdfs:domain :Rating ; rdfs:range xsd:float .
+
+:hasPrice rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Product ;
+          rdfs:range xsd:decimal .
+
+:cores rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:integer .
+
+:threads rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:integer .
+
+:baseClock rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:string .
+
+:boostClock rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:string .
+
+:cache rdf:type owl:DatatypeProperty ;
+    rdfs:domain :CPU ;
+    rdfs:range xsd:string .
+
+:memory rdf:type owl:DatatypeProperty ;
+    rdfs:domain :RAM ;
+    rdfs:range xsd:integer .
+
+:type rdf:type owl:DatatypeProperty ;
+    rdfs:domain :RAM ;
+    rdfs:range xsd:string .
+
+:speed rdf:type owl:DatatypeProperty ;
+    rdfs:domain :RAM ;
+    rdfs:range xsd:string .
+
+:vramMemory rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GPU ;
+    rdfs:range xsd:integer .
+
+:brand rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GPU ;
+    rdfs:range xsd:string .
+
+:model rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GPU ;
+    rdfs:range xsd:string .
+
