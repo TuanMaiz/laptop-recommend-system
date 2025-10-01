@@ -2,7 +2,8 @@ import os
 from typing import List, Optional, Any, Dict, Union
 from fastapi import APIRouter, HTTPException, Query, Header
 from fastapi.params import Depends
-import psycopg2
+
+# import psycopg2
 from sqlalchemy.orm import Session
 from api.db.session import SessionLocal
 from api.schemas.laptop_schema import LaptopBase
@@ -84,7 +85,11 @@ def list_laptops(limit: int = 20):
                     parsed_specs[prop_display_name] = prop_value
 
         laptop_list.append(
-            {"id": laptop["uri"], "name": friendly_name, "specifications": parsed_specs}
+            {
+                "id": laptop["uri"],
+                "name": friendly_name,
+                "specifications": parsed_specs,
+            }
         )
 
     return {"laptops": laptop_list}
@@ -168,14 +173,23 @@ class APIResponse(BaseModel):
     code: int
 
 
-@router.get("/recommend/{fingerprint}", response_model=APIResponse)
+@router.get("/recommend/{fingerprint}")
 def get_recommendations(
     fingerprint: str, top_k: int = 5, db: Session = Depends(get_db)
 ):
     try:
         service = RecommendationService(db)
         items = service.get_recommendations(fingerprint, top_k)
-        # return {"recommendations": items}
+        return {"success": True, "payload": items, "code": 200}
+    except Exception as e:
+        return {"success": False, "message": str(e), "code": 500}
+
+
+@router.post("/rate/{fingerprint}")
+def rate_product(fingerprint: str, product_id: str, rate: int):
+    try:
+        service = LaptopService()
+        items = service.rate_product(fingerprint, product_id, rate)
         return {"success": True, "payload": items, "code": 200}
     except Exception as e:
         return {"success": False, "message": str(e), "code": 500}

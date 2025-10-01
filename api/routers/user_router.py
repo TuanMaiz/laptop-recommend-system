@@ -10,6 +10,7 @@ from api.schemas.laptop_schema import LaptopBase
 from api.schemas.chat_request_schema import ChatRequest
 from api.db.models.laptop_model import Laptop
 from api.services.user_profile_service import UserProfileNeo4j
+from api.services.recommendation_helper.collab_filtering_service import RDFUSM
 
 # from api.services.chat_query_service import makeChat
 router = APIRouter(prefix="/user")
@@ -27,12 +28,11 @@ def create_user(user: UserCreateRequest):
     Create a new user and initialize ontology preferences.
     """
     try:
-        user_service = UserProfileNeo4j()
-        user_service.init_owl_local()
-        user_service.create_or_update_user_preference(
+        user_service = RDFUSM()
+        user_service.init_profile(
             fingerprint=user.fingerprint,
-            func_req=user.func_req,
-            prefers_range=user.prefers_range,
+            functionality=user.func_req,
+            profile=user.prefers_range,
         )
         return {"message": "User created successfully"}
     except Exception as e:

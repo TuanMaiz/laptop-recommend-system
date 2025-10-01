@@ -244,6 +244,8 @@
         :weight_1.8kg ;
     :satisfiesRequirement :Gaming .
 
+:CPU_i5 a :CPU .
+
 :Dell_Alienware_M18_R2_2025_i714700HX_32GB_RAM_1TB_SSD_RTX_5050 a :MiddleEnd ;
     :hasImage "https://sazo.vn/storage/products/alienware-m18/1-1.png" ;
     :hasPrice 47500000.0 ;
@@ -448,13 +450,6 @@
         :storage_512gb_pcie_nvme_m2,
         :weight_1.8kg ;
     :satisfiesRequirement :Office .
-
-:Dell_Inspiron_3525 a :Product ;
-    :hasPrice 750.0 ;
-    :hasPriceRange :MidPrice ;
-    :hasSpecification :CPU_i5,
-        :RAM_16GB ;
-    :satisfiesRequirement :Gaming .
 
 :Dell_Inspiron_5420_i51240P_16GB_RAM_512GB_SSD a :LowEnd ;
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-5420/artboard-1.png" ;
@@ -882,26 +877,6 @@
         :weight_2.4kg ;
     :satisfiesRequirement :Gaming .
 
-:Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD a :MiddleEnd,
-        :Product ;
-    :hasImage "https://sazo.vn/storage/products/lecoo-pro-14/1-1.png" ;
-    :hasPrice 15790000.0 ;
-    :hasSpecification :1TB_PCIe_NVMe_M2_SSD_2_slots,
-        :32GB_DDR55600MHz_h_tr_nng_cp,
-        :AMD_Ryzen_7_H_255_8_nhn_16_lung_c_th_t_ti_49GHz_vi_turbo_boost_24MB_Cache,
-        :Battery_80wh,
-        :Brightness_400nits,
-        :RefreshRate_120Hz,
-        :Weight_1_43kg,
-        :battery_80WH,
-        :cpu_amd_ryzen_7_h255,
-        :gpu_amd_radeon_780m,
-        :ram_32gb_ddr5_5600_up,
-        :resolution_2880x1800,
-        :storage_1tb_pcie_nvme_m2_dual,
-        :weight_1.43kg ;
-    :satisfiesRequirement :Graphic .
-
 :Legion_5_2025_Y7000P_I914900HX_16GB_RAM_1TB_SSD_RTX_50605070 a :MiddleEnd ;
     :hasImage "https://sazo.vn/storage/products/y7000p-2025/1-1.png" ;
     :hasPrice 34190000.0 ;
@@ -1022,6 +997,8 @@
         :weight_2.7kg ;
     :satisfiesRequirement :Gaming .
 
+:RAM_16GB a :RAM .
+
 :Rating1 a :Rating ;
     :forProduct :Legion_Pro_7i_2025_Y9000P_WhiteUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti ;
     :forUser :User_abc123 ;
@@ -1038,32 +1015,29 @@
     :score "4.5"^^xsd:float .
 
 :Rating4 a :Rating ;
-    :forProduct :Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_16GB_RAM_512GB_SSD,
-        :Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 ;
-    :forUser :User_xyz456,
-        :User_xyz789 ;
-    :score "4.5"^^xsd:float,
-        "5.0"^^xsd:float .
+    :forProduct :Dell_XPS_13_9335_Touch_OLED_Ryzen_Pro_R7350_16GB_RAM_512GB_SSD ;
+    :forUser :User_xyz456 ;
+    :score "4.5"^^xsd:float .
 
 :Rating5 a :Rating ;
-    :forProduct :Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_512GB_SSD,
-        :ThinkBook_14P_AI_2025_Ultra_9275H_32GB_RAM_1TB_SSD ;
-    :forUser :User_xyz456,
-        :User_xyz789 ;
-    :score "4.0"^^xsd:float,
-        "5.0"^^xsd:float .
+    :forProduct :Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_512GB_SSD ;
+    :forUser :User_xyz456 ;
+    :score "4.0"^^xsd:float .
 
-:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 a :MiddleEnd ;
-    :hasImage "https://sazo.vn/storage/products/16p-2025-amd/1-1.png" ;
-    :hasPrice 35690000.0 ;
-    :hasSpecification :battery_85WH,
-        :cpu_amd_ryzen_9_8945hx,
-        :gpu_combo_intel_integrated_nvidia_rtx_5060_8gb,
-        :ram_16gb_ddr5_5200_up,
-        :resolution_2560x1600,
-        :storage_1tb_pcie4_nvme,
-        :weight_2.2kg ;
-    :satisfiesRequirement :Gaming .
+:Rating_User_abc123_ThinkBook_14P_AI_2025_Ultra_9275H_32GB_RAM_1TB_SSD a :Rating ;
+    :forProduct :ThinkBook_14P_AI_2025_Ultra_9275H_32GB_RAM_1TB_SSD ;
+    :forUser :User_abc123 ;
+    :score "2.0"^^xsd:float .
+
+:Rating_User_abc123_ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 a :Rating ;
+    :forProduct :ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 ;
+    :forUser :User_abc123 ;
+    :score "5.0"^^xsd:float .
+
+:Rating_User_abc123_Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 a :Rating ;
+    :forProduct :Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 ;
+    :forUser :User_abc123 ;
+    :score "5.0"^^xsd:float .
 
 :ThinkBook_16P_2025_25k_240Hz_Ultra_9275HX_32GB_RAM_1TB_SSD_RTX_5060 a :MiddleEnd ;
     :hasImage "https://sazo.vn/storage/products/16p-2025-intel/1-1.png" ;
@@ -1158,18 +1132,6 @@
         :brightness_500nits,
         :cpu_intel_core_ultra_5_225h,
         :gpu_intel_arc_130t,
-        :ram_32gb_ddr5_5600_dual_up,
-        :refresh_rate_120Hz,
-        :storage_1tb_pcie4_nvme_tlc_m2,
-        :weight_1.56kg ;
-    :satisfiesRequirement :Graphic .
-
-:ThinkPad_T14P_AI_2025_Ultra_7255H_32GB_RAM_1TB_SSD a :MiddleEnd ;
-    :hasImage "https://sazo.vn/storage/products/t14p-2025/1-1.png" ;
-    :hasPrice 33200000.0 ;
-    :hasSpecification :battery_75WH,
-        :cpu_intel_core_ultra_7_255h,
-        :gpu_intel_arc_140t,
         :ram_32gb_ddr5_5600_dual_up,
         :refresh_rate_120Hz,
         :storage_1tb_pcie4_nvme_tlc_m2,
@@ -1272,18 +1234,6 @@
         :weight_1.9kg ;
     :satisfiesRequirement :Graphic .
 
-:Thinkbook_X_AI_2025__Touch_Ultra_7255H_32GB_RAM_1TB_SSD a :MiddleEnd ;
-    :hasImage "https://sazo.vn/storage/products/thinkbook-x-2025-touch/1-1.png" ;
-    :hasPrice 29900000.0 ;
-    :hasSpecification :battery_74WH,
-        :cpu_intel_core_ultra_7_255h,
-        :gpu_intel_arc_140t,
-        :ram_32gb_lpddr5x_8400_nonup,
-        :resolution_2880x1920,
-        :storage_1tb_pcie4_nvme_2242_m2,
-        :weight_1.2kg ;
-    :satisfiesRequirement :Graphic .
-
 :Thinkbook_X_AI_2025__Touch_Ultra_9285H_32GB_RAM_1TB_SSD a :HighEnd ;
     :hasImage "https://sazo.vn/storage/products/thinkbook-x-2025-touch/1-1.png" ;
     :hasPrice 32390000.0 ;
@@ -1319,6 +1269,10 @@
         :storage_1tb_pcie4_ssd,
         :weight_1.09kg ;
     :satisfiesRequirement :Graphic .
+
+:User_xyz789 a :User ;
+    :HAS_FUNCREQ :Office ;
+    :PREFERS_RANGE :MiddleEnd .
 
 :Xiaoxin_15c_2025_Lenovo_IdeaPad_Slim_3_R78745HS_16GB_RAM_512GB_SSD a :LowEnd ;
     :hasImage "https://sazo.vn/storage/products/xx-15c/1-1.png" ;
@@ -1356,17 +1310,17 @@
         :weight_1.39kg ;
     :satisfiesRequirement :Graphic .
 
-:Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 a :LowEnd ;
+:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 a :MiddleEnd ;
     :hasImage "https://sazo.vn/storage/products/pro-16c/1-1.png" ;
-    :hasPrice 18790000.0 ;
+    :hasPrice 21990000.0 ;
     :hasSpecification :battery_80WH,
-        :cpu_amd_ryzen_7_h255,
-        :gpu_amd_radeon_780m,
-        :ram_24gb_ddr5_4800_up,
+        :cpu_amd_ryzen_ai_7_h350,
+        :gpu_amd_radeon_860m,
+        :ram_32gb_ddr5_5600_up,
         :resolution_2880x1800,
         :storage_1tb_pcie4_nvme_2242_m2,
         :weight_1.76kg ;
-    :satisfiesRequirement :Graphic .
+    :satisfiesRequirement :Office .
 
 :gamingReq a :Functionality,
         :Gaming .
@@ -1384,8 +1338,6 @@
 :user_a-b-b-c a :User ;
     :HAS_FUNCREQ :Gaming ;
     :PREFERS_RANGE :LowEnd .
-
-:CPU_i5 a :CPU .
 
 :Dell_Inspiron_16_5630_Ultra_5125U_16GB_RAM_512GB_SSD a :LowEnd ;
     :hasImage "https://sazo.vn/storage/products/dell-inspiron-16/1-1.png" ;
@@ -1411,6 +1363,26 @@
         :weight_1.17kg ;
     :satisfiesRequirement :Office .
 
+:Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD a :MiddleEnd,
+        :Product ;
+    :hasImage "https://sazo.vn/storage/products/lecoo-pro-14/1-1.png" ;
+    :hasPrice 15790000.0 ;
+    :hasSpecification :1TB_PCIe_NVMe_M2_SSD_2_slots,
+        :32GB_DDR55600MHz_h_tr_nng_cp,
+        :AMD_Ryzen_7_H_255_8_nhn_16_lung_c_th_t_ti_49GHz_vi_turbo_boost_24MB_Cache,
+        :Battery_80wh,
+        :Brightness_400nits,
+        :RefreshRate_120Hz,
+        :Weight_1_43kg,
+        :battery_80WH,
+        :cpu_amd_ryzen_7_h255,
+        :gpu_amd_radeon_780m,
+        :ram_32gb_ddr5_5600_up,
+        :resolution_2880x1800,
+        :storage_1tb_pcie_nvme_m2_dual,
+        :weight_1.43kg ;
+    :satisfiesRequirement :Graphic .
+
 :Legion_Pro_7i_2025_Y9000P_BlackUltra_9275HX_32GB_RAM_1TB_SSD_RTX_5070Ti a :MiddleEnd ;
     :hasImage "https://sazo.vn/storage/products/y9000p-2025/1-1-1.png" ;
     :hasPrice 67290000.0 ;
@@ -1435,8 +1407,6 @@
         :weight_2.57kg ;
     :satisfiesRequirement :Gaming .
 
-:RAM_16GB a :RAM .
-
 :ThinkBook_14P_AI_2025_Ultra_9275H_32GB_RAM_1TB_SSD a :MiddleEnd ;
     :hasImage "https://sazo.vn/storage/products/thinkbook-14p-ai-2025/1-1.png" ;
     :hasPrice 36900000.0 ;
@@ -1448,6 +1418,30 @@
         :storage_1tb_pcie4_nvme,
         :weight_1.69kg ;
     :satisfiesRequirement :Office .
+
+:ThinkBook_16P_2025_25k_240Hz_R98945HX_16GB_RAM_1TB_SSD_RTX_5060 a :MiddleEnd ;
+    :hasImage "https://sazo.vn/storage/products/16p-2025-amd/1-1.png" ;
+    :hasPrice 35690000.0 ;
+    :hasSpecification :battery_85WH,
+        :cpu_amd_ryzen_9_8945hx,
+        :gpu_combo_intel_integrated_nvidia_rtx_5060_8gb,
+        :ram_16gb_ddr5_5200_up,
+        :resolution_2560x1600,
+        :storage_1tb_pcie4_nvme,
+        :weight_2.2kg ;
+    :satisfiesRequirement :Gaming .
+
+:ThinkPad_T14P_AI_2025_Ultra_7255H_32GB_RAM_1TB_SSD a :MiddleEnd ;
+    :hasImage "https://sazo.vn/storage/products/t14p-2025/1-1.png" ;
+    :hasPrice 33200000.0 ;
+    :hasSpecification :battery_75WH,
+        :cpu_intel_core_ultra_7_255h,
+        :gpu_intel_arc_140t,
+        :ram_32gb_ddr5_5600_dual_up,
+        :refresh_rate_120Hz,
+        :storage_1tb_pcie4_nvme_tlc_m2,
+        :weight_1.56kg ;
+    :satisfiesRequirement :Graphic .
 
 :Thinkbook_16_G7_2025_Ultra_7255H_32GB_RAM_1TB_SSD_RTX_5060 a :MiddleEnd ;
     :hasImage "https://sazo.vn/storage/products/16g7-u5-225/1-1.png" ;
@@ -1461,17 +1455,17 @@
         :weight_1.9kg ;
     :satisfiesRequirement :Gaming .
 
-:Xiaoxin_Pro_16c_2025_AI_7_H_350_32GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 a :MiddleEnd ;
-    :hasImage "https://sazo.vn/storage/products/pro-16c/1-1.png" ;
-    :hasPrice 21990000.0 ;
-    :hasSpecification :battery_80WH,
-        :cpu_amd_ryzen_ai_7_h350,
-        :gpu_amd_radeon_860m,
-        :ram_32gb_ddr5_5600_up,
-        :resolution_2880x1800,
+:Thinkbook_X_AI_2025__Touch_Ultra_7255H_32GB_RAM_1TB_SSD a :MiddleEnd ;
+    :hasImage "https://sazo.vn/storage/products/thinkbook-x-2025-touch/1-1.png" ;
+    :hasPrice 29900000.0 ;
+    :hasSpecification :battery_74WH,
+        :cpu_intel_core_ultra_7_255h,
+        :gpu_intel_arc_140t,
+        :ram_32gb_lpddr5x_8400_nonup,
+        :resolution_2880x1920,
         :storage_1tb_pcie4_nvme_2242_m2,
-        :weight_1.76kg ;
-    :satisfiesRequirement :Office .
+        :weight_1.2kg ;
+    :satisfiesRequirement :Graphic .
 
 :battery_56WH a :Battery ;
     :capacity "56Wh" .
@@ -1720,9 +1714,17 @@
     :HAS_FUNCREQ :Office ;
     :PREFERS_RANGE :MiddleEnd .
 
-:User_xyz789 a :User ;
-    :HAS_FUNCREQ :Office ;
-    :PREFERS_RANGE :MiddleEnd .
+:Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 a :LowEnd ;
+    :hasImage "https://sazo.vn/storage/products/pro-16c/1-1.png" ;
+    :hasPrice 18790000.0 ;
+    :hasSpecification :battery_80WH,
+        :cpu_amd_ryzen_7_h255,
+        :gpu_amd_radeon_780m,
+        :ram_24gb_ddr5_4800_up,
+        :resolution_2880x1800,
+        :storage_1tb_pcie4_nvme_2242_m2,
+        :weight_1.76kg ;
+    :satisfiesRequirement :Graphic .
 
 :battery_60WH a :Battery ;
     :capacity "60Wh" .
@@ -1944,10 +1946,6 @@
     :unit "kg" ;
     :value 2.4 .
 
-:User_abc123 a :User ;
-    :HAS_FUNCREQ :Gaming ;
-    :PREFERS_RANGE :HighEnd .
-
 :battery_52.5WH a :Battery ;
     :capacity "5Wh" .
 
@@ -2031,6 +2029,31 @@
 :weight_2.7kg a :Weight ;
     :unit "kg" ;
     :value 2.7 .
+
+:User_7f3a91c2-5d44-4e3c-9b2e-6ac98f2fb5d1 a :User ;
+    :HAS_FUNCREQ :Graphic ;
+    :PREFERS_RANGE :MiddleEnd .
+
+:Rating_User_7f3a91c2-5d44-4e3c-9b2e-6ac98f2fb5d1_Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD a :Rating ;
+    :forProduct :Lecoo_Pro_14_2025_Ryzen_7_H_255_32GB_RAM_1TB_SSD ;
+    :forUser :User_7f3a91c2-5d44-4e3c-9b2e-6ac98f2fb5d1 ;
+    :score "4.0"^^xsd:float .
+
+:Rating_User_7f3a91c2-5d44-4e3c-9b2e-6ac98f2fb5d1_ThinkPad_T14P_AI_2025_Ultra_7255H_32GB_RAM_1TB_SSD a :Rating ;
+    :forProduct :ThinkPad_T14P_AI_2025_Ultra_7255H_32GB_RAM_1TB_SSD ;
+    :forUser :User_7f3a91c2-5d44-4e3c-9b2e-6ac98f2fb5d1 ;
+    :score "5.0"^^xsd:float .
+
+:Rating_User_7f3a91c2-5d44-4e3c-9b2e-6ac98f2fb5d1_Thinkbook_X_AI_2025__Touch_Ultra_7255H_32GB_RAM_1TB_SSD a :Rating ;
+    :forProduct :Thinkbook_X_AI_2025__Touch_Ultra_7255H_32GB_RAM_1TB_SSD ;
+    :forUser :User_7f3a91c2-5d44-4e3c-9b2e-6ac98f2fb5d1 ;
+    :score "3.0"^^xsd:float .
+
+:Rating_User_7f3a91c2-5d44-4e3c-9b2e-6ac98f2fb5d1_Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 a :Rating ;
+    :forProduct :Xiaoxin_Pro_16c_2025_Ryzen_7_H_255_24GB_RAM_1TB_SSDLenovo_IdeaPad_Slim_5 ;
+    :forUser :User_7f3a91c2-5d44-4e3c-9b2e-6ac98f2fb5d1 ;
+    :score "5.0"^^xsd:float .
+
 
 :battery_55WH a :Battery ;
     :capacity "55Wh" .
@@ -2155,6 +2178,10 @@
 :weight_2.57kg a :Weight ;
     :unit "kg" ;
     :value 2.57 .
+
+:User_abc123 a :User ;
+    :HAS_FUNCREQ :Gaming ;
+    :PREFERS_RANGE :HighEnd .
 
 :cpu_intel_core_i9_14900hx a :CPU ;
     :baseClock "2.2GHz" ;
@@ -2399,4 +2426,6 @@
     :capacity "1" ;
     :interface "Unknown" ;
     :type "SSD" .
+
+:Graphic a :Functionality .
 

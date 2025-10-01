@@ -4,6 +4,7 @@ from rdflib.namespace import RDF, RDFS, XSD
 import numpy as np
 from collections import defaultdict
 import os
+from pathlib import Path
 
 BASE = "http://example.org/laptop#"
 ns = Namespace(BASE)
@@ -13,37 +14,28 @@ class RDFUSM:
     def __init__(self, owl_file_path: str = None):
         if owl_file_path is None:
             # Get the directory where this script is located
-            current_dir = os.path.dirname(os.path.abspath(__file__))
-            owl_file_path = os.path.join(current_dir, "laptop.owl")
+            root_dir = Path(__file__).resolve().parents[3]
+            owl_file_path = os.path.join(root_dir, "laptops.owl")
+        self.owl_file_path = owl_file_path
         self.g = rdflib.Graph()
-        self.g.parse(owl_file_path, format="turtle")
+        self.g.parse("file:///" + owl_file_path, format="turtle")
 
     def save(self):
-        self.g.serialize(destination="./laptop_res.owl", format="turtle")
+        self.g.serialize(destination=self.owl_file_path, format="turtle")
 
     # --- Init profile from InitialAnswer (fingerprint, functionality, specs, price) ---
-    def init_profile(
-        self, fingerprint: str, functionality: str, specs: str, price: str
-    ):
+    def init_profile(self, fingerprint: str, functionality: str, profile: str):
         u = ns["User_" + fingerprint]
         self.g.add((u, RDF.type, ns.User))
+
         # functionality
         f = ns[functionality]
         self.g.add((f, RDF.type, ns.Functionality))
         self.g.add((u, ns.HAS_FUNCREQ, f))
-        # price
-        p = ns[price]
-        self.g.add((p, RDF.type, ns.PriceRange))
+
+        # profile
+        p = ns[profile]
         self.g.add((u, ns.PREFERS_RANGE, p))
-        # specs could be comma-separated string or single
-        for sname in specs:
-            sname = sname.strip()
-            if not sname:
-                continue
-            s = ns[sname]
-            self.g.add((s, RDF.type, ns.Specification))
-            # optionally link functionality to spec if not present
-            self.g.add((f, ns.REQUIRES, s))
         self.save()
         return True
 
@@ -53,20 +45,13 @@ class RDFUSM:
         p = ns[product_id]
         # ensure user/product nodes exist (product probably exists in ontology)
         self.g.add((u, RDF.type, ns.User))
-        # Remove existing rating if present
-        for s in list(self.g.triples((u, ns.RATED, None))):
-            # s = (u, ns.RATED, obj)
-            # But the score is stored as a reified or as property on blank node?
-            pass
-        # We'll store rating as reified via a blank node, but simpler: create a custom predicate link with score as literal attached to the edge via a node
-        # Simpler approach: create a Rating node
+
         rid = URIRef(f"{BASE}Rating_{fingerprint}_{product_id}")
         self.g.set((rid, RDF.type, ns.Rating))
         self.g.set((rid, ns.forUser, u))
         self.g.set((rid, ns.forProduct, p))
         self.g.set((rid, ns.score, Literal(float(score), datatype=XSD.float)))
-        # Also add a direct typed relationship for simpler SPARQL: u ns.RATED p .
-        self.g.set((u, ns.RATED, p))
+
         self.save()
         return True
 
@@ -75,20 +60,17 @@ class RDFUSM:
         u = ns[fingerprint]
         candidates = set()
 
-        # 1. Get user's functionality requirements
+        # Get user's functionality requirements
         for _, _, func in self.g.triples((u, ns.HAS_FUNCREQ, None)):
-            # print(f"User requires functionality: {func.split('#')[-1]}")
-
-            # 2. Find products that satisfy that functionality
+            # Find products that satisfy that functionality
             for prod, _, _ in self.g.triples((None, ns.satisfiesRequirement, func)):
                 candidates.add(prod)
 
-        # 3. Optional: filter by user preferred price range
+        # Filter by user preferred price range
         for _, _, pr in self.g.triples((u, ns.PREFERS_RANGE, None)):
-            # print(f"User prefers price range: {pr.split('#')[-1]}")
             prcands = set()
             for prod in candidates:
-                if (prod, ns.hasPriceRange, pr) in self.g:
+                if (prod, rdflib.RDF.type, pr) in self.g:
                     prcands.add(prod)
             if prcands:
                 candidates = prcands
@@ -112,6 +94,7 @@ class RDFUSM:
             u = user_nodes[0]
             p = prod_nodes[0]
             s = float(scores[0].toPython())
+            print("Score:", s)
             u_str = str(u)
             p_str = str(p)
             if u_str not in users:
@@ -292,6 +275,7 @@ class RDFUSM:
         ns = rdflib.Namespace("http://example.org/laptop#")
 
         candidates = self.get_candidates_by_ontology(fingerprint)
+        # print("Candidates:", candidates)
         preds = self.predict_scores_for_user(fingerprint, candidates)
 
         results = []
@@ -309,6 +293,14 @@ class RDFUSM:
             # --- Get image ---
             image_vals = list(self.g.objects(prod, ns.hasImage))
             image = str(image_vals[0]) if image_vals else None
+
+            # --- Get Satisfied Requirements ---
+            satisreq_val = list(self.g.objects(prod, ns.satisfiesRequirement))
+            satisreq = str(satisreq_val[0].split("#")[-1]) if satisreq_val else None
+
+            # --- Get RDF Type ---
+            type_val = list(self.g.objects(prod, RDF.type))
+            type = str(type_val[0].split("#")[-1]) if type_val else None
 
             # --- Build nested specs ---
             specs = {}
@@ -342,6 +334,8 @@ class RDFUSM:
                     "price": price,
                     "image": image,
                     "specs": specs,
+                    "satisreq": satisreq,
+                    "range": type,
                     "cf_score": cf_score,
                 }
             )

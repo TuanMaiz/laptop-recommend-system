@@ -7,6 +7,8 @@ from api.services.recommendation_helper.collab_filtering_service import RDFUSM a
 import json
 from collections import defaultdict, Counter
 import uuid
+from pathlib import Path
+import os
 
 
 class RecommendationService:
